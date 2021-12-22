@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+*{
+  box-sizing: border-box;
+
+  font-family: "Roboto";
+
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body::-webkit-scrollbar {
+  width: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body::-webkit-scrollbar-track {
+  background: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(211, 0, 0);
+  border-radius: 20px;
+  border: 3px solid #fff;
+}
+
+.App{
   display: flex;
   flex-direction: column;
+
+  min-height: 100vh;
+
+  padding: 78px 100px;
+  
+}
+
+.initial{
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.App__title{
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  color: #000000;
+
+  border-bottom: 3px solid rgb(255, 0, 0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App__main{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  
+  width: 100%;
+}
+
+.main__title{
+  align-self: center;
+
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  color: #000000;
+
+  border-bottom: 2px solid rgb(255, 0, 0);
+
+  margin-bottom: 22px;
+}
+
+.main__subtitle{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+
+  margin-bottom: 13px;
+}
+
+.main__text{
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.main__img{
+  align-self: center;
+
+  max-width: 100%;
+
+  margin: 40px 0;
 }

@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import useGlobal from './hooks/useGlobal';
+
+import SideMenu from './components/SideMenu';
+
+import './css/layout.css';
 import './App.css';
 
 function App() {
+  const { openMenu, currentContent } = useGlobal();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App ${currentContent ? "" : "initial"}`} style={{ marginLeft: openMenu ? "20%" : "66px" }}>
+      <SideMenu />
+      {!currentContent && <h1 className="App__title cursor--default">Rodrigo Index</h1>}
+      {currentContent &&
+        <main className="App__main">
+          <h1 className="main__title">{currentContent.title}</h1>
+          {currentContent.content.map((item, index) => {
+            return (
+              <>
+                {item.subtitle && <h2 className="main__subtitle" key={index}>{item.subtitle}</h2>}
+                {item.text && <p className="main__text" key={index + 1}>{item.text}</p>}
+                {item.img && <img className="main__img" src={item.img} alt="imagem" />}
+              </>
+            );
+          })}
+        </main>
+      }
     </div>
   );
 }
