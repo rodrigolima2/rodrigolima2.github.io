@@ -96,8 +96,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main__img{
-  align-self: center;
-
   max-width: 100%;
 
   margin: 40px 0;

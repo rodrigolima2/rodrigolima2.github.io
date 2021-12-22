@@ -1,3 +1,22 @@
+import reactContextImg1 from "../assets/images/react-context-img1.png";
+import reactContextImg2 from "../assets/images/react-context-img2.png";
+import reactContextImg3 from "../assets/images/react-context-img3.png";
+import reactContextImg4 from "../assets/images/react-context-img4.png";
+import reactContextImg5 from "../assets/images/react-context-img5.png";
+import reactContextImg6 from "../assets/images/react-context-img6.png";
+import reactContextImg7 from "../assets/images/react-context-img7.png";
+import reactContextImg8 from "../assets/images/react-context-img8.png";
+import reactContextImg9 from "../assets/images/react-context-img9.png";
+import reactContextImg10 from "../assets/images/react-context-img10.png";
+import reactContextImg11 from "../assets/images/react-context-img11.png";
+import reactContextImg12 from "../assets/images/react-context-img12.png";
+import reactContextImg13 from "../assets/images/react-context-img13.png";
+import reactContextImg14 from "../assets/images/react-context-img14.png";
+import reactContextImg15 from "../assets/images/react-context-img15.png";
+import reactContextImg16 from "../assets/images/react-context-img16.png";
+import reactContextImg17 from "../assets/images/react-context-img17.png";
+import reactContextImg18 from "../assets/images/react-context-img18.png";
+
 import reactHooksImg1 from "../assets/images/react-hooks-img1.png";
 import reactHooksImg2 from "../assets/images/react-hooks-img2.png";
 import reactHooksImg3 from "../assets/images/react-hooks-img3.png";
@@ -70,6 +89,155 @@ const content = [
                 text: `Como citado acima, o JSX é uma sintaxe muito parecida com HTML, mas com elementos de JS. 
                 Todos os componentes do React são descritos com o JSX, então se você pretende trabalhar com o React e todo o seu universo de possibilidades, é necessário aprender antes a compreender o JSX.
                 A boa notícia é que esta sintaxe é muito simples de ser assimilada!`
+            }
+        ]
+    },
+    {
+        title: "React Context",
+        content: [
+            {
+                text: `Contexto (context) disponibiliza uma forma de passar dados entre a árvore de componentes sem precisar passar props manualmente em cada nível.
+                Em uma aplicação típica do React, os dados são passados de cima para baixo (de pai para filho) via props, mas esse uso pode ser complicado para certos tipos de props (como preferências locais ou tema de UI), que são utilizadas por muitos componentes dentro da aplicação. Contexto (context) fornece a forma de compartilhar dados como esses, entre todos componentes da mesma árvore de componentes, sem precisar passar explicitamente props entre cada nível.`
+            },
+            {
+                subtitle: "Quando Usar Contexto",
+                text: `Contexto (context) é indicado para compartilhar dados que podem ser considerados “globais” para a árvore de componentes do React. Usuário autenticado ou o idioma preferido, são alguns casos comuns. No exemplo do código a seguir, nós passamos um tema a fim de estilizar o componente Button.`,
+                img: reactContextImg1
+            },
+            {
+                text: `Usando contexto, nós podemos evitar passar prop através de elementos intermediários.`,
+                img: reactContextImg2
+            },
+            {
+                subtitle: "Antes de você usar Contexto",
+                text: `Contexto (context) é usado principalmente quando algum dado precisa ser acessado por muitos componentes em diferentes níveis. Use contexto moderadamente uma vez que isto pode dificultar a reutilização de componentes.
+                Se você apenas quer evitar passar algumas props por muitos níveis, composição de componente geralmente é uma solução mais simples que Contexto (context).
+                Considere por exemplo o componente Page que passa as props user e avatarSize por vários níveis abaixo de modo que os componentes Link e Avatar profundamente aninhados, podem ler essas props.`,
+                img: reactContextImg3
+            },
+            {
+                text: `Pode parecer redundante passar para baixo as props user e avatarSize através de vários níveis se no final apenas o componente Avatar realmente precisa usa-las. Além disso, é incômodo sempre que o componente Avatar precisar de mais props do topo, você também precisar adicionar todas elas por todos os níveis intermediários.
+                Uma forma de resolver este problema sem contexto é atribuir o próprio componente Avatar a uma prop do componente Page, assim os componentes intermediários não precisam saber sobre a prop user ou o avatarSize:`,
+                img: reactContextImg4
+            },
+            {
+                text: `Com esta mudança, apenas o componente Page do topo precisa saber sobre os componentes Link e Avatar e das props user e avatarSize.
+                Esta inversão de controle pode fazer seu código mais limpo em vários casos, reduzindo a quantidade de props que você precisa passar através da sua aplicação e dando mais controle para os componentes raíz. Essa inversão, entretanto, não é a escolha certa em todos os casos; mover mais complexibilidade para o topo da árvore, faz com que estes componentes fiquem mais complicados e forçando os componentes dos níveis mais abaixo ficarem mais flexíveis do que você gostaria.
+                Você não está limitado a um único filho por componente, Você pode passar vários componentes filhos ou até mesmo ter vários slots de componentes filhos como documentado aqui:`,
+                img: reactContextImg5
+            },
+            {
+                text: `Este padrão é suficiente para vários casos onde você precisa separar um componente filho de seu pai imediato. Você pode ainda ir mais longe com render props se o filho precisa se comunicar com o pai antes de ser renderizado.
+                Contudo, às vezes o mesmo dado precisa ser acessado por vários componentes na árvore e em diferentes níveis de aninhamento. Contexto (context) deixa você “transmitir” este dado e mudanças do mesmo para todos componentes abaixo. Exemplos comuns onde usar contexto pode ser mais simples que as alternativas incluem o gerenciamento de localização atual, tema, ou um dado em cache.`
+            },
+            {
+                subtitle: "API"
+            },
+            {
+                subtitle: "React.createContext",
+                text: `const MyContext = React.createContext(defaultValue);`
+            },
+            {
+                text: `Cria um objeto Contexto (context). Quando o React renderiza um componente que assina este objeto Contexto (context), este vai ler o valor atual do Provider superior na árvore que estiver mais próximo.
+                O argumento defaultValue (valor padrão) é usado apenas quando o componente não corresponder com um Provider acima dele na árvore. Este valor padrão pode ser útil para testar componentes isoladamente, sem envolvê-los. Observação: passando undefined como um valor de Provider não faz com que os componentes consumidores do Provider usem defaultValue.`
+            },
+            {
+                subtitle: "Context.Provider",
+                text: `<MyContext.Provider value={/* some value */}>`
+            },
+            {
+                text: `Cada objeto Contexto (context) vem com um componente Provider que permite componentes consumidores a assinarem mudanças no contexto.
+                O componente Provider aceita uma prop value que pode ser passada para ser consumida por componentes que são descendentes deste Provider. Um Provider pode ser conectado a vários consumidores. Providers podem ser aninhados para substituir valores mais ao fundo da árvore.
+                Todos consumidores que são descendentes de um Provider serão renderizados novamente sempre que a prop value do Provider for alterada. A propagação do Provider aos seus descendentes (incluido .contextType e useContext), não está condicionada ao método shouldComponenteUpdate, logo, o consumidor é atualizado mesmo quando um componente antepassado ignora uma atualização.
+                Mudanças são determinadas comparando os valores novos com os anteriores usando o mesmo algoritimo de Object.is.
+                Nota:
+                A forma como as mudanças são determinadas, podem causar alguns problemas quando se atribui objetos como value: veja Ressalvas`
+            },
+            {
+                subtitle: "Class.contextType",
+                img: reactContextImg6
+            },
+            {
+                text: `A propriedade contextType pode ser atribuída a um objeto Contexto (Context) criado por React.createContext(). Usar esta propriedade permite que você consuma o valor atual mais próximo deste tipo de contexto usando this.context. Você pode referencia-lo em qualquer momento nos métodos de ciclo-de-vida, incluindo a função render.
+                Nota:
+                Você pode assinar apenas um contexto usando esta API. Se você precisa ler mais de um contexto, veja Consumindo vários Contextos.
+                Se você está usando o recurso experimental public class fields syntax, você pode usar um campo estático da classe para inicializar o seu contextType.`,
+                img: reactContextImg7
+            },
+            {
+                subtitle: "Context.Consumer",
+                img: reactContextImg8
+            },
+            {
+                text: `Um componente React que assina mudanças de contexto. Usar este componente permite você assinar a um contexto por um function component.
+                Requer uma function as a child. A função recebe o valor atual do contexto e retorna um nó React. O argumento value passado para a função será igual ao value da prop do Provider do contexto mais próximo acíma na árvore. Se não houver um Provider para este contexto acima, o argumento value será igual a defaultValue que foi passado ao criar o contexto com createContext().
+                Nota:
+                Para mais informações sobre o padrão “function as a child” veja, render props.`
+            },
+            {
+                subtitle: "Context.displayName",
+                text: `O objeto Context aceita uma propriedade string displayName. React DevTools usa essa string para determinar o que exibir para o contexto.
+                Por exemplo, o seguinte componente aparecerá como MyDisplayName no DevTools:`,
+                img: reactContextImg9
+            },
+            {
+                subtitle: "Exemplos"
+            },
+            {
+                subtitle: "Contexto Dinâmico",
+                text: `Um exemplo mais complexo com valores dinâmicos para o tema:`
+            },
+            {
+                subtitle: "theme-context.js",
+                img: reactContextImg10
+            },
+            {
+                subtitle: "themed-button.js",
+                img: reactContextImg11
+            },
+            {
+                subtitle: "app.js",
+                img: reactContextImg12
+            },
+            {
+                subtitle: "Atualizando o Contexto de um componente aninhado",
+                text: `Geralmente é necessário atualizar o contexto de um componente que está aninhado em algum lugar da árvore de componentes. Neste caso, você pode passar uma função para o contexto, permitindo assim que consumidores possam atualizar o contexto.`
+            },
+            {
+                subtitle: "theme-context.js",
+                img: reactContextImg13
+            },
+            {
+                subtitle: "theme-toggler-button.js",
+                img: reactContextImg14
+            },
+            {
+                subtitle: "app.js",
+                img: reactContextImg15
+            },
+            {
+                subtitle: "Consumindo vários Contextos",
+                text: `Para que o contexto possa continuar renderizando rapidamente, o React precisa manter cada consumidor de contexto separado em um nó da árvore.`,
+                img: reactContextImg16
+            },
+            {
+                text: `Se dois ou mais valores de contexto são utilizados juntos com frequência, você pode considerar criar o seu próprio render prop.
+                Nota:
+                Para mais informações sobre render prop, veja render props.`
+            },
+            {
+                subtitle: "Ressalvas",
+                text: `Contexto (context) usa referência de identidade para determinar quando renderizar novamente, por este motivo, existem alguns casos que podem desencadear renderizações não intencionais em consumidores quando algum componente que antecede um Provider é renderizados. Por exemplo, o código abaixo vai re-renderizar todos consumidores toda vez que o Provider re-renderizar porque um novo objeto é sempre criado para value:`,
+                img: reactContextImg17
+            },
+            {
+                text: `Para contornar isso, mova a prop value para o state do nível antecessor.`,
+                img: reactContextImg18
+            },
+            {
+                subtitle: "API Legada",
+                text: `Nota:
+                Versões anteriores do React foram disponibilizadas com uma versão experimental do context API. Esta versão antiga da API será suportada em todas versões 16.x lançadas mas, aplicações utilizando esta API, devem migrar para a nova versão. Leia aqui em API Legada.`
             }
         ]
     },
