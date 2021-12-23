@@ -7,12 +7,28 @@
     top: 0;
     left: 0;
     z-index: 5;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     height: 100%;
 
     background-color: #4E9ECB;
 
     padding: 11px 8px;
+}
+
+.SideMenu::-webkit-scrollbar {
+    width: 4px;
+}
+  
+.SideMenu::-webkit-scrollbar-track {
+    background: #4E9ECB;
+}
+  
+.SideMenu::-webkit-scrollbar-thumb {
+    background-color: rgb(211, 0, 0);
+    border-radius: 20px;
+    border: 1px solid #4E9ECB;
 }
 
 .open{
@@ -27,6 +43,9 @@
     display: flex;
     align-items: center;
     gap: 25%;
+
+    position: sticky;
+    top: 0;
 
     width: 100%;
 
@@ -63,10 +82,14 @@
     font-weight: 300;
 
     border-bottom: 1px solid transparent;
+
+    padding-bottom: 2px;
 }
 
 .selected{
     font-weight: 500;
 
     border-bottom: 1px solid rgb(255, 0, 0);
+
+    padding-bottom: 2px;
 }

@@ -32,25 +32,25 @@ function SideMenu() {
                 <img className="SideMenu__icon cursor--pointer" onClick={handleOpenMenu} src={sideMenuIcon} alt="icone abrir fechar menu" />
             </div>
             {openMenu &&
-                <>
+                <nav className="SideMenu__nav">
                     {content &&
                         content.map((item, index) => {
                             return (
                                 <h2
                                     key={index}
-                                    className={`SideMenu__item cursor--pointer ${selected === index ? "selected" : "not-selected"}`}
+                                    className={`SideMenu__item cursor--pointer`}
                                     onClick={() => {
                                         handleSelected(index)
                                         setCurrentContent(item)
                                         scrollToTop();
                                     }}
                                 >
-                                    {item.title}
+                                    <span className={selected === index ? "selected" : "not-selected"}>{item.title}</span>
                                 </h2>
                             );
                         })
                     }
-                </>
+                </nav>
             }
         </aside>
     );
