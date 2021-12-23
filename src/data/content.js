@@ -23,6 +23,12 @@ import reactHooksImg3 from "../assets/images/react-hooks-img3.png";
 import reactHooksImg4 from "../assets/images/react-hooks-img4.png";
 import reactHooksImg5 from "../assets/images/react-hooks-img5.png";
 
+import reactRouterDomImg1 from "../assets/images/react-router-dom-img1.png";
+import reactRouterDomImg2 from "../assets/images/react-router-dom-img2.png";
+import reactRouterDomImg3 from "../assets/images/react-router-dom-img3.png";
+import reactRouterDomImg4 from "../assets/images/react-router-dom-img4.png";
+import reactRouterDomImg5 from "../assets/images/react-router-dom-img5.png";
+
 const content = [
     {
         title: "React",
@@ -289,6 +295,90 @@ const content = [
                 text: `Os hooks permitem o uso de state e outros recursos que antes só eram possíveis dentro do React através de classes. Apesar disso, os hooks são opcionais, ficando a seu critério se vai usá-los ou continuar usando as classes. Clicando aqui você pode ver dentro da documentação oficial do React as principais motivações que levaram à criação dos hooks.
                 Se você quiser saber mais, aqui na Alura, temos a Formação React JS, onde mergulhamos ainda mais no conceito de hooks e falamos de todo ecossistema do React.
                 Te vejo numa próxima, até mais!`
+            }
+        ]
+    },
+    {
+        title: "React Router Dom",
+        content: [
+            {
+                text: `Em um site acessamos várias páginas, como por exemplo, página inicial, contatos, sobre e perfil. Para navegar entre as páginas de uma aplicação React.JS precisaremos criar rotas, onde cada rota vai representar uma tela.
+                Para trabalhar com rotas no React vamos utilizar um pacote chamado React Router Dom que precisa ser instalado no nosso projeto. É ele que nos auxiliará na criação da navegação.`
+            },
+            {
+                subtitle: "Instalação e Configuração",
+                text: `Antes de aplicar o conceito de navegação e instalar o pacote React Router Dom precisamos criar um projeto React. Para isso execute o Código 1.`
+            },
+            {
+                text: `npx create-react-app react-rotas`
+            },
+            {
+                text: `Após a criação do novo projeto em React, precisamos instalar o pacote React Router Dom que vai manipular as rotas do nosso projeto React. Antes disso acesse a pasta do projeto executando o comando do Código 2.`
+            },
+            {
+                text: `cd react-rotas`
+            },
+            {
+                text: `A instalação de pacotes nos nossos projetos é feita através de um gerenciador de pacotes, que pode ser o NPM ou o Yarn. Nesse artigo manteremos o foco no NPM por ser comumente usado, para instalar o pacote react router dom. Basta executar o comando do Código 3 no terminal.`
+            },
+            {
+                text: `npm install react-router-dom`
+            },
+            {
+                text: `Com projeto criado e o pacote instalado, abriremos nossa aplicação em um editor de texto ou IDE de sua preferência e implementar a navegação do nosso projeto.`
+            },
+            {
+                subtitle: "Criando o arquivo de rotas",
+                text: `Neste ponto vamos criar o arquivo de rotas da nossa aplicação, o routes.js. Seu código pode ser visto no Código 4.`,
+                img: reactRouterDomImg1
+            },
+            {
+                text: `Note que na linha 2 do arquivo routes.js importamos dois componentes do pacote do react-router-dom: BrowserRouter e Route.
+                Esses dois componentes provêm e gerenciam as rotas dentro da nossa aplicação. Vamos aprender a função de cada um.
+                BrowserRouter: é um componente responsável por informar a nossa aplicação que teremos um roteamento de componentes, por conta disso ele ficará em volta dos componentes <Route>.
+                Route: componente que associa a rota ao componente. Nele temos três parâmetros: component, path e exact. O parâmetro component recebe o componente que precisa ser exibido ao acessar a rota. O parâmetro path é o caminho na URL que precisa ser acessado para mostrar o componente, definido pelo parâmetro component. O parâmetro exact determina qual o componente vai ser exibido apenas se a rota for igual ao definido entre aspas, no nosso caso se for exatamente "/".
+                Os componentes Home, Sobre e Usuario que foram importados em routes.js serão criados mais a frente ainda neste artigo, então não se preocupe com eles nesse momento.
+                Em nosso arquivo App.js precisaremos importar o routes.js, para usarmos a navegação através das páginas em nossa aplicação, conforme mostra o Código 5.`,
+                img: reactRouterDomImg2
+            },
+            {
+                text: `O próximo passo é criar nossos componentes que serão exibidos de acordo com a URL acessada pelos nossos usuários. O primeiro será o componente Home.
+                Para cada componente, deixaremos uma mensagem e um Link para retornar a página inicial.`
+            },
+            {
+                subtitle: "Componente Home",
+                text: `O código do componente Home (arquivo Home.js) pode ser visto no Código 6.`,
+                img: reactRouterDomImg3
+            },
+            {
+                text: `O componente Home foi estruturado para ser a nossa página inicial, nele temos dois links que nos permite navegar para as páginas Sobre e Usuario.
+                Observando o código vemos que existe um componente chamado <Link> que foi usado duas vezes como pode ser visto nas linhas 11 e 14.
+                Esse componente, que pertence ao pacote react-router-dom vai substituir a nossa tag <a> do HTML para acessar as páginas do próprio projeto. Além disso, recebe o parâmetro to. Ele representa o nome da rota que será acessada pela URL.
+                O componente Link possui duas tags: uma de abertura e uma de fechamento. Entre as duas tags (abertura e fechamento) será inserido o conteúdo que ficará disponível para ser clicado. Veja um exemplo no Código 7.`
+            },
+            {
+                text: `<Link to="/">retornar a página inicial</Link>`
+            },
+            {
+                text: `No nosso exemplo inserimos o texto "retornar a página inicial", que ao ser clicado exibirá o componente referente a rota /.
+                A tag <a> será utilizada na programação React para acessar links externos ou links âncora da própria página.`
+            },
+            {
+                subtitle: "Componentes Sobre e Usuário",
+                text: `As páginas de Sobre e Usuário tem a mesma estrutura: têm o título da página e um link para retornar a página inicial.
+                Veja o código do componente Sobre (arquivo Sobre.js) no Código 8.`,
+                img: reactRouterDomImg4
+            },
+            {
+                text: `Veja o código do componente Usuario (arquivo Usuario.js) no Código 9.`,
+                img: reactRouterDomImg5
+            },
+            {
+                subtitle: "Executando a aplicação",
+                text: `Agora que já configuramos nosso arquivo de rotas e nossos componentes, acesse o projeto e execute o comando do Código 10.`,
+            },
+            {
+                text: `npm start`
             }
         ]
     }
