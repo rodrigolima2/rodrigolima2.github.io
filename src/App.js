@@ -1,6 +1,7 @@
 import useGlobal from './hooks/useGlobal';
 
 import SideMenu from './components/SideMenu';
+import ButtonMenu from './components/ButtonMenu';
 
 import './css/layout.css';
 import './App.css';
@@ -26,6 +27,7 @@ function App() {
           })}
         </main>
       }
+      <ButtonMenu />
     </div>
   );
 }

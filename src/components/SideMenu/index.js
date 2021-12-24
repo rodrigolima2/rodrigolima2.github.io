@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import useGlobal from '../../hooks/useGlobal';
 
-import sideMenuIcon from "../../assets/side-menu-icon.svg";
+import sideMenuIcon from "../../assets/icons/side-menu-icon.svg";
 
 import content from "../../data/content";
 
