@@ -546,7 +546,7 @@ const content = [
             },
             {
                 subtitle: "Sintaxe",
-                text: `str.includes(searchString[, position])`
+                example: `str.includes(searchString[, position])`
             },
             {
                 subtitle: "Parâmetros"
