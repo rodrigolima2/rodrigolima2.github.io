@@ -95,6 +95,10 @@ body::-webkit-scrollbar-thumb {
   line-height: 28px;
   color: #333333;
 
+  width: 100%;
+
+  background-color: rgb(235, 235, 235);
+
   margin-top: 10px;
 }
 
