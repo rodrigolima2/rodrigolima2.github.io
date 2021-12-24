@@ -20,8 +20,10 @@ function App() {
             return (
               <>
                 {item.subtitle && <h2 className="main__subtitle" key={index}>{item.subtitle}</h2>}
-                {item.text && <p className="main__text" key={index + 1}>{item.text}</p>}
-                {item.img && <img className="main__img" src={item.img} alt="imagem" />}
+                {item.subtitle2 && <h3 className="main__subtitle2" key={index + 1}>{item.subtitle2}</h3>}
+                {item.text && <p className="main__text" key={index + 2}>{item.text}</p>}
+                {item.example && <p className="main__example" key={index + 3}>{item.example}</p>}
+                {item.img && <img className="main__img" key={index + 4} src={item.img} alt="imagem" />}
               </>
             );
           })}

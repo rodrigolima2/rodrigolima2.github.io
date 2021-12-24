@@ -29,6 +29,17 @@ import reactRouterDomImg3 from "../assets/images/react-router-dom-img3.png";
 import reactRouterDomImg4 from "../assets/images/react-router-dom-img4.png";
 import reactRouterDomImg5 from "../assets/images/react-router-dom-img5.png";
 
+import javascriptImg1 from "../assets/images/javascript-img1.png";
+import javascriptImg2 from "../assets/images/javascript-img2.png";
+import javascriptImg3 from "../assets/images/javascript-img3.png";
+import javascriptImg4 from "../assets/images/javascript-img4.png";
+import javascriptImg5 from "../assets/images/javascript-img5.png";
+
+import arrayIncludesImg1 from "../assets/images/array-includes-img1.png";
+
+import stringIncludesImg1 from "../assets/images/string-includes-img1.png";
+
+
 const content = [
     {
         title: "React",
@@ -140,16 +151,16 @@ const content = [
                 subtitle: "API"
             },
             {
-                subtitle: "React.createContext",
-                text: `const MyContext = React.createContext(defaultValue);`
+                subtitle2: "React.createContext",
+                example: `const MyContext = React.createContext(defaultValue);`
             },
             {
                 text: `Cria um objeto Contexto (context). Quando o React renderiza um componente que assina este objeto Contexto (context), este vai ler o valor atual do Provider superior na árvore que estiver mais próximo.
                 O argumento defaultValue (valor padrão) é usado apenas quando o componente não corresponder com um Provider acima dele na árvore. Este valor padrão pode ser útil para testar componentes isoladamente, sem envolvê-los. Observação: passando undefined como um valor de Provider não faz com que os componentes consumidores do Provider usem defaultValue.`
             },
             {
-                subtitle: "Context.Provider",
-                text: `<MyContext.Provider value={/* some value */}>`
+                subtitle2: "Context.Provider",
+                example: `<MyContext.Provider value={/* some value */}>`
             },
             {
                 text: `Cada objeto Contexto (context) vem com um componente Provider que permite componentes consumidores a assinarem mudanças no contexto.
@@ -160,7 +171,7 @@ const content = [
                 A forma como as mudanças são determinadas, podem causar alguns problemas quando se atribui objetos como value: veja Ressalvas`
             },
             {
-                subtitle: "Class.contextType",
+                subtitle2: "Class.contextType",
                 img: reactContextImg6
             },
             {
@@ -171,7 +182,7 @@ const content = [
                 img: reactContextImg7
             },
             {
-                subtitle: "Context.Consumer",
+                subtitle2: "Context.Consumer",
                 img: reactContextImg8
             },
             {
@@ -181,7 +192,7 @@ const content = [
                 Para mais informações sobre o padrão “function as a child” veja, render props.`
             },
             {
-                subtitle: "Context.displayName",
+                subtitle2: "Context.displayName",
                 text: `O objeto Context aceita uma propriedade string displayName. React DevTools usa essa string para determinar o que exibir para o contexto.
                 Por exemplo, o seguinte componente aparecerá como MyDisplayName no DevTools:`,
                 img: reactContextImg9
@@ -190,19 +201,19 @@ const content = [
                 subtitle: "Exemplos"
             },
             {
-                subtitle: "Contexto Dinâmico",
+                subtitle2: "Contexto Dinâmico",
                 text: `Um exemplo mais complexo com valores dinâmicos para o tema:`
             },
             {
-                subtitle: "theme-context.js",
+                subtitle2: "theme-context.js",
                 img: reactContextImg10
             },
             {
-                subtitle: "themed-button.js",
+                subtitle2: "themed-button.js",
                 img: reactContextImg11
             },
             {
-                subtitle: "app.js",
+                subtitle2: "app.js",
                 img: reactContextImg12
             },
             {
@@ -210,15 +221,15 @@ const content = [
                 text: `Geralmente é necessário atualizar o contexto de um componente que está aninhado em algum lugar da árvore de componentes. Neste caso, você pode passar uma função para o contexto, permitindo assim que consumidores possam atualizar o contexto.`
             },
             {
-                subtitle: "theme-context.js",
+                subtitle2: "theme-context.js",
                 img: reactContextImg13
             },
             {
-                subtitle: "theme-toggler-button.js",
+                subtitle2: "theme-toggler-button.js",
                 img: reactContextImg14
             },
             {
-                subtitle: "app.js",
+                subtitle2: "app.js",
                 img: reactContextImg15
             },
             {
@@ -310,19 +321,19 @@ const content = [
                 text: `Antes de aplicar o conceito de navegação e instalar o pacote React Router Dom precisamos criar um projeto React. Para isso execute o Código 1.`
             },
             {
-                text: `npx create-react-app react-rotas`
+                example: `npx create-react-app react-rotas`
             },
             {
                 text: `Após a criação do novo projeto em React, precisamos instalar o pacote React Router Dom que vai manipular as rotas do nosso projeto React. Antes disso acesse a pasta do projeto executando o comando do Código 2.`
             },
             {
-                text: `cd react-rotas`
+                example: `cd react-rotas`
             },
             {
                 text: `A instalação de pacotes nos nossos projetos é feita através de um gerenciador de pacotes, que pode ser o NPM ou o Yarn. Nesse artigo manteremos o foco no NPM por ser comumente usado, para instalar o pacote react router dom. Basta executar o comando do Código 3 no terminal.`
             },
             {
-                text: `npm install react-router-dom`
+                example: `npm install react-router-dom`
             },
             {
                 text: `Com projeto criado e o pacote instalado, abriremos nossa aplicação em um editor de texto ou IDE de sua preferência e implementar a navegação do nosso projeto.`
@@ -357,7 +368,7 @@ const content = [
                 O componente Link possui duas tags: uma de abertura e uma de fechamento. Entre as duas tags (abertura e fechamento) será inserido o conteúdo que ficará disponível para ser clicado. Veja um exemplo no Código 7.`
             },
             {
-                text: `<Link to="/">retornar a página inicial</Link>`
+                example: `<Link to="/">retornar a página inicial</Link>`
             },
             {
                 text: `No nosso exemplo inserimos o texto "retornar a página inicial", que ao ser clicado exibirá o componente referente a rota /.
@@ -378,7 +389,194 @@ const content = [
                 text: `Agora que já configuramos nosso arquivo de rotas e nossos componentes, acesse o projeto e execute o comando do Código 10.`,
             },
             {
-                text: `npm start`
+                example: `npm start`
+            }
+        ]
+    },
+    {
+        title: "Javascript",
+        content: [
+            {
+                text: `JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas web — toda vez que uma página da web faz mais do que simplesmente mostrar a você informação estática — mostrando conteúdo que se atualiza em um intervalo de tempo, mapas interativos ou gráficos 2D/3D animados, etc. — você pode apostar que o JavaScript provavelmente está envolvido. É a terceira camada do bolo das tecnologias padrões da web, duas das quais (HTML e CSS) nós falamos com muito mais detalhes em outras partes da Área de Aprendizado.`,
+                img: javascriptImg1
+            },
+            {
+                text: `HTML é a linguagem de marcação que nós usamos para estruturar e dar significado para o nosso conteúdo web. Por exemplo, definindo parágrafos, cabeçalhos, tabelas de conteúdo, ou inserindo imagens e vídeos na página.
+                CSS é uma linguagem de regras de estilo que nós usamos para aplicar estilo ao nosso conteúdo HTML. Por exemplo, definindo cores de fundo e fontes, e posicionando nosso conteúdo em múltiplas colunas.
+                JavaScript é uma linguagem de programação que permite a você criar conteúdo que se atualiza dinamicamente, controlar múltimídias, imagens animadas, e tudo o mais que há de intessante. Ok, não tudo, mas é maravilhoso o que você pode efetuar com algumas linhas de código JavaScript.`
+            },
+            {
+                subtitle: "Então o que ele pode realmente fazer?",
+                text: `O núcleo da linguagem JavaScript consiste em alguns benefícios comuns da programação que permite a você fazer coisas como:
+                Armazenar conteúdo útil em variáveis. No exemplo acima, a propósito, nós pedimos que um novo nome seja inserido e armazenamos o nome em uma variável chamada nome.
+                Operações com pedaços de texto (conhecidos como "strings" em programação). No exemplo acima, nós pegamos a string "Jogador 1: " e concatenamos (juntamos) com a variável nome para criar o texto completo "Jogador 1: Chris".
+                Executar o código em resposta a determinados eventos que ocorrem em uma página da Web. Nós usamos o click (en-US) no nosso exemplo acima para que quando clicassem no botão, rodasse o código que atualiza o texto.
+                E muito mais!
+                O que é ainda mais empolgante é a funcionalidade construída no topo do núcleo da linguagem JavaScript. As APIs (Application Programming Interfaces - Interface de Programação de Aplicativos) proveem a você superpoderes extras para usar no seu código JavaScript.
+                APIs são conjuntos prontos de blocos de construção de código que permitem que um desenvolvedor implemente programas que seriam difíceis ou impossíveis de implementar. Eles fazem o mesmo para a programação que os kits de móveis prontos para a construção de casas - é muito mais fácil pegar os painéis prontos e parafusá-los para formar uma estante de livros do que para elaborar o design, sair e encontrar a madeira, cortar todos os painéis no tamanho e formato certos, encontrar os parafusos de tamanho correto e depois montá-los para formar uma estante de livros.
+                Elas geralmente se dividem em duas categorias.`,
+                img: javascriptImg2
+            },
+            {
+                text: `APIs de navegadores já vem implementadas no navegador, e são capazes de expor dados do ambiente do computador, ou fazer coisas complexas e úteis. Por exemplo:
+                A API DOM (Document Object Model) permite a você manipular HTML e CSS, criando, removendo e mudando HTML, aplicando dinamicamente novos estilos para a sua página, etc. Toda vez que você vê uma janela pop-up aparecer em uma página, ou vê algum novo conteúdo sendo exibido (como nós vimos acima na nossa simples demonstração), isso é o DOM em ação.
+                A API de Geolocalização recupera informações geográficas. É assim que o Google Maps consegue encontrar sua localização e colocar em um mapa.
+                As APIs Canvas e WebGL permite a você criar gráficos 2D e 3D animados. Há pessoas fazendo algumas coisas fantásticas usando essas tecnologias web — veja Chrome Experiments e webglsamples.
+                APIs de áudio e vídeo como HTMLMediaElement (en-US) e WebRTC permitem a você fazer coisas realmente interessantes com multimídia, tanto tocar música e vídeo em uma página da web, como capturar vídeos com a sua câmera e exibir no computador de outra pessoa (veja Snapshot demo para ter uma ideia).
+                Nota: Muitas demonstrações acima não vão funcionar em navegadores antigos — quando você for experimentar, é uma boa ideia usar browsers modernos como Firefox, Edge ou Opera para ver o código funcionar. Você vai precisar estudar testes cross browser com mais detalhes quando você estiver chegando perto de produzir código (código real que as pessoas vão usar).
+                APIs de terceiros não estão implementados no navegador automaticamente, e você geralmente tem que pegar seu código e informações em algum lugar da Web. Por exemplo:
+                A API do Twitter permite a você fazer coisas como exibir seus últimos tweets no seu website.
+                A API do Google Maps permite a você inserir mapas customizados no seu site e outras diversas funcionalidades.
+                Note: Essas APIs são avançadas e nós não vamos falar sobre nenhuma delas nesse módulo.Vo cê pode achar muito mais sobre elas em nosso módulo APIs web no lado cliente. 
+                Tem muito mais coisas disponíveis! Contudo, não fique animado ainda. Você não estará pronto para desenvolver o próximo Facebook, Google Maps ou Instagram depois de estudar JavaScript por 24 horas — há um monte de coisas básicas para estudar primeiro. E é por isso que você está aqui — vamos começar!`
+            },
+            {
+                subtitle: "O que JavaScript está fazendo na sua página web?",
+                text: `Aqui nós vamos realmente começar a ver algum código, e enquanto fazemos isso vamos explorar o que realmente acontece quando você roda algum código JavaScript na sua página.
+                Vamos recaptular brevemente a história do que acontece quando você carrega uma página web em um navegador (falamos sobre isso no nosso artigo Como o CSS funciona). Quando você carrega uma página web no seu navegador, você está executando seu código (o HTML, CSS e JavaScript) dentro de um ambiente de execução (a guia do navegador). Isso é como uma fábrica que pega a matéria prima (o código) e transforma em um produto (a página web).`,
+                img: javascriptImg3
+            },
+            {
+                text: `Um uso muito comum do JavaScript é modificar dinamicamente HTML e CSS para atualizar uma interface do usuário, por meio da API do Document Object Model (conforme mencionado acima). Observe que o código em seus documentos web geralmente é carregado e executado na ordem em que aparece na página. Se o JavaScript carregar e tentar executar antes do carregamento do HTML e CSS afetado, poderão ocorrer erros. Você aprenderá maneiras de contornar isso mais adiante neste artigo, na seção Estratégias de carregamento de scripts .`
+            },
+            {
+                subtitle: "Segurança do navegador",
+                text: `Segurança do navegador
+                Cada guia do navegador tem seu próprio espaço para executar código (esses espaços são chamados de "ambientes de execução", em termos técnicos) — isso significa que na maioria dos casos o código em cada guia está sendo executado separadamente, e o código em uma guia não pode afetar diretamente o código de outra guia — ou de outro website. Isso é uma boa medida de segurança — se esse não fosse o caso, então hackers poderiam começar a escrever código para roubar informações de outros websites, e fazer outras coisas más.`
+            },
+            {
+                subtitle: "Código interpretado x compilado",
+                text: `Você pode ouvir os termos interpretado e compilado no contexto da programação. JavaScript é uma linguagem interpretada — o código é executado de cima para baixo e o resultado da execução do código é imediatamente retornado. Você não tem que transformar o código em algo diferente antes do navegador executa-lo.
+                Linguagens compiladas, por outro lado, são transformadas (compiladas) em algo diferente antes que sejam executadas pelo computador. Por exemplo, C/C++ são compiladas em linguagem Assembly, e depois são executadas pelo computador.
+                JavaScript é uma linguagem de programação leve e interpretada. O navegador recebe o código JavaScript em sua forma de texto original e executa o script a partir dele. Do ponto de vista técnico, a maioria dos intérpretes modernos de JavaScript realmente usa uma técnica chamada compilação just-in-time para melhorar o desempenho; o código-fonte JavaScript é compilado em um formato binário mais rápido enquanto o script está sendo usado, para que possa ser executado o mais rápido possível. No entanto, o JavaScript ainda é considerado uma linguagem interpretada, pois a compilação é manipulada em tempo de execução, e não antes.
+                Há vantagens em ambos os tipos de linguagem, mas nós não iremos discutir no momento.`
+            },
+            {
+                subtitle: "Lado do servidor x Lado do cliente",
+                text: `Você pode também ouvir os termos lado do servidor (server-side) e lado do cliente (client-side), especialmente no contexto de desenvolvimento web. Códigos do lado do cliente são executados no computador do usuário — quando uma página web é visualizada, o código do lado do cliente é baixado, executado e exibido pelo navegador. Nesse módulo JavaScript nós estamos explicitamente falando sobre JavaScript do lado do cliente.
+                Códigos do lado do servidor, por outro lado, são executados no servidor e o resultado da execução é baixado e exibido no navegador. Exemplos de linguagens do lado do servidor populares incluem PHP, Python, Ruby, e ASP.NET. E JavaScript! JavaScript também pode ser usada como uma linguagem server-side, por exemplo, no popular ambiente Node.js — você pode encontrar mais sobre JavaScript do lado do servidor no nosso tópico Websites dinâmicos - Programação do lado do servidor.`
+            },
+            {
+                subtitle: "Código dinâmico x estático",
+                text: `A palavra dinâmico é usada para descrever tanto o JavaScript client-side como o server-side — essa palavra se refere a habilidade de atualizar a exibição de uma página web/app para mostrar coisas diferentes em circunstâncias diferentes, gerando novo conteúdo como solicitado. Código do lado do servidor dinamicamente gera novo conteúdo no servidor, puxando dados de um banco de dados, enquanto que JavaScript do lado do cliente dinamicamente gera novo conteúdo dentro do navegador do cliente, como criar uma nova tabela HTML com dados recebidos do servidor e mostrar a tabela em uma página web exibida para o usuário. Os significados são ligeiramente diferente nos dois contextos, porém relacionados, e ambos (JavaScript server-side e client-side) geralmente trabalham juntos.
+                Uma página web sem atualizações dinâmicas é chamada de estática — ela só mostra o mesmo conteúdo o tempo todo.`
+            },
+            {
+                subtitle: "Como você adiciona JavaScript na sua página?",
+                text: `O JavaScript é inserido na sua página de uma maneira similar ao CSS. Enquanto o CSS usa o elemento <link> para aplicar folhas de estilo externas e o elemento <style> para aplicar folhas de estilo internas, o JavaScript só precisa de um amigo no mundo do HTML — o elemento <script>.`
+            },
+            {
+                subtitle: "Estratégias para o carregamento de scripts",
+                text: `Há um considerável número de problemas envolvendo o carregamento de scripts na ordem correta. Infelizmente, nada é tão simples quanto parece ser! Um problema comum é que todo o HTML de uma página é carregado na ordem em que ele aparece. Se você estiver usando Javascript para manipular alguns elementos da página (sendo mais preciso, manipular o Document Object Model), seu código não irá funcionar caso o JavaScript for carregado e executado antes mesmo dos elementos HTML estarem disponíveis.
+                Nos exemplos acima, tanto nos scripts internos ou externos, o JavaScript é carregado e acionado dentro do cabeçalho do documento, antes do corpo da página ser completamente carregado. Isso poderá causar algum erro. Assim, temos algumas soluções para isso.
+                No exemplo interno, você pode ver essa estrutura em volta do código:`
+            },
+            {
+                example: `document.addEventListener("DOMContentLoaded", function() {
+                    ...
+                  });`
+            },
+            {
+                text: `Isso é um event listener (ouvidor de eventos), que ouve e aguarda o disparo do evento "DOMContentLoaded" vindo do browser, evento este que significa que o corpo do HTML está completamente carregado e pronto. O código JavaScript que estiver dentro desse bloco não será executado até que o evento seja disparado, portanto, o erro será evitado (você irá aprender sobre eventos mais tarde).
+                No exemplo externo, nós usamos um recurso moderno do JavaScript para resolver esse problema: Trata-se do atributo defer, que informa ao browser para continuar renderizando o conteúdo HTML uma vez que a tag <script> foi atingida.`
+            },
+            {
+                example: `<script src="script.js" defer></script>`
+            },
+            {
+                text: `Neste caso, ambos script e HTML irão carregar de forma simultânea e o código irá funcionar.
+                Nota: No caso externo, nós não precisamos utilizar o evento DOMContentLoaded porque o atributo defer resolve o nosso problema. Nós não utilizamos defer como solução para os exemplos internos pois defer funciona apenas com scripts externos.
+                Uma solução à moda antiga para esse problema era colocar o elemento script bem no final do body da página (antes da tag </body>). Com isso, os scripts iriam carregar logo após todo o conteúdo HTML. O problema com esse tipo de solução é que o carregamento/renderização do script seria completamente bloqueado até que todo o conteúdo HTML fosse analisado. Em sites de maior escala, com muitos scripts, essa solução causaria um grande problema de performance e deixaria o site lento. `
+            },
+            {
+                subtitle: "async e defer",
+                text: `Atualmente, há dois recursos bem modernos que podermos usar para evitar o problema com o bloqueio de scripts — async e defer (que vimos acima). Vamos ver as diferenças entre esses dois?
+                Os scripts que são carregados usando o atributo async (veja abaixo) irão baixar o script sem bloquear a renderização da página e irão executar imediatamente após o script terminar de ser disponibilizado. Nesse modo você não tem garantia nenhuma que os scripts carregados irão rodar em uma ordem específica, mas saberá que dessa forma eles não irão impedir o carregamento do restante da página. O melhor uso para o async é quando os scripts de uma página rodam de forma independente entre si e também não dependem de nenhum outro script.
+                Por exemplo, se você tiver os seguintes elementos script:`,
+                img: javascriptImg4
+            },
+            {
+                text: `Você não pode garantir que o script. jquery.js carregará antes ou depois do script2.js e script3.js . Nesse caso, se alguma função desses scripts dependerem de algo vindo do jquery, ela produzirá um erro pois o jquery ainda não foi definido/carregado quando os scripts executaram essa função.
+                async deve ser usado quando houver muitos scripts rodando no background, e você precisa que estejam disponíveis o mais rápido possível. Por exemplo, talvez você tenha muitos arquivos de dados de um jogo para carregar que serão necessários assim que o jogo iniciar, mas por enquanto, você só quer entrar e ver a tela de carregamento, a do titulo do jogo e o lobby, sem ser bloqueado pelo carregamento desses scripts.
+                Scripts que são carregados utilizando o atributo defer (veja abaixo) irão rodar exatamente na ordem em que aparecem na página e serão executados assim que o script e o conteúdo for baixado.`,
+                img: javascriptImg5
+            },
+            {
+                text: `Todos os scripts com o atributo defer irão carregar na ordem que aparecem na página. No segundo exemplo, podemos ter a certeza que o script jquery.js irá carregar antes do script2.js e script3.js e o script2.js irá carregar antes do script3.js. Os scripts não irão rodar sem que antes todo o conteúdo da página seja carregado, que no caso, é muito útil se os seus scripts dependem de um DOM completamente disponibilizado em tela (por exemplo, scripts que modificam um elemento).
+                Resumindo:
+                async e defer istruem o browser a baixar os scripts numa thread (processo) á parte, enquanto o resto da página (o DOM, etc.) está sendo baixado e disponibilizado de forma não bloqueante.
+                Se os seus scripts precisam rodar imediatamente, sem que dependam de outros para serem executados, use async.
+                Se seus scripts dependem de outros scripts ou do DOM completamente disponível em tela, carregue-os usando defer e coloque os elementos <script> na ordem exata que deseja que sejam carregados.`
+            }
+        ]
+    },
+    {
+        title: "Array includes()",
+        content: [
+            {
+                subtitle: "Sumário",
+                text: `O método includes() determina se um array contém um determinado elemento, retornando true ou false apropriadamente.`
+            },
+            {
+                subtitle: "Sintaxe",
+                example: `array.includes(searchElement[, fromIndex])`
+            },
+            {
+                subtitle: "Parâmetros"
+            },
+            {
+                subtitle2: "searchElement",
+                text: `O elemento a buscar`
+            },
+            {
+                subtitle2: "fromIndex",
+                text: `Opcional. A posição no array de onde a busca pelo searchElement se iniciará. Por padrão, 0.`
+            },
+            {
+                subtitle: "Exemplos",
+                img: arrayIncludesImg1
+            }
+        ]
+    },
+    {
+        title: "String includes()",
+        content: [
+            {
+                text: `O método includes() determina se um conjunto de caracteres pode ser encontrado dentro de outra string, retornando true ou false.`
+            },
+            {
+                subtitle: "Sintaxe",
+                text: `str.includes(searchString[, position])`
+            },
+            {
+                subtitle: "Parâmetros"
+            },
+            {
+                subtitle2: "searchString",
+                text: `É o conjunto de caracteres que será pesquisado dentro desta string.`
+            },
+            {
+                subtitle2: "position",
+                text: `Opcional. É um número inteiro que indica por onde a busca iniciará, referente ao índice da string a ser pesquisada. O valor padrão é 0.`
+            },
+            {
+                subtitle: "Valor retornado",
+                text: `true se o conjunto de caracteres for encontrado em algum lugar dentro da string sendo pesquisada. Do contrário, retorna false.`
+            },
+            {
+                subtitle: "Descrição",
+                text: `Este método permite conferir se uma string contém um determinado conjunto de caracteres.`
+            },
+            {
+                subtitle: "Case-sensitivity",
+                text: `O método includes() é case sensitive. Por exemplo, a seguinte expressão retorna false:`
+            },
+            {
+                example: `'Bandeira do Brasil'.includes('brasil'); // retorna false`
+            },
+            {
+                subtitle: "Exemplos",
+                img: stringIncludesImg1
             }
         ]
     }
