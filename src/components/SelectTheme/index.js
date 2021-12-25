@@ -27,19 +27,11 @@ function SelectTheme() {
         function setTheme() {
             const root = document.querySelector(':root');
 
-            const theme = {
-                themeColor: ["--theme-color", themes[activeTheme].themeColor],
-                themeColorShadow: ["--theme-color-shadow", themes[activeTheme].themeColorShadow],
-                underlineColor: ["--underline-color", themes[activeTheme].underlineColor],
-                scrollColor: ["--scroll-color", themes[activeTheme].scrollColor],
-                textExampleColor: ["--text-example-color", themes[activeTheme].textExampleColor]
-            };
-
-            root.style.setProperty(theme.themeColor[0], theme.themeColor[1]);
-            root.style.setProperty(theme.themeColorShadow[0], theme.themeColorShadow[1]);
-            root.style.setProperty(theme.underlineColor[0], theme.underlineColor[1]);
-            root.style.setProperty(theme.scrollColor[0], theme.scrollColor[1]);
-            root.style.setProperty(theme.textExampleColor[0], theme.textExampleColor[1]);
+            root.style.setProperty("--theme-color", themes[activeTheme].themeColor);
+            root.style.setProperty("--theme-color-shadow", themes[activeTheme].themeColorShadow);
+            root.style.setProperty("--underline-color", themes[activeTheme].underlineColor);
+            root.style.setProperty("--scroll-color", themes[activeTheme].scrollColor);
+            root.style.setProperty("--text-example-color", themes[activeTheme].textExampleColor);
         }
 
         setTheme();
