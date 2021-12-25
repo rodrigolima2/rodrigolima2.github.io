@@ -55,6 +55,11 @@ function SelectTheme() {
     }
 
     useEffect(() => {
+        if (activeTheme >= themes.length || typeof (activeTheme) !== 'number') {
+            setActiveTheme(0);
+            return;
+        }
+
         function setTheme() {
             const root = document.querySelector(':root');
 
