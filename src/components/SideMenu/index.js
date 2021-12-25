@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import useGlobal from '../../hooks/useGlobal'
-    ;
+import useGlobal from '../../hooks/useGlobal';
+
 import content from "../../data/content";
 
 import sideMenuIcon from "../../assets/icons/side-menu-icon.svg";

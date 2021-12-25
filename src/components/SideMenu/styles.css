@@ -31,11 +31,11 @@
     border: 1px solid var(--theme-color);
 }
 
-.open{
+.SideMenu.open{
     width: 20%;
 }
 
-.close{
+.SideMenu.close{
     width: auto;
 }
 
@@ -78,7 +78,7 @@
     color: #d8d8d8;
 }
 
-.not-selected{
+.SideMenu__item .not-selected{
     font-weight: 300;
 
     border-bottom: 1px solid transparent;
@@ -86,7 +86,7 @@
     padding-bottom: 2px;
 }
 
-.selected{
+.SideMenu__item .selected{
     font-weight: 500;
 
     border-bottom: 1px solid var(--underline-color);
