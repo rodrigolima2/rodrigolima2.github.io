@@ -1,5 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 
+/*:root{
+  --theme-color: #4E9ECB;
+  --theme-color-shadow: #3f90be;
+  --underline-color: rgb(255, 0, 0);
+  --scroll-color: rgb(211, 0, 0);
+  --text-example-color: #a71616;
+}
+/*  dark blue with green theme
+    --theme-color: #214254;
+    --theme-color-shadow: #17303e;
+    --underline-color: #00ff66;
+    --scroll-color: #009d3f;
+    --text-example-color: #147002;
+*/
+
 *{
   box-sizing: border-box;
 
@@ -8,6 +23,7 @@
   padding: 0;
   margin: 0;
 }
+
 
 body{
   overflow-x: hidden;
@@ -22,7 +38,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(211, 0, 0);
+  background-color: var(--scroll-color);
   border-radius: 20px;
   border: 3px solid #fff;
 }
@@ -51,7 +67,7 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   color: #000000;
 
-  border-bottom: 3px solid rgb(255, 0, 0);
+  border-bottom: 3px solid var(--underline-color);
 }
 
 .App__main{
@@ -73,7 +89,7 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   color: #000000;
 
-  border-bottom: 2px solid rgb(255, 0, 0);
+  border-bottom: 2px solid var(--underline-color);
 
   margin-bottom: 50px;
 }
@@ -119,7 +135,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
-  color: #a71616;
+  color: var(--text-example-color);
 
   margin-bottom: 30px;
 }

@@ -1,0 +1,12 @@
+.SelectTheme{
+    cursor: pointer;
+    
+    position: absolute;
+    top: 5%;
+    right: 2%;
+}
+
+.SelectTheme__icon{
+    width: 60px;
+    height: 60px;
+}

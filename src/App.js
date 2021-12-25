@@ -1,6 +1,7 @@
 import useGlobal from './hooks/useGlobal';
 
 import SideMenu from './components/SideMenu';
+import SelectTheme from './components/SelectTheme';
 import ButtonMenu from './components/ButtonMenu';
 
 import './css/layout.css';
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className={`App ${currentContent ? "" : "initial"}`} style={{ marginLeft: openMenu ? "20%" : "66px" }}>
       <SideMenu />
+      <SelectTheme />
       {!currentContent && <h1 className="App__title cursor--default">Rodrigo Index</h1>}
       {currentContent &&
         <main className="App__main">

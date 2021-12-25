@@ -15,7 +15,7 @@
     font-size: 30px;
     color: #FFF;
 
-    background-color: #4E9ECB;
+    background-color: var(--theme-color);
 
     border-radius: 50%;
 
@@ -23,7 +23,7 @@
 }
 
 .ButtonMenu__button:hover{
-    background-color: #3f90be;
+    background-color: var(--theme-color-shadow);
 }
 
 .ButtonMenu__button.activated {
