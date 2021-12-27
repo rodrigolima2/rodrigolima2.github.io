@@ -472,9 +472,7 @@ const content = [
                 No exemplo interno, você pode ver essa estrutura em volta do código:`
             },
             {
-                example: `document.addEventListener("DOMContentLoaded", function() {
-                    ...
-                  });`
+                example: `document.addEventListener( "DOMContentLoaded", function() {...});`
             },
             {
                 text: `Isso é um event listener (ouvidor de eventos), que ouve e aguarda o disparo do evento "DOMContentLoaded" vindo do browser, evento este que significa que o corpo do HTML está completamente carregado e pronto. O código JavaScript que estiver dentro desse bloco não será executado até que o evento seja disparado, portanto, o erro será evitado (você irá aprender sobre eventos mais tarde).
