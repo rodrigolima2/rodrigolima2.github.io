@@ -157,3 +157,21 @@ body::-webkit-scrollbar-thumb {
     margin-left: 0;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .App{
+    padding: 78px 50px 78px 20px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .App{
+    padding: 78px 10px;
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  .App{
+    padding: 78px 3px;
+  }
+}

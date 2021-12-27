@@ -94,6 +94,12 @@
     padding-bottom: 2px;
 }
 
+@media only screen and (max-width: 1000px) {
+    .SideMenu__item{
+        max-width: 13ch;
+    }
+}
+
 @media only screen and (max-width: 700px) {
     .SideMenu{
         right: 0;
@@ -119,5 +125,21 @@
 
     .SideMenu__item{
         cursor: default;
+
+        max-width: 20ch;
     }
+}
+
+@media only screen and (max-width: 300px) {
+    .SideMenu__header{
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 220px) {
+
+    .SideMenu__item{
+        max-width: 10ch;
+    }
+
 }
