@@ -11,7 +11,7 @@ function App() {
   const { openMenu, currentContent } = useGlobal();
 
   return (
-    <div className={`App ${currentContent ? "" : "initial"}`} style={{ marginLeft: openMenu ? "20%" : "66px" }}>
+    <div className={`App ${currentContent ? "" : "initial"} ${openMenu ? "menu--opened" : "menu--closed"} `}>
       <SideMenu />
       <SelectTheme />
       {!currentContent && <h1 className="App__title cursor--default">Rodrigo Index</h1>}

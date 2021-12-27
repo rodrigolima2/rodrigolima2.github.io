@@ -43,6 +43,14 @@ body::-webkit-scrollbar-thumb {
   padding: 0;
 }
 
+.App.menu--opened{
+  margin-left: 20%;
+}
+
+.App.menu--closed{
+  margin-left: 66px;
+}
+
 .App__title{
   font-style: normal;
   font-weight: 900;
@@ -128,4 +136,24 @@ body::-webkit-scrollbar-thumb {
   max-width: 100%;
 
   margin: 40px 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .App{
+    padding: 78px 100px 78px 30px;
+  }
+
+  .App.menu--opened{
+    min-height: calc(100vh - 350px) !important;
+
+    margin-top: 250px;
+    margin-left: 0;
+  }
+  
+  .App.menu--closed{
+    min-height: calc(100vh - 66px) !important;
+
+    margin-top: 66px;
+    margin-left: 0;
+  }
 }

@@ -93,3 +93,31 @@
 
     padding-bottom: 2px;
 }
+
+@media only screen and (max-width: 700px) {
+    .SideMenu{
+        right: 0;
+
+        height: 35%;
+    }
+
+    .SideMenu.open{
+        width: 100%;
+    }
+
+    .SideMenu.close{
+        height: 66px;
+    }
+
+    .SideMenu.close .SideMenu__header{
+        margin-bottom: 0;
+    }
+
+    .SideMenu__icon{
+        cursor: default;
+    }
+
+    .SideMenu__item{
+        cursor: default;
+    }
+}

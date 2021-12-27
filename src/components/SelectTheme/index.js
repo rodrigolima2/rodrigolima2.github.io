@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useLocalStorage } from 'react-use';
 
+import useGlobal from '../../hooks/useGlobal';
+
 import themes from '../../data/themes';
 
 import colorIcon from "../../assets/icons/color-icon.png";
@@ -9,6 +11,8 @@ import "./styles.css";
 
 function SelectTheme() {
     const [activeTheme, setActiveTheme] = useLocalStorage("theme", 0);
+
+    const { openMenu } = useGlobal();
 
     function handleActiveTheme() {
         if (activeTheme < themes.length - 1) {
@@ -39,7 +43,7 @@ function SelectTheme() {
     }, [activeTheme]);
 
     return (
-        <div className="SelectTheme" onClick={handleActiveTheme}>
+        <div className={`SelectTheme ${openMenu ? "menu-top--opened" : "menu-top--closed"}`} onClick={handleActiveTheme}>
             <img className="SelectTheme__icon" src={colorIcon} alt="icone de cor" />
         </div>
     );

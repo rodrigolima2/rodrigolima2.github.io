@@ -10,3 +10,17 @@
     width: 60px;
     height: 60px;
 }
+
+@media only screen and (max-width: 700px) {
+    .SelectTheme{
+        cursor: default;
+    }
+
+    .SelectTheme.menu-top--opened{
+        top: 37%;
+    }
+
+    .SelectTheme.menu-top--closed{
+        top: 12%;
+    }
+}
