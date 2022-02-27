@@ -1,14 +1,27 @@
+import { useState } from 'react';
+
 import useGlobal from './hooks/useGlobal';
 
 import SideMenu from './components/SideMenu';
 import SelectTheme from './components/SelectTheme';
 import ButtonMenu from './components/ButtonMenu';
+import ModalOpenImage from './components/ModalOpenImage';
 
 import './css/layout.css';
 import './App.css';
 
 function App() {
-  const { openMenu, currentContent } = useGlobal();
+  const { openMenu, openModalImage, setOpenModalImage, currentContent } = useGlobal();
+
+  const [sendImgToModalImage, setSendImgToModalImage] = useState("");
+
+  function handleModalImage(img) {
+    if (img !== sendImgToModalImage) {
+      setSendImgToModalImage(img);
+    }
+
+    setOpenModalImage(openModalImage ? false : true);
+  }
 
   return (
     <div className={`App ${currentContent ? "" : "initial"} ${openMenu ? "menu--opened" : "menu--closed"} `}>
@@ -25,13 +38,14 @@ function App() {
                 {item.subtitle2 && <h3 className="main__subtitle2" key={index + 1}>{item.subtitle2}</h3>}
                 {item.text && <p className="main__text" key={index + 2}>{item.text}</p>}
                 {item.example && <p className="main__example" key={index + 3}>{item.example}</p>}
-                {item.img && <img className="main__img" key={index + 4} src={item.img} alt="imagem" />}
+                {item.img && <img className="main__img" key={index + 4} src={item.img} alt="imagem" onClick={() => handleModalImage(item.img)} />}
               </>
             );
           })}
         </main>
       }
       <ButtonMenu />
+      <ModalOpenImage img={sendImgToModalImage} />
     </div>
   );
 }

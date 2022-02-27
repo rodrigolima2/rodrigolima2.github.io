@@ -133,6 +133,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main__img{
+  cursor: pointer;
+  
   max-width: 100%;
 
   margin: 40px 0;
