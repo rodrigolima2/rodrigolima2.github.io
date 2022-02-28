@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.a7a2270d.css",
-    "main.js": "/static/js/main.6639e17c.js",
+    "main.css": "/static/css/main.6004c873.css",
+    "main.js": "/static/js/main.eba88122.js",
     "static/media/linkedin-icon.ico": "/static/media/linkedin-icon.44f893b3cc3902f5bf7d.ico",
     "static/media/react-router-dom-img1.png": "/static/media/react-router-dom-img1.b301c1a64bcea3588826.png",
     "static/media/react-router-dom-img3.png": "/static/media/react-router-dom-img3.dfcf68aad1e5458f5e8d.png",
+    "static/media/dom-img6.png": "/static/media/dom-img6.39eb7ba5ddf37448fa66.png",
     "static/media/react-context-img12.png": "/static/media/react-context-img12.a78a7558ad042fc7095a.png",
     "static/media/react-context-img2.png": "/static/media/react-context-img2.2436ebbbd2d35863d613.png",
     "static/media/react-context-img16.png": "/static/media/react-context-img16.339f1036652820b7e3f5.png",
@@ -14,7 +15,10 @@
     "static/media/react-context-img1.png": "/static/media/react-context-img1.2bb27af04334cad2f088.png",
     "static/media/react-context-img14.png": "/static/media/react-context-img14.4d37a9f855542d732cdc.png",
     "static/media/react-router-dom-img2.png": "/static/media/react-router-dom-img2.1a36ee2414312aca70a0.png",
+    "static/media/dom-img3.png": "/static/media/dom-img3.c0734076136f49cf8c9d.png",
+    "static/media/dom-img5.png": "/static/media/dom-img5.ef71cc96e7022cba0e38.png",
     "static/media/react-hooks-img2.png": "/static/media/react-hooks-img2.86917108749b840a82d4.png",
+    "static/media/dom-img4.png": "/static/media/dom-img4.c2841fe57f31e710508f.png",
     "static/media/react-context-img4.png": "/static/media/react-context-img4.ad9aa83083acd1849e62.png",
     "static/media/react-context-img6.png": "/static/media/react-context-img6.79429a1eeceb3aab1015.png",
     "static/media/string-includes-img1.png": "/static/media/string-includes-img1.7730127d59619c3c0de3.png",
@@ -28,22 +32,25 @@
     "static/media/react-hooks-img4.png": "/static/media/react-hooks-img4.0572ea1f5574c15e621f.png",
     "static/media/javascript-img1.png": "/static/media/javascript-img1.faeeb6b68e07951c7bfc.png",
     "static/media/react-context-img10.png": "/static/media/react-context-img10.92e163959379e27048de.png",
+    "static/media/dom-img2.png": "/static/media/dom-img2.53a768b3b2115e5bfd19.png",
     "static/media/react-hooks-img3.png": "/static/media/react-hooks-img3.e0a6632287fae789dca4.png",
     "static/media/react-context-img13.png": "/static/media/react-context-img13.0e15a72b7102891e1282.png",
     "static/media/react-context-img9.png": "/static/media/react-context-img9.005ec7104c4daead66f8.png",
     "static/media/array-includes-img1.png": "/static/media/array-includes-img1.75672a71a860b5f47a41.png",
     "static/media/javascript-img3.png": "/static/media/javascript-img3.7e32f8b8442c6f0d08b8.png",
+    "static/media/dom-img1.png": "/static/media/dom-img1.945a75761a1393e399e8.png",
     "static/media/react-context-img17.png": "/static/media/react-context-img17.ac98cc6e1f6f8224ac58.png",
     "static/media/javascript-img4.png": "/static/media/javascript-img4.b20ad0f7f62ea2eea0f3.png",
     "static/media/javascript-img5.png": "/static/media/javascript-img5.3ef98adf8678de9df2fd.png",
     "static/media/github-icon.png": "/static/media/github-icon.2425f82a0e8b7e70f339.png",
+    "static/media/array-map-img2.png": "/static/media/array-map-img2.03778b1f0921dcd6dcbb.png",
     "static/media/side-menu-icon.svg": "/static/media/side-menu-icon.35d5b12b948bb0c0b21ca27bec2d1338.svg",
     "index.html": "/index.html",
-    "main.a7a2270d.css.map": "/static/css/main.a7a2270d.css.map",
-    "main.6639e17c.js.map": "/static/js/main.6639e17c.js.map"
+    "main.6004c873.css.map": "/static/css/main.6004c873.css.map",
+    "main.eba88122.js.map": "/static/js/main.eba88122.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7a2270d.css",
-    "static/js/main.6639e17c.js"
+    "static/css/main.6004c873.css",
+    "static/js/main.eba88122.js"
   ]
 }
