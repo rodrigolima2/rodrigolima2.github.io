@@ -115,7 +115,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: normal;
   letter-spacing: 1px;
   word-spacing: 4px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 28px;
   color: #000000;
 
@@ -138,6 +138,22 @@ body::-webkit-scrollbar-thumb {
   max-width: 100%;
 
   margin: 40px 0;
+}
+
+.main__ul{
+  margin-bottom: 30px;
+}
+
+.main__li{
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  font-size: 15px;
+  line-height: 28px;
+  color: #000000;
+  
+  margin-bottom: 5px;
 }
 
 @media only screen and (max-width: 700px) {

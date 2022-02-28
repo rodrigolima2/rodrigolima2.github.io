@@ -11,7 +11,7 @@ import './css/layout.css';
 import './App.css';
 
 function App() {
-  const { openMenu, openModalImage, setOpenModalImage, currentContent } = useGlobal();
+  const { openMenu, setOpenModalImage, currentContent } = useGlobal();
 
   const [sendImgToModalImage, setSendImgToModalImage] = useState("");
 
@@ -20,7 +20,7 @@ function App() {
       setSendImgToModalImage(img);
     }
 
-    setOpenModalImage(openModalImage ? false : true);
+    setOpenModalImage(true);
   }
 
   return (
@@ -39,6 +39,15 @@ function App() {
                 {item.text && <p className="main__text" key={index + 2}>{item.text}</p>}
                 {item.example && <p className="main__example" key={index + 3}>{item.example}</p>}
                 {item.img && <img className="main__img" key={index + 4} src={item.img} alt="imagem" onClick={() => handleModalImage(item.img)} />}
+                {item.ul &&
+                  <ul className="main__ul">
+                    {item.ul.map((listItem, listIndex) => {
+                      return (
+                        <li className="main__li" key={listIndex + 5}>{listItem}</li>
+                      );
+                    })}
+                  </ul>
+                }
               </>
             );
           })}

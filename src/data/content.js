@@ -37,7 +37,17 @@ import javascriptImg5 from "../assets/images/javascript-img5.png";
 
 import arrayIncludesImg1 from "../assets/images/array-includes-img1.png";
 
+import arrayMapImg1 from "../assets/images/array-map-img1.png";
+import arrayMapImg2 from "../assets/images/array-map-img2.png";
+
 import stringIncludesImg1 from "../assets/images/string-includes-img1.png";
+
+import domImg1 from "../assets/images/dom-img1.png";
+import domImg2 from "../assets/images/dom-img2.png";
+import domImg3 from "../assets/images/dom-img3.png";
+import domImg4 from "../assets/images/dom-img4.png";
+import domImg5 from "../assets/images/dom-img5.png";
+import domImg6 from "../assets/images/dom-img6.png";
 
 
 const content = [
@@ -509,7 +519,7 @@ const content = [
         ]
     },
     {
-        title: "Array includes()",
+        title: "Array.includes()",
         content: [
             {
                 subtitle: "Sumário",
@@ -537,7 +547,60 @@ const content = [
         ]
     },
     {
-        title: "String includes()",
+        title: "Array.map()",
+        content: [
+            {
+                subtitle: "Resumo",
+                text: "O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado."
+            },
+            {
+                subtitle: "Sintaxe",
+                example: "arr.map(callback[, thisArg])"
+            },
+            {
+                subtitle: "Parâmetros",
+                subtitle2: "callback",
+                text: "Função cujo retorno produz o elemento do novo Array. Recebe três argumentos:"
+            },
+            {
+                subtitle2: "valorAtual",
+                text: "O valor do elemento original do Array de origem."
+            },
+            {
+                subtitle2: "indice",
+                text: "O índice do elemento atual que está sendo processado no array.",
+            },
+            {
+                subtitle2: "array",
+                text: "O Array de origem."
+            },
+            {
+                subtitle2: "thisArg",
+                text: "Opcional. Valor a ser utilizado como o this no momento da execução da função callback."
+            },
+            {
+                subtitle: "Descrição",
+                text: `O método map chama a função callback recebida por parâmetro para cada elemento do Array original, em ordem, e constrói um novo array com base nos retornos de cada chamada. A função callback é chamada apenas para os elementos do array original que tiverem valores atribuídos; os elementos que estiverem como undefined, que tiverem sido removidos ou os que nunca tiveram valores atribuídos não serão considerados.
+                A função callback é chamada com três argumentos: o valor do elemento corrente, o índice do elemento corrente e o array original que está sendo percorrido.
+                Se o parametro thisArg foi passado para o método map, ele será repassado para a função callback no momento da invocação para ser utilizado como o this. Caso contrário, o valor undefined será repassado para uso como o this. O valor do this a ser repassado para o callback deve respeitar as regras para determinar como o this é acessado por uma função (em inglês).
+                O método map não modifica o array original. No entanto, a função callback invocada por ele pode fazê-lo.
+                A lista de elementos que serão processados pelo map é montada antes da primeira invocação à função callback. Se um elemento for acrescentado ao array original após a chamada ao map, ele não será visível para o callback. Se os elementos existentes forem modificados, os valores que serão repassados serão os do momento em que o método map invocar o callback. Elementos removidos não serão visitados.`
+            },
+            {
+                subtitle: "Exemplos",
+                subtitle2: "Exemplo: Mapeando um array de números para um array de raízes quadradas",
+                text: "O código a seguir mapeia um array de números e cria um novo array contendo o valor da raiz quadrada de cada número do primeiro array.",
+                img: arrayMapImg1
+            },
+            {
+                subtitle2: "Exemplo: Mapeando um array de números usando uma função callback que contém um argumento",
+                text: `O código a seguir mostrar como o método map funciona quando a função callback possui apenas um argumento. Esse argumento será automaticamente atribuído para cada elemento do array conforme o map itera sobre o array original.`,
+                img: arrayMapImg2
+            }
+        ]
+    },
+    {
+        title: "String.includes()",
         content: [
             {
                 text: `O método includes() determina se um conjunto de caracteres pode ser encontrado dentro de outra string, retornando true ou false.`
@@ -586,6 +649,359 @@ const content = [
                 "Hipertexto" refere-se aos links que conectam páginas da Web entre si, seja dentro de um único site ou entre sites. Links são um aspecto fundamental da web. Ao carregar conteúdo na Internet e vinculá-lo a páginas criadas por outras pessoas, você se torna um participante ativo na world wide web.
                 O HTML usa "Marcação" para anotar texto, imagem e outros conteúdos para exibição em um navegador da Web. A marcação HTML inclui "elementos" especiais, como <head>, <title>, <body>, <header>, <footer>, <article>, <section>, <p>, <div>, <span>, <img>, <aside>, <audio>, <canvas>, <datalist>, <details>, <embed>, <nav>, <output>, <progress>, <video>, <ul>, <ol>, <li> e muitos outros.
                 Um elemento HTML é separado de outro texto em um documento por "tags", que consistem no nome do elemento entre "<" e ">". O nome de um elemento dentro de uma tag é insensível a maiúsculas e minúsculas. Isto é, pode ser escrito em maiúsculas, minúsculas ou um mistura. Por exemplo, a tag <title> pode ser escrita como <Title>, <TITLE> ou de qualquer outra forma.`
+            }
+        ]
+    },
+    {
+        title: "Comandos e tags HTML5",
+        content: [
+            {
+                subtitle: "Tags Continuadas:",
+                ul: [
+                    "<!--...--> Define um comentário;",
+                    `<!DOCTYPE> Define o tipo de documento; (No HTML 4 existiam três (3) diferentes tipos de doctype, mas no HTML 5 temos apenas um (1) tipo <!DOCTYPE HTML>. É aqui que o navegador entende o tipo de documento e como ele deve interpretar as tags nele contidas.)`,
+                    "<a> Define um hyperlink;",
+                    "<abbr> Define uma abreviação",
+                    "<address> Define um endereço. (Passa a ser tratado como uma seção);",
+                    "<area> Define uma área dentro de um mapa de imagem;",
+                    "<b> Define um texto em negrito; (Possui o mesmo nível semântico que um SPAN, e também o estilo de negrito no texto. Contudo, ele não dá nenhuma importância para o texto marcado com ele.)",
+                    "<base> Define uma base URL para todos os links da página;",
+                    "<bdo> Define a direção do texto apresentado;",
+                    "<blockquote> Define uma citação longa;",
+                    "<body> Define o corpo da página;",
+                    "<br> Insere uma quebra de linha simples;",
+                    "<button> Define um botão de comando;",
+                    `<caption> Define o "caption" de uma tabela;`,
+                    "<cite> Define uma citação;",
+                    "<code> Define o código texto do computador;",
+                    "<col> Define os atributos da coluna da tabela;",
+                    "<colgroup> Define um grupo de colunas da tabela;",
+                    "<dd> Define uma descrição de definição;",
+                    "<del> Define um texto deletado;",
+                    "<dfn> Define um termo de definição;",
+                    "<div> Define uma seção no documento;",
+                    "<dl> Define uma lista de definição;",
+                    "<dt> Define um termo de definição;",
+                    "<em> Define um texto em ênfase;",
+                    "<fieldset> Define um conjunto de campos (fieldset);",
+                    "<form> Define um formulário;",
+                    "<h1> até >h6> Define do cabeçalho 1 até o cabeçalho 6;",
+                    "<head> Define uma informação sobre o documento. (Não aceita mais elementos Child como filho);",
+                    "<hr> Define uma regra horizontal. (Tem o mesmo nível que um parágrafo, mas também é utilizado para fazer separações e quebras de linha);",
+                    "<html> Define um documento html;",
+                    "<i> Define um texto em itálico; (Possui o mesmo nível semântico que um SPAN. O texto continua sendo itálico e para usuários de leitores de tela, a voz utilizada é modificada para indicar ênfase. É de grande valor e utilidade para marcar, termos técnicos, termos em outras linguagens etc.)",
+                    "<iframe> Define uma linhas sobre a janela (frame);",
+                    "<img> Define uma imagem;",
+                    "<input> Define um campo de inserção;",
+                    "<ins> Define um texto inserido;",
+                    "<kbd> Define um texto do teclado;",
+                    `<label> Define uma "label" para o formulário;`,
+                    "<legend> Define um título para os campos (fields);",
+                    "<li> Define os itens da lista;",
+                    "<link> Define uma referência;",
+                    "<map> Define uma imagem de mapa;",
+                    `<menu> Define uma lista de "menus";`,
+                    "<meta> Define informações meta;",
+                    "<noscript> Define uma seção noscript;",
+                    "<object> Define um objeto incorporado;",
+                    "<ol> Define uma lista ordenada;",
+                    "<optgroup> Define um grupo de opção;",
+                    "<option> Define uma opção em uma lista suspensa (drop-down list);",
+                    "<p> Define um parágrafo;",
+                    "<param> Define um parâmetro para determinado objeto;",
+                    "<pre> Define um texto pré-formatado;",
+                    "<q> Define uma citação curta;",
+                    "<s> Define um texto que não é mais correto.",
+                    "<samp> Define um código de amostra;",
+                    "<script> Define um script;",
+                    "<select> Define uma lista selecionável;",
+                    "<small> Define um pequeno texto;",
+                    "<span> Define uma seção no documento;",
+                    "<strong> Define um texto forte (similar ao negrito);",
+                    "<style> Define um estilo;",
+                    "<sub> Define um texto subscrito;",
+                    "<sup> Define um texto sobrescrito;",
+                    "<table> Define uma tabela;",
+                    "<tbody> Define o corpo da tabela;",
+                    "<td> Define uma célula da tabela;",
+                    "<textarea> Define um área de texto;",
+                    "<tfoot> Define o rodapé da tabela;",
+                    "<th> Define o cabeçalho da tabela;",
+                    "<thead> Define o cabeçalho da tabela;",
+                    "<title> Define o título do documento;",
+                    "<tr> Define uma linha da tabela;",
+                    "<ul> Define uma lista desordenada;",
+                    "<var> Define uma variável;"
+                ]
+            },
+            {
+                subtitle: "Tags Descontinuadas:",
+                ul: [
+                    "<acronym> Define siglas em HTML 4.01. (Desenvolvedores preferem utilizar a tag <abbr>);",
+                    "<applet> Define um miniaplicativo incorporado. (Ficou obsoleto em função da tag <object>);",
+                    "<basefont> Define as propriedads da font padrão para todo o texto do documento. (Apenas efeito visual);",
+                    "<big> Usado para tornar o texto maior. (Apenas efeito visual);",
+                    "<center> Usado para alinhar texto e conteúdo no centro. (Apenas efeito visual);",
+                    "<dir> Define a lista do diretório. (Ficou obsoleto em função da Tag <ul>);",
+                    "<font> Especifica o tipo de fonte, tamanho, e cor do texto. (Apenas efeito visual);",
+                    `<frame> Define uma janela particular dentro de um conjunto de "frames". (Fere princípios de usabilidade e acessibilidade);`,
+                    "<frameset> Define um conjunto de frames organizado por múltiplas janelas.(Fere princípios de usabilidade e acessibilidade);",
+                    `<noframes> Texto exibido para navegadores que não lidam com "frames". (Fere princípios de usabilidade e acessibilidade);`,
+                    "<strike> Exibe texto rasurado. (Apenas efeito visual);",
+                    "<tt> Define teletipo de texto. (Apenas efeito visual);",
+                    "<u> Define sublinhado. (Apenas efeito visual);",
+                    "<xmp> Define texto pré-formatado. (Ficou obsoleto em função da tag <pre>);"
+                ]
+            },
+            {
+                text: `Se analisarmos bem as definições podemos perceber que muitas tags descontinuadas tiveram esse fim por já existirem tags que realizam a mesma função. E ao utilizar o HTML 5 você perceberá que algumas tags continuadas foram modificadas e passaram a exercer outras propriedades, fazendo, também, que outras tags percam valor.`,
+                ul: [
+                    "Nota 1: Você pode ouvir em algum lugar sobre HTML - ArqHP (Arquitetura de Home Pages). É o próprio HTML 5 com outra denominação e isso é apenas uma jogada de marketing.",
+                    "Nota 2: Os HTML 1, HTML 2 , HTML 3 e o HTML 4 estão todos contidos no HTML 5 e mesmo as tags descontinuadas não trazem nenhum problema de compatibilidade com o HTML 5 e o contrário também ocorre, onde as novas tags também não trazem nenhum problema de compatibilidade com as versões antigas."
+                ]
+            },
+            {
+                subtitle: "HTML5 DOCTYPE e as Tags link e script",
+                text: `A tag <DOCTYPE> é a primeira que aparece em um documento HTML e indica para o browser o tipo e versão do documento que está sendo aberto.
+                Na HTML5 o DOCTYPE ficou mais simples, com relação à HTML4.1. Observe as listagens a seguir.`
+            },
+            {
+                subtitle2: "Listagem 1: HTML4.1 DOCTYPE",
+                example: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">`
+            },
+            {
+                subtitle2: "Listagem 2: HTML5 DOCTYPE",
+                example: "<!DOCTYPE html>"
+            },
+            {
+                text: `Nas tags link e script, utilizadas para referenciar arquivos CSS e JavaScript, respectivamente, não é mais necessário informar o atributo type=”text/css” ou text=”text/javascript”, como era feito na HTML 4.1.
+                As listagens a seguir mostram como eram essas tags na HTML4.1 e como são agora na HTML5.`
+            },
+            {
+                subtitle2: `HTML4.1 LINK e SCRIPT`,
+                example: `<link rel="stylesheet" type="text/css" href="arquivo.css"> <script type="text/javascript" src="arquivo.js"></script>`
+            },
+            {
+                subtitle2: `Listagem 4: HTML5 LINK e SCRIPT`,
+                example: `<link rel="stylesheet" href="arquivo.css"> <script src="arquivo.js"></script>`
+            },
+            {
+                subtitle: "HTML 5 - Novos Atributos e Eventos",
+                text: `Neste artigo estaremos vendo os novos atributos globais e eventos do HTML 5.`
+            },
+            {
+                subtitle2: "Atributos Globais",
+                ul: [
+                    "contenteditable - especifica se o usuário está autorizado a editar um conteúdo ou não: true|false (verdadeiro|Falso).",
+                    "contextmenu - especifica um menu contexto para um elemento. menu_id.",
+                    "draggable - especifica se um usuário tem permissão para arrastar um elemento: true|false|auto (verdadeiro|falso|automático).",
+                    "dropzone - especifica o que acontece quando um dado arrastado é solto: copy|move|link (copiar|mover|linkar).",
+                    "hidden - especifica que o elemento não é relevante: hidden (oculto).",
+                    "spellcheck - especifica se o elemento deve ter sua grafia verificada: true|false (verdadeiro|falso)."
+                ]
+            },
+            {
+                subtitle2: "Eventos",
+                text: `De Janelas:`,
+                ul: [
+                    "onafterprint - executa após o documento ser impresso.",
+                    "onbeforeprint - executa antes do documento ser impresso.",
+                    "onbeforeonload - executa antes do documento ser carregado.",
+                    "onerror - executa quando ocorre um erro.",
+                    "onhaschange - executa quando o documento sofre alteração.",
+                    "onmessage - executa quando uma mensagem é disparada.",
+                    "onoffline - executa quando o documento é desconectado da internet.",
+                    "ononline - executa quando o documento é conectado à internet.",
+                    "onpagehide - executa quando a janela é ocultada.",
+                    "onpageshow - executa quando a janela se torna visível.",
+                    "onpopstate - executa quando ocorre alteração no histórico da janela.",
+                    "onredo- executa quando é acionado o comando de repetir.",
+                    "onresize - executa quando a janela tem alteração de tamanho.",
+                    "onstorage - executa quando um documento é carregado.",
+                    "onundo - executa quando é acionado o comando de desfazer.",
+                    "onunload - executa quando o usuário sai do documento."
+                ]
+            },
+            {
+                text: `De Formulários:`,
+                ul: [
+                    "oncontextmenu - executa quando um menu de contexto é acionado.",
+                    "onformchange - executa quando ocorre alterações no formulário.",
+                    "onforminput - executa quando o usuário dá entrada no formulário.",
+                    "oninput - executa quando um elemento dá entrada do usuário no formulário.",
+                    "oninvalid - executa quando um elemento não é válido."
+                ]
+            },
+            {
+                text: `De Mouse:`,
+                ul: [
+                    "ondrag - executa quando um elemento é arrastado.",
+                    "ondragend - executa ao fim de uma operação de arrastar um elemento.",
+                    "ondragenter - executa quando um elemento é arrastado e solto em seu destino.",
+                    "ondragleave - executa quando um elemento é solto em um destino válido.",
+                    "ondragover - executa quando elemento é arrastado e solto ao longo de um destino.",
+                    "ondragstart - executa quando se inicia uma operação de arrastar.",
+                    "ondrop - executa quando o elemento arrastado está sendo descartado.",
+                    "onmousewheel - executa quando o scroll do mouse é girado.",
+                    "onscroll - executa quando as barras de rolagem de um elemento está sendo rolada."
+                ]
+            },
+            {
+                text: `De Multimídia:`,
+                ul: [
+                    "oncanplay - executa quando uma mídia está sendo iniciada a tocar.",
+                    "onclanplaythrought - executa quando a mídia está sendo tocada até o fim.",
+                    "ondurationchange - executa quando o comprimento da mídia é alterado.",
+                    "onemptied - executado quando um elemento de recursos de mídia torna-se vazio.",
+                    "onended - executa quando a mídia chega ao fim.",
+                    "onerror - executa quando ocorre um erro de carregamento de um elemento.",
+                    "onloadeddata - executa quando os dados de mídia são carregados.",
+                    "onloadedmetadata - executa quando a duração de um elemento de mídia está sendo carregado.",
+                    "onloadstart - executa quando o navegador começa a carregar os dados de mídia.",
+                    "onpause - executa quando a mídia de dados está em pausa.",
+                    "onplay - executa quando a mídia de dados for começar a tocar.",
+                    "onplaying - executa quando a mídia começa a tocar.",
+                    "onprogress - executa quando o navegador está buscando os dados de mídia.",
+                    "onratechange - executa quando altera a faixa de mídia.",
+                    "onreadystatechange - executa quando ocorre uma mudança de estado.",
+                    "onseeked - executa quando o atributo de busca de um elemento não é verdadeiro.",
+                    "onseeking - executa quando o atributo de busca de um elemento é verdadeiro.",
+                    "onstalled - executa quando há um erro na busca de dados de mídia.",
+                    "onsuspend - executa quando o navegador para de buscar os dados da mídia.",
+                    "ontimeupdate - executa quando a posição da mídia é alterada.",
+                    "onvolumechange - executar quando a mídia muda de volume e, também, quando o volume fica mudo.",
+                    "onwaiting - executar quando a mídia para de tocar."
+                ]
+            },
+            {
+                subtitle: "HTML5 - Novas Tags",
+                text: `O HTML5 acrescentou uma nova série de Tags a serem explorados pelos Web Designers, conforme mostra o (infográfico disponivel no site). 
+                Há praticamente uma década sem atualização, o HTML abre as portas para os diversos browsers que conhecemos oferecendo uma gama de recursos multimídia e aplicações off-line.
+                Os novos recursos tem por objetivo facilitar a compreensão e a manutenção do código. Por isso, que organizações como  Mozilla Foundation, Opera e Apple se uniram para atualizar o HTML4 de 1999 e lançar o HTML5.`
+            },
+            {
+                subtitle2: "Layout",
+                ul: [
+                    "<article>: Define um artigo;",
+                    "<aside>: Define o conteúdo além do conteúdo da página;",
+                    "<embed>: Define o conteúdo interativo ou plugin externo;",
+                    "<figcaption>: Define o caption de uma imagem;",
+                    "<figure>: Define um grupo de média e seus captions;",
+                    "<footer>: Define o rodapé de uma página;",
+                    "<header>: Define o cabeçalho de uma página;",
+                    "<nav>: Define os links de navegação;",
+                    "<section>: Define uma área ou seção;",
+                    "<wbr>: Define uma possível quebra de linha;"
+                ]
+            },
+            {
+                subtitle2: "Media",
+                ul: [
+                    "<audio>: Define o conteúdo de som;",
+                    "<source>: Define recursos de mídia;",
+                    "<video>: Define um vídeo;"
+                ]
+            },
+            {
+                subtitle2: "Aplicativos Web",
+                ul: [
+                    "<canvas>: Define gráficos;",
+                    "<command>: Define um botão de comando;",
+                    "<datagrid>: Referências aos dados dinâmicos em Tree View ou tabelas;",
+                    "<datalist>: Define uma lista suspensa (DropDown);",
+                    "<details>: Define detalhes de um elemento;",
+                    "<output>: Define os tipos de saída (outputs);",
+                    "<progress>: Define o progresso de uma tarefa qualquer;"
+                ]
+            },
+            {
+                subtitle2: "Linguagem Ruby",
+                ul: [
+                    "<rp>: Define o browser substituto para elementos não suportados pelo ruby;",
+                    "<rt>: Define explicações para as anotações de ruby;",
+                    "<ruby>: Define as anotações de ruby;"
+                ]
+            },
+            {
+                subtitle2: "Outros",
+                ul: [
+                    "<dialog>: Define uma conversa ou pessoas falando;",
+                    "<hgroup>: Define informações sobre uma determinada área do documento;",
+                    "<keygen>: Define a key (chave) do formulário;",
+                    "<mark>: Define a marcação de um texto;",
+                    "<meter>: Define a medição dentro de um intervalo pré-definido;",
+                    "<summary>: Define o cabeçalho de dados “detalhe”;",
+                    "<time>: Define uma data ou hora;"
+                ]
+            },
+            {
+                text: `Com esse novo leque de comandos e a adequação e compatibilidade temos uma maior segurança de nossas páginas e aplicações.
+                Desde setembro de 2011, grandes empresas têm se aderido ao uso do HTML5. Como grande exemplo temos o Facebook que liberou recursos aos desenvolvedores para criar, transformar e inovar em aplicações utilizadas para si mesmo.`
+            }
+        ]
+    },
+    {
+        title: "DOM",
+        content: [
+            {
+                subtitle: "Introdução ao DOM",
+                text: `O DOM (Document Object Model) é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um documento na Web. Neste guia, apresentaremos brevemente o DOM. Veremos como o DOM representa um documento HTML ou XML na memória e como você usa APIs para criar aplicativos e conteúdo da Web.`
+            },
+            {
+                subtitle: "O que é o DOM?",
+                text: `O Document Object Model (DOM) é uma interface de programação para os documentos HTML e XML. Representa a página de forma que os programas possam alterar a estrutura do documento, alterar o estilo e conteúdo. O DOM representa o documento com nós e objetos, dessa forma, as linguagens de programação podem se conectar à página.
+                Uma página da Web é um documento. Este documento pode ser exibido na janela do navegador ou como a fonte HTML. Mas é o mesmo documento nos dois casos. O DOM (Document Object Model) representa o mesmo documento para que possa ser manipulado. O DOM é uma representação orientada a objetos da página da web, que pode ser modificada com uma linguagem de script como JavaScript.
+                Os padrões W3C DOM e WHATWG DOM são implementados na maioria dos navegadores modernos. Muitos navegadores estendem o padrão; portanto, é necessário ter cuidado ao usá-los na Web, onde os documentos podem ser acessados por vários navegadores com diferentes DOMs.
+                Por exemplo, o DOM padrão especifica que o método getElementsByTagName no código abaixo deve retornar uma lista de todos os elementos <p> no documento:`,
+                img: domImg1
+            },
+            {
+                text: `Todas as propriedades, métodos e eventos disponíveis para manipular e criar páginas da Web são organizados em objetos (por exemplo, o objeto de document que representa o próprio documento, o objeto de table que implementa a Interface especial DOM HTMLTableElement (en-US)}}  para acessar tabelas HTML e assim por diante). Esta documentação fornece uma referência objeto a objeto ao DOM.
+                O DOM moderno é construído usando várias APIs que trabalham juntas. O DOM principal define os objetos que descrevem fundamentalmente um documento e os objetos dentro dele. Isso é expandido conforme necessário por outras APIs que adicionam novos recursos e capacidades ao DOM. Por exemplo, a HTML DOM API adiciona suporte para representar documentos HTML no DOM principal.`
+            },
+            {
+                subtitle: "DOM e JavaScript",
+                text: `O pequeno exemplo acima, como quase todos os exemplos nesta referência, é JavaScript. Ou seja, está escrito em JavaScript, mas usa o DOM para acessar o documento e seus elementos. O DOM não é uma linguagem de programação, mas sem ela, a linguagem JavaScript não teria nenhum modelo ou noção de páginas da web, documentos HTML, documentos XML e suas partes componentes (por exemplo, elementos). Cada elemento de um documento - o documento como um todo, o cabeçalho, as tabelas do documento, os cabeçalhos da tabela, o texto nas células da tabela - faz parte do modelo de objeto do documento desse documento, para que todos possam ser acessados e manipulados usando o método DOM e uma linguagem de script como JavaScript.
+                No início, o JavaScript e o DOM estavam fortemente interligados, mas, eventualmente, evoluíram para entidades separadas. O conteúdo da página é armazenado no DOM e pode ser acessado e manipulado via JavaScript, para que possamos escrever esta equação aproximada:
+                API (página HTML ou XML) = DOM + JS (linguagem de script)
+                O DOM foi projetado para ser independente de qualquer linguagem de programação específica, disponibilizando a representação estrutural do documento a partir de uma única API consistente. Embora nos concentremos exclusivamente no JavaScript nesta documentação de referência, as implementações do DOM podem ser construídas para qualquer idioma, como este exemplo em Python demonstra:`,
+                img: domImg2
+            },
+            {
+                subtitle: "Acessando o DOM",
+                text: `Você não precisa fazer nada de especial para começar a usar o DOM. Navegadores diferentes têm implementações diferentes do DOM, e essas implementações exibem graus variados de conformidade com o padrão DOM real (um assunto que tentamos evitar nesta documentação), mas todo navegador usa um modelo de objeto de documento para tornar as páginas da web acessíveis via JavaScript.
+                Quando você cria um script - seja embutido em um elemento(tag) <script> ou incluído na página da web por meio de uma instrução de carregamento de script - você pode começar imediatamente a usar a API para o document ou { {domxref ("Window", "window")}} elementos para manipular o próprio documento ou obter os filhos desse documento, que são os vários elementos na página da web. Sua programação DOM pode ser algo tão simples quanto o exemplo seguinte, que exibe uma mensagem de alerta usando a função alert() da função window ou pode usar métodos DOM mais sofisticados para criar realmente novo conteúdo, como no extenso exemplo abaixo.
+                O JavaScript a seguir exibirá um alerta quando o documento for carregado (e quando todo o DOM estiver disponível para uso):`,
+                example: `<body onload="window.alert('Welcome to my home page!');">`
+            },
+            {
+                text: `Outro exemplo. Esta função cria um novo elemento H1, adiciona texto a esse elemento e, em seguida, adiciona o H1 à árvore deste documento:`,
+                img: domImg3
+            },
+            {
+                subtitle: "DOM interfaces",
+                text: `Esse guia é sobre os objetos e o que você pode usar ao manipular a hierarquia do DOM. Há muitos aspectos que tornam entender como eles funcionam confuso. Por exemplo, o objeto representando o elemento HTML form pega a propriedade name da interface do HTMLFormElement mas a sua propriedade className vem da interface HTMLElement. Em ambos os casos, a propriedade que você quer está naquele objeto do formulário.
+                Mas o relacionamento entre objetos e interfaces que são implementadas no DOM pode ser confuso, então essa seção busca mostrar um pouco sobre as interfaces na especificação do DOM e como elas são disponibilizadas.`
+            },
+            {
+                subtitle2: "Interfaces e Objetos",
+                text: `Muitos objetos pegam emprestados de várias interfaces diferentes. O objeto table por exemplo implementa uma interface especializada HTMLTableElement (en-US), que inclui métodos como createCaption e insertRow. Mas como é também um elemento HTML, table implementa a interface Element descrita no capítulo DOM Element Reference. E finalmente, já que um elemento HTML é também, no que diz respeito ao DOM, um nó na árvore de nós que fazem o modelo de objeto para uma página HTML ou XML, o objeto table também implementa a interface Node mais básica, de onde deriva Element.
+                Quando você pegar a referência para um objeto table, como no exemplo a seguir, você rotineiramente usa todas as três interfaces de forma intercambiável no objeto, talvez sem saber.`,
+                img: domImg4
+            },
+            {
+                subtitle: "Interfaces Core no DOM",
+                text: `Essa seção lista algumas das interfaces mais utilizadas no DOM. A ideia não é descrever o que essas APIs fazem aqui mas para te dar uma ideia de que tipos de métodos e propriedades você verá bastante conforme for usando o DOM. Essas APIs são usadas nos exemplos mais extensos no capítulo de DOM Examples ao fim desse livro.
+                Objetos Document e window são os objetos cujas interfaces você geralmente utiliza mais frequentemente em programação DOM. De forma simples, o objeto window representa algo como o browser, e o objeto document é a raiz de todo o documento em si. Element herda dessa interface Node genérica, e juntamente com essas duas interfaces fornecem muitos dos métodos e propriedades que você utiliza em elementos individuais. Esses elementos podem também ter interfaces específicas para lidar com o tipo de dado que esses elementos contêm, como no exemplo do objeto table na seção anterior.
+                A seguir uma lista breve de APIs comuns em scripting de páginas web e XML usando o DOM.`,
+                img: domImg5
+            },
+            {
+                subtitle: "Testando a DOM API",
+                text: `Esse documento fornece amostras para cada interface que você pode usar ao desenvolver. Em alguns casos, as amostras são páginas completas em HTML, com o acesso ao DOM em um elemento <script>, a interface (ex. botões) necessária para ativar o script num formulário, e os elementos HTML pelo qual o DOM opera listados também. Quando esse é o caso, você pode copiar e colar o exemplo em um novo documento HTML, salvar e rodar o exemplo pelo browser.
+                Há alguns casos, porém, que os exemplos são mais concisos. Para rodar exemplos que apenas demonstram o relacionamento básico da interface para os elementos HTML, você pode criar uma página teste em que as interfaces podem ser fácilmente acessadas por scripts. A simples página web a seguir fornece um elemento <script> no header em que você pode colocar funções para testar a interface, alguns elementos HTML com atributos que você consegue buscar, definir ou manipular, e a interface web do usuário necessária para chamar essas funções pelo broswer.
+                Você pode usar essa página teste ou criar uma similar para testar as interfaces DOM que quiser e ver como elas funcionam numa plataforma broswer. Você pode alterar os conteúdos da função test() como achar necessário, criar mais botões ou adicionar elementos se necessário.`,
+                img: domImg6
             }
         ]
     },
