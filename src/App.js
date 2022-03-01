@@ -12,7 +12,6 @@ import './App.css';
 
 import arrowChangeTheme from './assets/icons/arrow-change-theme.png';
 import arrowContact from './assets/icons/arrow-contact.png';
-import arrowContent from './assets/icons/arrow-content.png';
 
 function App() {
   const { openMenu, setOpenModalImage, currentContent } = useGlobal();
