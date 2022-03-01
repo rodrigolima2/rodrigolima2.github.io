@@ -290,3 +290,57 @@ body::-webkit-scrollbar-thumb {
     right: 20%;
   }
 }
+
+@media only screen and (max-height: 550px){
+  .App__img.change-theme{
+    top: 15%;
+    right: 10%;
+  }
+  
+  .App__img.contact{
+    bottom: 20%;
+    right: 7%;
+  }
+
+  @media only screen and (max-width: 700px){
+    .App__img.change-theme{
+      top: 45%;
+      right: 10%;
+    }
+  }
+}
+
+@media only screen and (max-height: 450px){
+  .App__img{
+    width: 70px;
+    height: 70px;
+  }
+
+  .App__img.change-theme{
+    top: 20%;
+    right: 10%;
+  }
+  
+  .App__img.contact{
+    bottom: 25%;
+    right: 7%;
+  }
+
+  @media only screen and (max-width: 700px){
+    .App__img{
+      width: 55px;
+      height: 55px;
+    }
+    
+    .App__img.change-theme{
+      top: 48%;
+      right: 13%;
+    }
+  }
+}
+
+@media only screen and (max-height: 220px){
+  .App__img{
+    display: none;
+  }
+}
