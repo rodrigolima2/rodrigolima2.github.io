@@ -35,6 +35,5 @@
 @media only screen and (max-width: 700px){
     .ModalOpenImage__img{
         width: 100%;
-        min-height: 40%;
     }
 }

@@ -41,9 +41,9 @@ function App() {
                 {item.img && <img className="main__img" key={index + 4} src={item.img} alt="imagem" onClick={() => handleModalImage(item.img)} />}
                 {item.ul &&
                   <ul className="main__ul">
-                    {item.ul.map((listItem, listIndex) => {
+                    {item.ul.map((ulItem, ulIndex) => {
                       return (
-                        <li className="main__li" key={listIndex + 5}>{listItem}</li>
+                        <li className="main__li" key={ulIndex + 5}>{ulItem}</li>
                       );
                     })}
                   </ul>

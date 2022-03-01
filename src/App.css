@@ -99,7 +99,7 @@ body::-webkit-scrollbar-thumb {
 .main__subtitle2{
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 28px;
   color: #333333;
 
@@ -125,7 +125,7 @@ body::-webkit-scrollbar-thumb {
 .main__example{
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 28px;
   color: var(--text-example-color);
 
@@ -141,6 +141,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main__ul{
+  margin-inline-start: 20px;
   margin-bottom: 30px;
 }
 
