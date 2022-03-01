@@ -35,7 +35,28 @@ import javascriptImg3 from "../assets/images/javascript-img3.png";
 import javascriptImg4 from "../assets/images/javascript-img4.png";
 import javascriptImg5 from "../assets/images/javascript-img5.png";
 
+import arrowFunctionImg1 from "../assets/images/arrowfunction-img1.png";
+import arrowFunctionImg2 from "../assets/images/arrowfunction-img2.png";
+
 import callbackImg1 from "../assets/images/callback-img1.png";
+
+import asyncfunctionImg1 from "../assets/images/asyncfunction-img1.png";
+import asyncfunctionImg2 from "../assets/images/asyncfunction-img2.png";
+import asyncfunctionImg3 from "../assets/images/asyncfunction-img3.png";
+import asyncfunctionImg4 from "../assets/images/asyncfunction-img4.png";
+import asyncfunctionImg5 from "../assets/images/asyncfunction-img5.png";
+import asyncfunctionImg6 from "../assets/images/asyncfunction-img6.png";
+import asyncfunctionImg7 from "../assets/images/asyncfunction-img7.png";
+import asyncfunctionImg8 from "../assets/images/asyncfunction-img8.png";
+import asyncfunctionImg9 from "../assets/images/asyncfunction-img9.png";
+import asyncfunctionImg10 from "../assets/images/asyncfunction-img10.png";
+import asyncfunctionImg11 from "../assets/images/asyncfunction-img11.png";
+import asyncfunctionImg12 from "../assets/images/asyncfunction-img12.png";
+import asyncfunctionImg13 from "../assets/images/asyncfunction-img13.png";
+import asyncfunctionImg14 from "../assets/images/asyncfunction-img14.png";
+import asyncfunctionImg15 from "../assets/images/asyncfunction-img15.png";
+import asyncfunctionImg16 from "../assets/images/asyncfunction-img16.png";
+import asyncfunctionImg17 from "../assets/images/asyncfunction-img17.png";
 
 import arrayIncludesImg1 from "../assets/images/array-includes-img1.png";
 
@@ -601,7 +622,24 @@ const content = [
         ]
     },
     {
-        title: "Função Callback",
+        title: "Arrow functions",
+        content: [
+            {
+                text: `Uma expressão arrow function possui uma sintaxe mais curta quando comparada a uma expressão de função (function expression) e não tem seu próprio this, arguments, super ou new.target. Estas expressões de funções são melhor aplicadas para funções que não sejam métodos, e elas não podem ser usadas como construtoras (constructors).`,
+            },
+            {
+                subtitle: "Sintaxe",
+                subtitle2: "Sintaxe básica",
+                img: arrowFunctionImg1
+            },
+            {
+                subtitle2: "Sintaxe avançada",
+                img: arrowFunctionImg2
+            }
+        ]
+    },
+    {
+        title: "Callback functions",
         content: [
             {
                 subtitle: "O que é callback?",
@@ -613,6 +651,173 @@ const content = [
                 text: `O JavaScript executa o código sequencialmente em uma ordem de cima para baixo. No entanto, existem alguns casos em que o código é executado (ou deve ser executado) depois que algo acontece e de modo não sequencial. Isso é chamado de programação assíncrona.
                 Callbacks garantem que uma função não seja executada antes que uma tarefa seja concluída, mas logo depois dessa tarefa ser concluída. Elas nos ajudam a desenvolver código JavaScript assíncrono e evitam que tenhamos problemas e erros.
                 Em JavaScript, o jeito de criar uma função de callback é passá-la como um parâmetro para outra função, chamando-a novamente em seguida, logo depois que algo aconteça ou que alguma tarefa seja concluída.`
+            }
+        ]
+    },
+    {
+        title: "Async functions",
+        content: [
+            {
+                text: `A declaração async function define uma função assíncrona, que retorna um objeto AsyncFunction.
+                Você também pode definir funções assíncronas usando uma expressão async function.`
+            },
+            {
+                subtitle: "Sintaxe",
+                example: `async function nome([param[, param[, ... param]]]) { instruções }`
+            },
+            {
+                subtitle2: "nome",
+                text: `O nome da função.`
+            },
+            {
+                subtitle2: "param",
+                text: `O nome de um parâmetro a ser passado para a função.`
+            },
+            {
+                subtitle2: "instruções",
+                text: `As instruções que compõem o corpo da função.`
+            },
+            {
+                subtitle: "Descrição",
+                text: `Quando uma função assíncrona é chamada, ela retorna uma Promise. Quando a função assíncrona retorna um valor, a Promise será resolvida com o valor retornado. Quando a função assíncrona lança uma exceção ou algum valor, a Promise será rejeitada com o valor lançado.
+                Uma função assíncrona pode conter uma expressão await, que pausa a execução da função assíncrona e espera pela resolução da Promise passada, e depois retoma a execução da função assíncrona e retorna o valor resolvido.`
+            },
+            {
+                text: `A proposta das funções async/await é de simplificar o uso de forma síncrona das Promises e executar alguns procedimentos em um grupo de Promises. Assim como Promises são similares a callbacks estruturados, funções async/await são similares à junção de generators com Promises.`
+            },
+            {
+                subtitle: "Exemplos",
+                subtitle2: "Exemplo simples",
+                img: asyncfunctionImg1
+            },
+            {
+                subtitle2: "Reescrevendo uma cadeia de Promise com uma função async",
+                text: `Uma API que retorna uma Promise vai resultar em uma cadeia de Promises e separa a função em várias partes. Considere o seguinte código:`,
+                img: asyncfunctionImg2
+            },
+            {
+                text: "pode ser escrita em uma única função async desta forma:",
+                img: asyncfunctionImg3
+            },
+            {
+                text: `Note que no exemplo acima não tem a instrução await na instrução do return, porque o valor retornado de uma função async é implícitamente passado por um Promise.resolve.`
+            },
+            {
+                subtitle: "A palavra-chave await",
+                text: `A vantagem de uma função assíncrona só se torna aparente quando você a combina com a palavra-chave await. await só funciona dentro de funções assíncronas no código JavaScript regular, no entanto, pode ser usado por conta própria com JavaScript modules.
+                await pode ser colocado na frente de qualquer função assíncrona baseada em promise para pausar seu código nessa linha até que a promise seja resolvida e, em seguida, retornar o valor resultante.
+                Você pode usar await quando chamar qualquer função que retorne uma Promise, incluindo funções de API web.
+                Aqui está um exemplo comum:`,
+                img: asyncfunctionImg4
+            },
+            {
+                subtitle2: "Reescrevendo código baseado em promises com async/await",
+                text: `Vejamos um exemplo simples de busca que vimos no artigo anterior:`,
+                img: asyncfunctionImg5
+            },
+            {
+                text: `Por enquanto, você precisa ter um entendimento razoável das promises e como elas funcionam, mas vamos converter isso para usar async/await e ver o quão simples as coisas se tornam:`,
+                img: asyncfunctionImg6
+            },
+            {
+                text: `Isto faz o código muito mais simples and fácil de entender — sem mais blocos .then() em todo lugar!
+                Visto que a palavra-chave async transforma a funcão em uma promise, você pode refatorar seu código para usar uma abordagem de promises e await, trazendo a segunda metade da funcão para um novo bloco e torná-la mais flexível:`,
+                img: asyncfunctionImg7
+            },
+            {
+                subtitle: "Mas como isso funciona?",
+                text: `Você notará que empacotamos o código dentro de uma função, e incluímos a palavra-chave async antes da palavra-chavefunction. Isso é necessário — você tem que criar uma função assíncrona para definir o bloco de código no qual você executará seu código assíncrono; como falamos mais cedo, await só funciona dentro de funções assíncronas.
+                Dentro da definição da função myFetch() você pode ver que o código se parece muito à versão anterior com promise, , mas tem algumas diferenças. Ao invés de precisar encadear um bloco .then() no final de cada método baseado em promise, você apenas adiciona a palavra-chave await antes de cada chamada de método, e então atribui o resultado a variável. A palavra-chave await faz com que o JavaScript pause seu código em tempo de execução nesta linha, não permitindo mais  nenhum código ser executado nesse meio tempo até que a chamada de função assíncrona retorne seu resultado — muito útil se o código subsequente depender desse resultado!
+                Assim que estiver completo, seu código continua a ser executado começando na próxima linha. Por exemplo:`,
+                example: `let response = await fetch('coffee.jpg');`
+            },
+            {
+                text: `A resposta retornada pela promise fetch() preenchida é atribuída a variável response quando a resposta estiver disponível, e o parser pausa nesta linha até que isso ocorra. Uma vez que a resposta está disponível, o parser move para a próxima linha, o qual cria o Blob fora dele. Esta linha também invoca um método assíncrono baseado em promise, assim podemos usar await aqui também. Quando o resultado da operação retorna, retornamos isso fora da funcão myFetch().
+                Isso significa que quando nós chamamos a função myFetch(), isso retorna uma promise, então podemos encadear um .then() no final, dentro do qual lidamos com a exibição do blob na tela.
+                Provavelmente você já está pensando "isso é realmente demais!", e você está certo — menos blocos .then() para envolver o código, e quase sempre se parece com um código síncrono, por isso é muito intuitivo.`
+            },
+            {
+                subtitle: "Esperando um Promise.all()",
+                text: `async/await é construído em cima de promises, por isso é compatível com todos os recursos oferecidos por promises. Isso inclui Promise.all() — você pode esperar felizmente uma chamada Promise.all() para obter todos os resultados retornados em uma variável de uma forma que se pareça com um código síncrono simples. De novo, vamos voltar para um exemplo que vimos em nosso artigo anterior. Mantenha-o aberto em uma guia separada para que você possa comparar e contrastar com a nova versão mostrada abaixo.
+                Convertendo este para async/await (veja demonstração ao vivo e código-fonte), isso agora parece assim:`,
+                img: asyncfunctionImg8
+            },
+            {
+                text: `Você notará que a função fetchAndDecode() foi convertida facilmente em uma função assíncrona com apenas algumas alterações. Veja a linha do Promise.all():`,
+                example: `let values = await Promise.all([coffee, tea, description]);`
+            },
+            {
+                text: `Usando await aqui podemos obter todos os resultados das três promises retornadas no array values, quando todos eles estão disponíveis, de uma forma que se parece muito com o código síncrono. Tivemos que envolver todo o código em uma nova função assíncrona, displayContent(), e não reduzimos o código em muitas linhas, mas ser capaz de mover a maior parte do código para fora do bloco .then() fornece uma simplificação agradável e útil, deixando-nos com um programa muito mais legível.
+                Para tratamento de erros, nós incluímos um bloco .catch() no nossa chamada displayContent(); isso vai lidar com os erros que ocorrem em ambas as funções.`,
+            },
+            {
+                text: `Nota: Também é possível usar um bloco finally síncrono na função assíncrona, no lugar de um bloco assíncrono.finally(), para mostrar um relatório final sobre como foi a operação`
+            },
+            {
+                subtitle: "Tratando lentidão com async/await",
+                text: `Async/await faz seu código parecer síncrono e, de certa forma, faz com que se comporte de maneira mais síncrona. A palavra-chave await bloqueia a execução de todo o código que o segue até que a promise seja cumprida, exatamente como faria com uma operação síncrona. Ele permite que outras tarefas continuem sendo executadas enquanto isso, mas o código com await é bloqueado. Por exemplo:`,
+                img: asyncfunctionImg9
+            },
+            {
+                text: `Como resultado, seu código pode ser retardado por um número significativo de promises aguardadas acontecendo uma após a outra. Cada await vai esperar que o anterior termine, ao passo que, na verdade, o que você pode querer é que as promises comecem a ser processadas simultaneamente, como fariam se não estivéssemos usando async/await.
+                Vejamos esses dois exemplos — slow-async-await.html (veja código-fonte) e fast-async-await.html (veja código-fonte). Ambos começam com uma função promise personalizada que simula um processo assíncrono com uma chamada setTimeout():`,
+                img: asyncfunctionImg10
+            },
+            {
+                text: `Cada um deles inclui uma função assíncrona timeTest() que espera três chamadas timeoutPromise():`,
+                example: `async function timeTest() { ... }`
+            },
+            {
+                text: `Cada um termina registrando um horário de início, vendo quanto tempo a promise timeTest() leva para completar, em seguida, registrando um horário de término e relatando quanto tempo a operação levou no total:`,
+                img: asyncfunctionImg11
+            },
+            {
+                text: `Isso é a função timeTest() que difere em cada caso.
+                No exemplo slow-async-await.html, timeTest() se parece com isso:`,
+                img: asyncfunctionImg12
+            },
+            {
+                text: `Aqui esperamos diretamente todas as três chamadas timeoutPromise(), fazendo cada uma a cada 3 segundos. Cada chamada subsequente é forçada a esperar até que a última termine — se você executar o primeiro exemplo, você verá a caixa de alerta relatando um tempo total de execução de cerca de 9 segundos.
+                No exemplo fast-async-await.html, timeTest() se parece com isso:`,
+                img: asyncfunctionImg13
+            },
+            {
+                text: `Aqui nós armazenamos os três objetos Promise em variáveis, que tem o efeito de desencadear seus processos associados, todos rodando simultaneamente.
+                A seguir, aguardamos seus resultados — porque todas as promises começaram a ser processadas essencialmente ao mesmo tempo, as promises serão cumpridas todas ao mesmo tempo; ao executar o segundo exemplo, você verá a caixa de alerta relatando um tempo total de execução de pouco mais de 3 segundos!`
+            },
+            {
+                subtitle: `Tratamento de erros`,
+                text: `Há um problema com o padrão acima, no entanto — pode levar a erros não tratados.
+                Vamos atualizar os exemplos anteriores, desta vez adicionando uma promise rejeitada e uma declaração catch no final:`,
+                img: asyncfunctionImg14
+            },
+            {
+                text: `No exemplo acima, o erro é tratado corretamente, e o alerta aparece após aproximadamente 7 segundos.
+                Agora no segundo padrão:`,
+                img: asyncfunctionImg15
+            },
+            {
+                text: `Neste exemplo, temos um erro não tratado no console (depois de 2 segundos), e o alerta aparece após aproximadamente 5 segundos.
+                Para iniciar as promises em paralelo e detectar o erro corretamente, nós poderíamos usar Promise.all(), como discutido anteriormente:`,
+                img: asyncfunctionImg16
+            },
+            {
+                text: `Neste exemplo, o erro é tratado corretamente após aproximadamente 2 segundos e também vemos o alerta após aproximadamente 2 segundos.
+                A Promise.all() rejeita quando qualquer uma das promises de entrada é rejeitada. Se você deseja que todas as promises sejam cumpridas e, em seguida, usar alguns de seus valores retornados, mesmo quando alguns deles são rejeitados, você pode usar Promise.allSettled().`
+            },
+            {
+                subtitle: "Async/await em métodos de classe",
+                text: `Como nota final, antes de prosseguirmos, você pode até adicionar async na frente de métodos de classe / objeto para fazê-los retornar promises, e await promises dentro deles. Dê uma olhada no artigo Código de classe ES que vimos em nosso JavaScript orientado a objetos. em seguida, olhe para nossa versão modificada com um método async:`,
+                img: asyncfunctionImg17
+            },
+            {
+                text: `O primeiro método da classe agora pode ser usado assim:`,
+                example: `han.greeting().then(console.log);`
+            },
+            {
+                subtitle: "Suporte de navegador",
+                text: `Uma consideração ao decidir se deve usar async/await é o suporte para navegadores mais antigos. Eles estão disponíveis em versões modernas da maioria dos navegadores, o mesmo que promises; os principais problemas de suporte vêm com o Internet Explorer e o Opera Mini.
+                Se você deseja usar async/await, mas está preocupado com o suporte a navegadores mais antigos, pode considerar o uso da biblioteca BabelJS — isso permite que você escreva seus aplicativos usando o JavaScript mais recente e deixe Babel descobrir quais mudanças, se houver, são necessárias para os navegadores de seu usuário. Ao encontrar um navegador que não suporta async/await, o polyfill do Babel pode fornecer automaticamente substitutos que funcionam em navegadores mais antigos.`
             }
         ]
     },

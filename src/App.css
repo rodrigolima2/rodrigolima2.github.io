@@ -62,6 +62,26 @@ body::-webkit-scrollbar-thumb {
   border-bottom: 3px solid var(--underline-color);
 }
 
+.App__img{
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+  z-index: -10;
+
+  opacity: 0.3;
+}
+
+.App__img.change-theme{
+  top: 10%;
+  right: 7%;
+}
+
+.App__img.contact{
+  bottom: 15%;
+  right: 5%;
+}
+
 .App__main{
   display: flex;
   flex-direction: column;
@@ -157,6 +177,18 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 5px;
 }
 
+@media only screen and (max-width: 1000px) {
+  .App__img.change-theme{
+    top: 10%;
+    right: 10%;
+  }
+  
+  .App__img.contact{
+    bottom: 15%;
+    right: 7%;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .App{
     padding: 78px 100px 78px 30px;
@@ -175,11 +207,48 @@ body::-webkit-scrollbar-thumb {
     margin-top: 66px;
     margin-left: 0;
   }
+
+  .App__img{
+    width: 80px;
+    height: 80px;
+  }
+
+  .App__img.change-theme{
+    top: 42%;
+    right: 12%;
+  }
+  
+  .App__img.contact{
+    bottom: 15%;
+    right: 7%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .App__img.change-theme{
+    top: 42%;
+    right: 17%;
+  }
+  
+  .App__img.contact{
+    bottom: 15%;
+    right: 13%;
+  }
 }
 
 @media only screen and (max-width: 400px) {
   .App{
     padding: 78px 50px 78px 20px;
+  }
+
+  .App__img.change-theme{
+    top: 42%;
+    right: 22%;
+  }
+  
+  .App__img.contact{
+    bottom: 15%;
+    right: 17%;
   }
 }
 
@@ -192,5 +261,32 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (max-width: 250px) {
   .App{
     padding: 78px 3px;
+  }
+
+  .App__img{
+    width: 65px;
+    height: 65px;
+  }
+
+  .App__img.change-theme{
+    top: 42%;
+    right: 27%;
+  }
+  
+  .App__img.contact{
+    bottom: 15%;
+    right: 20%;
+  }
+}
+
+@media only screen and (max-width: 200px){
+  .App__img.change-theme{
+    top: 44%;
+    right: 30%;
+  }
+  
+  .App__img.contact{
+    bottom: 15%;
+    right: 20%;
   }
 }

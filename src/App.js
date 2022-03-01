@@ -10,6 +10,10 @@ import ModalOpenImage from './components/ModalOpenImage';
 import './css/layout.css';
 import './App.css';
 
+import arrowChangeTheme from './assets/icons/arrow-change-theme.png';
+import arrowContact from './assets/icons/arrow-contact.png';
+import arrowContent from './assets/icons/arrow-content.png';
+
 function App() {
   const { openMenu, setOpenModalImage, currentContent } = useGlobal();
 
@@ -27,7 +31,13 @@ function App() {
     <div className={`App ${currentContent ? "" : "initial"} ${openMenu ? "menu--opened" : "menu--closed"} `}>
       <SideMenu />
       <SelectTheme />
-      {!currentContent && <h1 className="App__title cursor--default">Rodrigo Index</h1>}
+      {!currentContent &&
+        <>
+          <h1 className="App__title cursor--default">Rodrigo Index</h1>
+          <img className="App__img change-theme" src={arrowChangeTheme} alt="seta mudar tema" />
+          <img className="App__img contact" src={arrowContact} alt="seta contato" />
+        </>
+      }
       {currentContent &&
         <main className="App__main">
           <h1 className="main__title">{currentContent.title}</h1>
