@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.19922c50.css",
-    "main.js": "/static/js/main.6f7d8d66.js",
+    "main.css": "/static/css/main.64ce7822.css",
+    "main.js": "/static/js/main.810229fe.js",
     "static/media/linkedin-icon.ico": "/static/media/linkedin-icon.44f893b3cc3902f5bf7d.ico",
     "static/media/react-router-dom-img1.png": "/static/media/react-router-dom-img1.b301c1a64bcea3588826.png",
     "static/media/react-router-dom-img3.png": "/static/media/react-router-dom-img3.dfcf68aad1e5458f5e8d.png",
@@ -31,11 +31,9 @@
     "static/media/arrowfunction-img2.png": "/static/media/arrowfunction-img2.9db313a6ed15362650f1.png",
     "static/media/react-context-img4.png": "/static/media/react-context-img4.ad9aa83083acd1849e62.png",
     "static/media/react-context-img6.png": "/static/media/react-context-img6.79429a1eeceb3aab1015.png",
-    "static/media/arrow-contact.png": "/static/media/arrow-contact.be96d950f9a12512b88b.png",
     "static/media/asyncfunction-img9.png": "/static/media/asyncfunction-img9.6a3785bb54f9d6107284.png",
     "static/media/arrowfunction-img1.png": "/static/media/arrowfunction-img1.2d77af4244d449a90072.png",
     "static/media/string-includes-img1.png": "/static/media/string-includes-img1.7730127d59619c3c0de3.png",
-    "static/media/arrow-change-theme.png": "/static/media/arrow-change-theme.fd297d9e4236200d6b46.png",
     "static/media/react-context-img18.png": "/static/media/react-context-img18.ab9919f7af8f93cf9413.png",
     "static/media/javascript-img2.png": "/static/media/javascript-img2.1e1609efc7c56fa2c26a.png",
     "static/media/react-context-img5.png": "/static/media/react-context-img5.030af99ce8ff27229226.png",
@@ -55,10 +53,12 @@
     "static/media/react-context-img13.png": "/static/media/react-context-img13.0e15a72b7102891e1282.png",
     "static/media/react-context-img9.png": "/static/media/react-context-img9.005ec7104c4daead66f8.png",
     "static/media/array-includes-img1.png": "/static/media/array-includes-img1.75672a71a860b5f47a41.png",
+    "static/media/arrow-change-theme.svg": "/static/media/arrow-change-theme.19d963d22e7d7533a2e0060d191577a2.svg",
     "static/media/javascript-img3.png": "/static/media/javascript-img3.7e32f8b8442c6f0d08b8.png",
     "static/media/dom-img1.png": "/static/media/dom-img1.945a75761a1393e399e8.png",
     "static/media/asyncfunction-img11.png": "/static/media/asyncfunction-img11.b892992c454031f94651.png",
     "static/media/asyncfunction-img10.png": "/static/media/asyncfunction-img10.cfe2cd1c8e9501d6ce36.png",
+    "static/media/arrow-contact.svg": "/static/media/arrow-contact.12f6ff08f8f6edf178dcc2b39bbe8e4c.svg",
     "static/media/react-context-img17.png": "/static/media/react-context-img17.ac98cc6e1f6f8224ac58.png",
     "static/media/javascript-img4.png": "/static/media/javascript-img4.b20ad0f7f62ea2eea0f3.png",
     "static/media/javascript-img5.png": "/static/media/javascript-img5.3ef98adf8678de9df2fd.png",
@@ -67,11 +67,11 @@
     "static/media/asyncfunction-img12.png": "/static/media/asyncfunction-img12.82f5fdaa684bcf54668a.png",
     "static/media/side-menu-icon.svg": "/static/media/side-menu-icon.35d5b12b948bb0c0b21ca27bec2d1338.svg",
     "index.html": "/index.html",
-    "main.19922c50.css.map": "/static/css/main.19922c50.css.map",
-    "main.6f7d8d66.js.map": "/static/js/main.6f7d8d66.js.map"
+    "main.64ce7822.css.map": "/static/css/main.64ce7822.css.map",
+    "main.810229fe.js.map": "/static/js/main.810229fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.19922c50.css",
-    "static/js/main.6f7d8d66.js"
+    "static/css/main.64ce7822.css",
+    "static/js/main.810229fe.js"
   ]
 }
