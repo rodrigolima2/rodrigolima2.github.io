@@ -7,11 +7,11 @@ import SelectTheme from './components/SelectTheme';
 import ButtonMenu from './components/ButtonMenu';
 import ModalOpenImage from './components/ModalOpenImage';
 
-import './css/layout.css';
-import './App.css';
-
 import arrowChangeTheme from './assets/icons/arrow-change-theme.png';
 import arrowContact from './assets/icons/arrow-contact.png';
+
+import './css/layout.css';
+import './App.css';
 
 function App() {
   const { openMenu, setOpenModalImage, currentContent } = useGlobal();
@@ -33,7 +33,7 @@ function App() {
       {!currentContent &&
         <>
           <h1 className="App__title cursor--default">Rodrigo Index</h1>
-          <img className="App__img change-theme" src={arrowChangeTheme} alt="seta mudar tema" />
+          <img className={`App__img change-theme ${openMenu ? "" : "closed"}`} src={arrowChangeTheme} alt="seta mudar tema" />
           <img className="App__img contact" src={arrowContact} alt="seta contato" />
         </>
       }
