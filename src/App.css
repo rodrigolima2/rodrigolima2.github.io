@@ -218,7 +218,6 @@ body::-webkit-scrollbar-thumb {
 
   .App__img.change-theme.closed{
     top: 18%;
-    right: 15%;
   }
   
   .App__img.contact{
@@ -298,11 +297,6 @@ body::-webkit-scrollbar-thumb {
   .App__img.change-theme{
     top: 15%;
     right: 10%;
-  }
-
-  .App__img.change-theme.closed{
-    top: 22%;
-    right: 15%;
   }
   
   .App__img.contact{
