@@ -71,7 +71,7 @@ body::-webkit-scrollbar-thumb {
 
 
   opacity: 0.7;
-  filter: url()drop-shadow(1px 1px 1px var(--theme-color-blur));
+  filter: url()drop-shadow(15px 15px 3px var(--theme-color-blur));
 }
 
 .App__img.change-theme{
