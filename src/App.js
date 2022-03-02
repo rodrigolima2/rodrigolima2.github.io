@@ -7,8 +7,8 @@ import SelectTheme from './components/SelectTheme';
 import ButtonMenu from './components/ButtonMenu';
 import ModalOpenImage from './components/ModalOpenImage';
 
-import arrowChangeTheme from './assets/icons/arrow-change-theme.png';
-import arrowContact from './assets/icons/arrow-contact.png';
+import arrowChangeTheme from './assets/icons/arrow-change-theme.svg';
+import arrowContact from './assets/icons/arrow-contact.svg';
 
 import './css/layout.css';
 import './App.css';
