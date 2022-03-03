@@ -58,6 +58,18 @@ import asyncfunctionImg15 from "../assets/images/asyncfunction-img15.png";
 import asyncfunctionImg16 from "../assets/images/asyncfunction-img16.png";
 import asyncfunctionImg17 from "../assets/images/asyncfunction-img17.png";
 
+import fetchImg1 from "../assets/images/fetch-img1.png";
+import fetchImg2 from "../assets/images/fetch-img2.png";
+import fetchImg3 from "../assets/images/fetch-img3.png";
+import fetchImg4 from "../assets/images/fetch-img4.png";
+import fetchImg5 from "../assets/images/fetch-img5.png";
+import fetchImg6 from "../assets/images/fetch-img6.png";
+import fetchImg7 from "../assets/images/fetch-img7.png";
+import fetchImg8 from "../assets/images/fetch-img8.png";
+import fetchImg9 from "../assets/images/fetch-img9.png";
+import fetchImg10 from "../assets/images/fetch-img10.png";
+import fetchImg11 from "../assets/images/fetch-img11.png";
+
 import arrayIncludesImg1 from "../assets/images/array-includes-img1.png";
 
 import arrayMapImg1 from "../assets/images/array-map-img1.png";
@@ -818,6 +830,137 @@ const content = [
                 subtitle: "Suporte de navegador",
                 text: `Uma consideração ao decidir se deve usar async/await é o suporte para navegadores mais antigos. Eles estão disponíveis em versões modernas da maioria dos navegadores, o mesmo que promises; os principais problemas de suporte vêm com o Internet Explorer e o Opera Mini.
                 Se você deseja usar async/await, mas está preocupado com o suporte a navegadores mais antigos, pode considerar o uso da biblioteca BabelJS — isso permite que você escreva seus aplicativos usando o JavaScript mais recente e deixe Babel descobrir quais mudanças, se houver, são necessárias para os navegadores de seu usuário. Ao encontrar um navegador que não suporta async/await, o polyfill do Babel pode fornecer automaticamente substitutos que funcionam em navegadores mais antigos.`
+            }
+        ]
+    },
+    {
+        title: "Usando Fetch",
+        content: [
+            {
+                text: `A API Fetch fornece uma interface JavaScript para acessar e manipular partes do pipeline HTTP, tais como os pedidos e respostas. Ela também fornece o método global fetch() (en-US) que fornece uma maneira fácil e lógica para buscar recursos de forma assíncrona através da rede.
+                Este tipo de funcionalidade era obtida anteriormente utilizando XMLHttpRequest. Fetch fornece uma alternativa melhor que pode ser facilmente utilizada por outras tecnologias como Service Workers (en-US). Fetch também provê um lugar lógico único para definir outros conceitos relacionados ao protocolo HTTP como CORS e extensões ao HTTP.
+                Note que a especificação fetch() difere de jQuery.ajax(), principalmente, de três formas:`,
+                ul: [
+                    `A Promise retornada do fetch() não rejeitará o status do erro HTTP, mesmo que a resposta seja um HTTP 404 ou 500. Em vez disso, ela irá resolver normalmente (com o status ok definido como falso), e só irá rejeitar se houver falha na rede ou se algo impedir a requisição de ser completada.`,
+                    `fetch() não receberá cookies cross-site; você não pode estabelecer uma conexão cross-site usando fetch. Cabeçalhos Set-Cookie de outros sites são ignorados silenciosamente.`,
+                    `fetch() não enviará cookies, a não ser que seja definida a opção credentials do parâmetro init. (Desde 25 de agosto de 2017. A especificação alterou as políticas padrão de credenciais para  same-origin. O Firefox mudou desde 61.0b13.)`
+                ]
+            },
+            {
+                subtitle: "Situação do suporte por navegadores",
+                text: `Os suportes para Fetch ainda estão em uma fase bastante precoce, mas começa a ter progresso. Se tornou um padrão no Firefox 39 e Chrome 42 até as versões mais atuais.
+                Caso tenha interesse no uso da ferramenta, há também uma Fetch Polyfill disponivel que recria as funcionalidade para outros navegadores que ainda não o suporta. Fique ciente que está em estado experimental e ainda não há uma versão completa.`
+            },
+            {
+                subtitle: "Fazendo as requisições Fetch",
+                text: `Uma requisição fetch é realizada para configuração. Temos um exemplo no seguinte código:`,
+                img: fetchImg1
+            },
+            {
+                text: `Aqui estamos procurando uma imagem e inserindo em um elemento <img>. O uso mais básico dofetch() acarreta em um argumento — a pasta do recurso que você deseja buscar — e retorna uma promessa contendo a resposta (a Response object).
+                Esta é apenas uma resposta HTTP, não a imagem em sí. Para extrairmos a imagem da resposta, nós usamos o método blob() (en-US) (definido no mixin do Body, que são implementados por ambos os objetos Request e Response.). Um objectURL é criado na extração de Blob, que então é inserido no img.
+                Requisições Fetch são controladas pela directiva connect-src do Content Security Policy ao invés da directiva do recurso retornado.`
+            },
+            {
+                subtitle: "Fornecendo opções de request",
+                text: `O método fetch() pode receber um segundo parametro opcional, que consiste em um objeto init que permite setar várias configurações:`,
+                img: fetchImg2
+            },
+            {
+                subtitle: "Verificando se o fetch foi bem sucedido",
+                text: `Uma promise fetch() (en-US) será rejeitada com um TypeError quando um erro de rede é encontrado, embora isso geralmente signifique problemas de permissão ou similar — um 404 não constitui um erro de rede, por exemplo. Uma verificação precisa de um fetch()  bem-sucedido incluiria a verificação de que a promessa foi resolvida e, em seguida, a verificação de que a propriedade Response.ok (en-US) tem o valor de true. O código seria parecido com o abaixo:`,
+                img: fetchImg3
+            },
+            {
+                subtitle: "Fornecendo seu próprio objeto de solicitação",
+                text: `Em vez de passar um caminho, para o recurso que você deseja solicitar, dentro da rquisição fetch(), você pode criar um objeto de solicitação usando o construtor Request(), e então passar a solicitação como um argumento do método fetch() :`,
+                img: fetchImg4
+            },
+            {
+                text: `Request() aceita exatamente os mesmos parâmetros do método fetch(). Você pode até mesmo passar um objeto de solicitação existente para criar uma cópia dele:​​​​​​`,
+                example: "var anotherRequest = new Request(myRequest,myInit);"
+            },
+            {
+                text: `Isso é muito útil, pois os conteúdos de cada solicitação e resposta tem apenas um uso. Fazer uma cópia como essa permite que você use a solicitação / resposta novamente, variando as opções de inicialização, se desejar.`
+            },
+            {
+                subtitle: "Headers",
+                text: `A interface Headers (en-US) permite que você crie seus proprios objetos headers por meio do construtor Headers() (en-US). Um objeto headers é um  mapa multidimensional simples de nomes para o valor? `,
+                img: fetchImg5
+            },
+            {
+                text: `O mesmo pode ser feito passando um array de arrays ou um objeto literal para o construtor:`,
+                img: fetchImg6
+            },
+            {
+                text: `O conteúdo pode ser consultado e recuperado:`,
+                img: fetchImg7
+            },
+            {
+                text: `Algumas dessas operações são úteis apenas em ServiceWorkers (en-US), mas fornecem uma API muito melhor para manipular cabeçalhos.
+                Todos os métodos Headers lançam um TypeError se for usado um nome de cabeçalho que não seja um nome de cabeçalho HTTP válido. As operações de mutação lançarão um TypeError se houver um guarda imutável (veja abaixo). Caso contrário, eles falham silenciosamente. Por exemplo:`,
+                img: fetchImg8
+            },
+            {
+                text: `Um bom caso de uso para cabeçalhos é verificar se o tipo de conteúdo está correto antes de processá-lo. Por exemplo:`,
+                img: fetchImg9
+            },
+            {
+                subtitle: `Guard`,
+                text: `Como os headers podem ser enviados em solicitações e recebidos em respostas, e têm várias limitações sobre quais informações podem e devem ser mutáveis, os objetos headers têm uma propriedade guard. Isso não é exposto à Web, mas afeta quais operações de mutação são permitidas no objeto de headers.
+                Os possíveis valores de guarda são:`,
+                ul: [
+                    "none: default.",
+                    "request: guarda para um objeto headers obtido de uma requisição (Request.headers (en-US)).",
+                    "request-no-cors: guarda para um objeto headers obtido de uma requisição criada com Request.mode (en-US) no-cors.",
+                    "response: guard para um Headers obtido de uma resposta (Response.headers (en-US)).",
+                    "immutable: Usado principalmente para ServiceWorkers; renderiza para cabeçalhos de objeto somente leitura."
+                ]
+            },
+            {
+                subtitle: "Response objects",
+                text: `Como você viu acima, as instâncias de resposta são retornadas quando as promessas fetch() são resolvidas.
+                Eles também podem ser criados programaticamente via JavaScript, mas isso só é realmente útil em ServiceWorkers (en-US), quando você está fornecendo uma resposta personalizada a uma solicitação recebida usando um método respondWith() (en-US):`,
+                img: fetchImg10
+            },
+            {
+                text: `O construtor Response() (en-US) recebe dois argumentos opcionais — um corpo para a resposta e um objeto init (semelhante ao que Request() aceita).
+                As propriedades de resposta mais comuns que você usará são:`,
+                ul: [
+                    "Response.status (en-US) — Um número inteiro (valor padrão 200) contendo o código de status da resposta.",
+                    `Response.statusText (en-US) — A string (valor padrão "OK"), que corresponde à mensagem do código de status HTTP.`,
+                    "Response.ok (en-US) — visto em uso acima, este é um atalho para verificar se o status está no intervalo 200-299 inclusive. Isso retorna um booleano (en-US)."
+                ]
+            },
+            {
+                subtitle: "Body",
+                text: `Tanto as solicitações quanto as respostas podem conter dados do corpo. Um corpo é uma instância de qualquer um dos seguintes tipos.`,
+                ul: [
+                    "ArrayBuffer",
+                    "ArrayBufferView",
+                    "Blob/File",
+                    "string",
+                    "URLSearchParams",
+                    "FormData"
+                ]
+            },
+            {
+                text: `O Body mixin define os seguintes métodos para extrair um corpo (implementado por Solicitação e Resposta). Todos eles retornam uma promessa que é eventualmente resolvida com o conteúdo real.`,
+                ul: [
+                    "arrayBuffer()",
+                    "blob()",
+                    "json()",
+                    "text()",
+                    "formData()"
+                ]
+            },
+            {
+                text: `Isso torna o uso de dados não textuais muito mais fácil do que era com o XHR.
+                Os corpos de solicitação podem ser definidos passando os parâmetros do corpo:`,
+                img: fetchImg11
+            },
+            {
+                text: `Tanto a solicitação quanto a resposta (e, por extensão, a função fetch()), tentarão determinar de forma inteligente o tipo de conteúdo. Uma solicitação também definirá automaticamente um cabeçalho Content-Type se nenhum estiver definido no dicionário.`
             }
         ]
     },

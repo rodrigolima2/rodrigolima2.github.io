@@ -48,6 +48,14 @@ const themes = [
         textExampleColor: "rgb(181 0 132)"
     },
     {
+        themeColor: "#de9dce",
+        themeColorShadow: "#ffe1f1",
+        themeColorBlur: "#f2d0ef",
+        underlineColor: "#f7eac8",
+        scrollColor: "#f7eac8",
+        textExampleColor: "#de9dce"
+    },
+    {
         themeColor: "#4e342e",
         themeColorShadow: "#221614",
         themeColorBlur: "#ff8100",
