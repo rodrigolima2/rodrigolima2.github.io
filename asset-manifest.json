@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.64ce7822.css",
-    "main.js": "/static/js/main.810229fe.js",
+    "main.js": "/static/js/main.5ab1297d.js",
     "static/media/linkedin-icon.ico": "/static/media/linkedin-icon.44f893b3cc3902f5bf7d.ico",
     "static/media/react-router-dom-img1.png": "/static/media/react-router-dom-img1.b301c1a64bcea3588826.png",
     "static/media/react-router-dom-img3.png": "/static/media/react-router-dom-img3.dfcf68aad1e5458f5e8d.png",
@@ -19,6 +19,7 @@
     "static/media/asyncfunction-img1.png": "/static/media/asyncfunction-img1.d039f9324b0d74aced42.png",
     "static/media/react-context-img1.png": "/static/media/react-context-img1.2bb27af04334cad2f088.png",
     "static/media/asyncfunction-img6.png": "/static/media/asyncfunction-img6.772fb1801455c26b58fa.png",
+    "static/media/fetch-img7.png": "/static/media/fetch-img7.c5f49be0fd0e4f3bd743.png",
     "static/media/react-context-img14.png": "/static/media/react-context-img14.4d37a9f855542d732cdc.png",
     "static/media/asyncfunction-img5.png": "/static/media/asyncfunction-img5.aa3fe547a54e1803bcbd.png",
     "static/media/react-router-dom-img2.png": "/static/media/react-router-dom-img2.1a36ee2414312aca70a0.png",
@@ -26,11 +27,15 @@
     "static/media/asyncfunction-img17.png": "/static/media/asyncfunction-img17.cdb31fd9f6ce8125d0e8.png",
     "static/media/dom-img3.png": "/static/media/dom-img3.c0734076136f49cf8c9d.png",
     "static/media/dom-img5.png": "/static/media/dom-img5.ef71cc96e7022cba0e38.png",
+    "static/media/fetch-img4.png": "/static/media/fetch-img4.91d45321f6ddbfa17c80.png",
     "static/media/react-hooks-img2.png": "/static/media/react-hooks-img2.86917108749b840a82d4.png",
     "static/media/dom-img4.png": "/static/media/dom-img4.c2841fe57f31e710508f.png",
+    "static/media/fetch-img3.png": "/static/media/fetch-img3.c5ab92b33f56c68015bf.png",
     "static/media/arrowfunction-img2.png": "/static/media/arrowfunction-img2.9db313a6ed15362650f1.png",
     "static/media/react-context-img4.png": "/static/media/react-context-img4.ad9aa83083acd1849e62.png",
     "static/media/react-context-img6.png": "/static/media/react-context-img6.79429a1eeceb3aab1015.png",
+    "static/media/fetch-img2.png": "/static/media/fetch-img2.6a380cc1c9f4462882f5.png",
+    "static/media/fetch-img9.png": "/static/media/fetch-img9.3430e3a24b4b40b647cc.png",
     "static/media/asyncfunction-img9.png": "/static/media/asyncfunction-img9.6a3785bb54f9d6107284.png",
     "static/media/arrowfunction-img1.png": "/static/media/arrowfunction-img1.2d77af4244d449a90072.png",
     "static/media/string-includes-img1.png": "/static/media/string-includes-img1.7730127d59619c3c0de3.png",
@@ -38,6 +43,7 @@
     "static/media/javascript-img2.png": "/static/media/javascript-img2.1e1609efc7c56fa2c26a.png",
     "static/media/react-context-img5.png": "/static/media/react-context-img5.030af99ce8ff27229226.png",
     "static/media/react-context-img11.png": "/static/media/react-context-img11.acb731e7f6d6d63cf91f.png",
+    "static/media/fetch-img1.png": "/static/media/fetch-img1.daf55a620dcc9299071e.png",
     "static/media/asyncfunction-img13.png": "/static/media/asyncfunction-img13.bcd698cd5aef72df6dce.png",
     "static/media/react-hooks-img1.png": "/static/media/react-hooks-img1.311e090ea84f2c6fc051.png",
     "static/media/asyncfunction-img2.png": "/static/media/asyncfunction-img2.c4362a7d40591692ee9d.png",
@@ -45,11 +51,13 @@
     "static/media/react-context-img3.png": "/static/media/react-context-img3.22d842fa88d906284de4.png",
     "static/media/react-hooks-img4.png": "/static/media/react-hooks-img4.0572ea1f5574c15e621f.png",
     "static/media/javascript-img1.png": "/static/media/javascript-img1.faeeb6b68e07951c7bfc.png",
+    "static/media/fetch-img5.png": "/static/media/fetch-img5.600b44f74f4113352797.png",
     "static/media/callback-img1.png": "/static/media/callback-img1.59ce3288cdd4db737cd0.png",
     "static/media/react-context-img10.png": "/static/media/react-context-img10.92e163959379e27048de.png",
     "static/media/dom-img2.png": "/static/media/dom-img2.53a768b3b2115e5bfd19.png",
     "static/media/asyncfunction-img3.png": "/static/media/asyncfunction-img3.9245244b96488a0ab026.png",
     "static/media/react-hooks-img3.png": "/static/media/react-hooks-img3.e0a6632287fae789dca4.png",
+    "static/media/fetch-img10.png": "/static/media/fetch-img10.66184b0a1e3e1aa638b7.png",
     "static/media/react-context-img13.png": "/static/media/react-context-img13.0e15a72b7102891e1282.png",
     "static/media/react-context-img9.png": "/static/media/react-context-img9.005ec7104c4daead66f8.png",
     "static/media/array-includes-img1.png": "/static/media/array-includes-img1.75672a71a860b5f47a41.png",
@@ -58,8 +66,10 @@
     "static/media/dom-img1.png": "/static/media/dom-img1.945a75761a1393e399e8.png",
     "static/media/asyncfunction-img11.png": "/static/media/asyncfunction-img11.b892992c454031f94651.png",
     "static/media/asyncfunction-img10.png": "/static/media/asyncfunction-img10.cfe2cd1c8e9501d6ce36.png",
+    "static/media/fetch-img8.png": "/static/media/fetch-img8.90646e3c64eaff0aa643.png",
     "static/media/arrow-contact.svg": "/static/media/arrow-contact.12f6ff08f8f6edf178dcc2b39bbe8e4c.svg",
     "static/media/react-context-img17.png": "/static/media/react-context-img17.ac98cc6e1f6f8224ac58.png",
+    "static/media/fetch-img6.png": "/static/media/fetch-img6.7af0d0e500169afc8ff1.png",
     "static/media/javascript-img4.png": "/static/media/javascript-img4.b20ad0f7f62ea2eea0f3.png",
     "static/media/javascript-img5.png": "/static/media/javascript-img5.3ef98adf8678de9df2fd.png",
     "static/media/github-icon.png": "/static/media/github-icon.2425f82a0e8b7e70f339.png",
@@ -68,10 +78,10 @@
     "static/media/side-menu-icon.svg": "/static/media/side-menu-icon.35d5b12b948bb0c0b21ca27bec2d1338.svg",
     "index.html": "/index.html",
     "main.64ce7822.css.map": "/static/css/main.64ce7822.css.map",
-    "main.810229fe.js.map": "/static/js/main.810229fe.js.map"
+    "main.5ab1297d.js.map": "/static/js/main.5ab1297d.js.map"
   },
   "entrypoints": [
     "static/css/main.64ce7822.css",
-    "static/js/main.810229fe.js"
+    "static/js/main.5ab1297d.js"
   ]
 }
