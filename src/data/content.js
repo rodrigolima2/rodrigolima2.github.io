@@ -634,6 +634,76 @@ const content = [
         ]
     },
     {
+        title: "API REST",
+        content: [
+            {
+                subtitle: "O que é API REST?",
+                text: `API REST, também chamada de API RESTful, é uma interface de programação de aplicações (API ou API web) que está em conformidade com as restrições do estilo de arquitetura REST, permitindo a interação com serviços web RESTful. REST é a sigla em inglês para "Representational State Transfer", que em português significa tansferência de estado representacional. Essa arquitetura foi criada pelo cientista da computação Roy Fielding.`
+            },
+            {
+                subtitle: "O que é API?",
+                text: `Uma API é um conjunto de definições e protocolos usado no desenvolvimento e na integração de aplicações. Às vezes, as APIs são descritas como um contrato entre um provedor e um usuário de informações, estabelecendo o conteúdo exigido pelo consumidor (a chamada) e o conteúdo exigido pelo produtor (a resposta). Por exemplo, o design da API de um serviço meteorológico pode especificar que o usuário forneça um CEP e o produtor responda em duas partes, a primeira contendo a temperatura mais elevada e a segunda com a temperatura mais baixa.  
+                Em outras palavras, ao interagir com um computador ou sistema para recuperar informações ou executar uma função, a API ajudará a comunicar o que você quer ao sistema para que ele entenda e realize o que foi solicitado. 
+                Pense nas APIs como um mediador entre os usuários ou clientes e os recursos ou serviços web que eles querem obter. As APIs também servem para que organizações compartilhem recursos e informações e, ao mesmo tempo, mantenham a segurança, o controle e a obrigatoriedade de autenticação, pois permitem determinar quem tem acesso e o que pode ser acessado. 
+                Outra vantagem de usar APIs é que não é necessário saber todos os detalhes sobre o armazenamento em cache, como os recursos são recuperados ou qual é a origem deles.`
+            },
+            {
+                subtitle: "REST",
+                text: `REST não é um protocolo ou padrão, mas sim um conjunto de restrições de arquitetura. Os desenvolvedores de API podem implementar a arquitetura REST de maneiras variadas.
+                Quando um cliente faz uma solicitação usando uma API RESTful, essa API transfere uma representação do estado do recurso ao solicitante ou endpoint. Essa informação (ou representação) é entregue via HTTP utilizando um dos vários formatos possíveis: Javascript Object Notation (JSON), HTML, XLT, Python, PHP ou texto sem formatação. O formato JSON é a linguagem de programação mais usada porque, apesar de seu nome, é independente de qualquer outra linguagem e pode ser lido por máquinas e humanos. 
+                Lembre-se também de que cabeçalhos e parâmetros são importantes nos métodos HTTP de uma solicitação HTTP de API RESTful porque contêm informações relevantes sobre o identificador, bem como metadados, autorização, Uniform Resource Identifier (URI), cache, cookies e outras informações da solicitação. Há os cabeçalhos da solicitação e os cabeçalhos da resposta, cada um contendo as informações de suas respectivas conexões HTTP e códigos de status.
+                Para que uma API seja considerada do tipo RESTful, ela precisa está em conformidade com os seguintes critérios:`,
+                ul: [
+                    "Ter uma arquitetura cliente/servidor formada por clientes, servidores e recursos, com solicitações gerenciadas por HTTP.",
+                    "Estabelecer uma comunicação stateless entre cliente e servidor. Isso significa que nenhuma informação do cliente é armazenada entre solicitações GET e toda as solicitações são separadas e desconectadas.",
+                    "Armazenar dados em cache para otimizar as interações entre cliente e servidor.",
+                    "Ter uma interface uniforme entre os componentes para que as informações sejam transferidas em um formato padronizado. Para tanto, é necessário que: os recursos solicitados sejam identificáveis e estejam separados das representações enviadas ao cliente; os recursos possam ser manipulados pelo cliente por meio da representação recebida com informações suficientes para tais ações; as mensagens autodescritivas retornadas ao cliente contenham informações suficientes para descrever como processá-las; hipertexto e hipermídia estão disponíveis. Isso significa que após acessar um recurso, o cliente pode usar hiperlinks para encontrar as demais ações disponíveis para ele no momento.",
+                    "Ter um sistema em camadas que organiza os tipos de servidores (responsáveis pela segurança, pelo carregamento de carga e assim por diante) envolvidos na recuperação das informações solicitadas em hierarquias que o cliente não pode ver.",
+                    "Possibilitar código sob demanda (opcional): a capacidade de enviar um código executável do servidor para o cliente quando solicitado para ampliar a funcionalidade disponível ao cliente. "
+                ]
+            },
+            {
+                text: `Embora uma API REST precise estar em conformidade com os critérios acima, ela é considerada mais fácil de usar do que um protocolo prescrito, como o Protocolo Simples de Acesso a Objetos (SOAP). Esse tipo de protocolo tem requisitos específicos, como o sistema de mensageria XML, além de precisar cumprir com exigências de segurança incorporada e transações, o que o torna mais lento e pesado. 
+                Em comparação, a arquitetura REST é composta de um conjunto de diretrizes que podem ser implementadas conforme necessário. Isso faz com que as APIs REST sejam mais rápidas, leves e escaláveis, o que é ideal para a Internet das Coisas (IoT) e o desenvolvimento de aplicativos mobile.`
+            },
+            {
+                subtitle: "API - Instruções sobre como se comunicar com um serviço",
+                text: `Muitos serviços possuem API's:`,
+                ul: [
+                    "Youtube possui uma API para listar vídeos, buscar, ver comentários..",
+                    "Instagram possui uma API para ver e enviar fotos...",
+                    "Uber possui um aAPI para chamar um motorista...",
+                    "Yahoo possui uma API para consultar a previsão to tempo...",
+                    "Mercado Livre possui uma API para pesquisar produtos, fazer compras e rastrear pedidos...",
+                    "Ex de API: Viacep - retorna dados de um determinado CEP."
+                ]
+            },
+            {
+                text: `Muitos Back-ends são feitos para disponibilizar api's`,
+                ul: [
+                    "API REST - Uma forma padronizada de criar API's baseada no HTTP. REST é um conjunto de regras a serem seguidas.",
+                ]
+            },
+            {
+                text: `API's começam definindo quais são as requisições possiveis como elas são escritas, e para cada uma quais são as respostas do servidor. Como se organiza uma API REST?`,
+                ul: [
+                    "Coleções de recursos.",
+                    "Cada recurso possui um identificador.",
+                    "*Recursos são representados como JSON."
+                ]
+            },
+            {
+                subtitle2: "Coleções de Recursos",
+                text: "Por exemplo: Uma API de uma biblioteca",
+                ul: [
+                    `Na API temos uma coleção de livros. "Livro" é um recurso nessa API.`,
+                    "ós também temos uma coleção de autores. Dentro de um autor também temos uma coleção de livros.",
+                    "Ex: Livros: Titulo, Editora, Ano de lançamento  Autores: Nome, País natal, Livros"
+                ]
+            }
+        ]
+    },
+    {
         title: "Arrow functions",
         content: [
             {
@@ -1463,6 +1533,103 @@ const content = [
             {
                 text: `CSS (Cascading Style Sheets ou Folhas de Estilo em Cascata) é uma linguagem de estilo (en-US) usada para descrever a apresentação de um documento escrito em HTML ou em XML (incluindo várias linguagens em XML como SVG, MathML ou XHTML). O CSS descreve como elementos são mostrados na tela, no papel, na fala ou em outras mídias.
                 CSS é uma das principais linguagens da open web e é padronizada em navagadores web de acordo com as especificação da W3C. Desenvolvido em níveis, o CSS1 está atualmente obsoleto, o CSS2.1 é uma recomendação e o CSS3, agora dividido em pequenos módulos, está progredindo para a sua padronização.`
+            }
+        ]
+    },
+    {
+        title: "Banco de dados",
+        content: [
+            {
+                text: `Um banco de dados é uma coleção organizada de informações - ou dados - estruturadas, normalmente armazenadas eletronicamente em um sistema de computador. Um banco de dados é geralmente controlado por um sistema de gerenciamento de banco de dados (DBMS). Juntos, os dados e o DBMS, juntamente com os aplicativos associados a eles, são chamados de sistema de banco de dados, geralmente abreviados para apenas banco de dados.
+                Os dados nos tipos mais comuns de bancos de dados em operação atualmente são modelados em linhas e colunas em uma série de tabelas para tornar o processamento e a consulta de dados eficientes. Os dados podem ser facilmente acessados, gerenciados, modificados, atualizados, controlados e organizados. A maioria dos bancos de dados usa a linguagem de consulta estruturada (SQL) para escrever e consultar dados.`
+            },
+            {
+                subtitle: "O que é SQL (Structured Query Language, Linguagem de consulta estruturada)?",
+                text: `SQL é uma linguagem de programação usada por quase todos os bancos de dados relacionais para consultar, manipular e definir dados e fornecer controle de acesso. O SQL foi desenvolvido pela primeira vez na IBM nos anos 1970, com a Oracle como principal contribuinte, o que levou à implementação do padrão SQL ANSI; o SQL estimulou muitas extensões de empresas como IBM, Oracle e Microsoft. Embora o SQL ainda seja amplamente usado hoje em dia, novas linguagens de programação estão começando a aparecer.`
+            },
+            {
+                subtitle: "Evolução do banco de dados",
+                text: `Os bancos de dados evoluíram muito desde a sua criação no início dos anos 1960. Bancos de dados de navegação, como o banco de dados hierárquico (que se baseava em um modelo de árvore e permitia apenas um relacionamento um-para-muitos), e o banco de dados de rede (um modelo mais flexível que permitia múltiplos relacionamentos) eram os sistemas originais usados para armazenar e manipular dados. Embora simples, esses primeiros sistemas eram inflexíveis. Nos anos 1980, bancos de dados relacionais tornaram-se populares, seguidos por bancos de dados orientados a objetos na década de 1990. Mais recentemente, bancos de dados NoSQL surgiram como uma resposta ao crescimento da internet e à necessidade de maior velocidade e processamento de dados não estruturados. Hoje, bancos de dados na nuvem e bancos de dados autônomos estão abrindo novos caminhos quando se trata de como os dados são coletados, armazenados, gerenciados e utilizados.`
+            },
+            {
+                subtitle: "Qual é a diferença entre um banco de dados e uma planilha?",
+                text: `Bancos de dados e planilhas (como o Microsoft Excel) são modos convenientes de armazenar informações. As principais diferenças entre os dois são:`,
+                ul: [
+                    "Como os dados são armazenados e manipulados",
+                    "Quem pode acessar os dados",
+                    "Quantos dados podem ser armazenados"
+                ]
+            },
+            {
+                text: `As planilhas foram originalmente projetadas para um usuário e suas características refletem isso. São ótimos para um único usuário ou um pequeno número de usuários que não precisam fazer manipulações de dados extremamente complicadas. Bancos de dados, por outro lado, são projetados para conter coleções muito maiores de informações organizadas, quantidades enormes, às vezes. Os bancos de dados permitem que vários usuários, ao mesmo tempo, acessem e consultem com rapidez e segurança os dados usando lógica e linguagem altamente complexas.`
+            },
+            {
+                subtitle: `Tipos de bancos de dados`,
+                text: `Existem muitos tipos diferentes de bancos de dados. O melhor banco de dados para uma organização específica depende de como a organização pretende usar os dados.`,
+                ul: [
+                    "Bancos de dados relacionais. Os bancos de dados relacionais se tornaram dominantes na década de 1980. Os itens em um banco de dados relacional são organizados como um conjunto de tabelas com colunas e linhas. A tecnologia de banco de dados relacional fornece a maneira mais eficiente e flexível de acessar informações estruturadas.",
+                    "Bancos de dados orientados a objetos. As informações em um banco de dados orientado a objetos são representadas na forma de objetos, como na programação orientada a objetos.",
+                    "Bancos de dados distribuídos. Um banco de dados distribuído consiste em dois ou mais arquivos localizados em sites diferentes. O banco de dados pode ser armazenado em vários computadores, localizados no mesmo local físico ou espalhados por diferentes redes.",
+                    "Data warehouses. Um repositório central de dados, um data warehouse é um tipo de banco de dados projetado especificamente para consultas e análises rápidas.",
+                    "Bancos de Dados NoSQL. Um NoSQL, ou banco de dados não relacional, permite que dados não estruturados e semiestruturados sejam armazenados e manipulados (em contraste com um banco de dados relacional, que define como todos os dados inseridos no banco de dados devem ser compostos). Os bancos de dados NoSQL se tornaram populares à medida que os aplicativos web se tornaram mais comuns e mais complexos.",
+                    "Bancos de dados gráficos. Um banco de dados gráfico armazena dados em termos de entidades e os relacionamentos entre entidades.",
+                    "Bancos de dados OLTP. Um banco de dados OLTP é um banco de dados rápido e analítico projetado para um grande número de transações realizadas por vários usuários."
+                ]
+            },
+            {
+                text: `Esses são apenas alguns dos vários tipos de bancos de dados em uso atualmente. Outros bancos de dados menos comuns são adaptados para funções científicas, financeiras ou outras muito específicas. Além dos diferentes tipos de banco de dados, as mudanças nas abordagens de desenvolvimento de tecnologia e os avanços dramáticos, como a nuvem e a automação, estão impulsionando os bancos de dados em direções totalmente novas. Alguns dos mais recentes bancos de dados incluem`,
+                ul: [
+                    "Bancos de dados de código aberto. Um sistema de banco de dados de código aberto é aquele cujo código-fonte é código aberto; esses bancos de dados podem ser bancos de dados SQL ou NoSQL.",
+                    "Bancos de dados em nuvem. Um banco de dados em nuvem é uma coleção de dados, estruturados ou não estruturados, que residem em uma plataforma de computação em nuvem privada, pública ou híbrida. Existem dois tipos de modelos de banco de dados em nuvem: tradicional e banco de dados como um serviço (DBaaS). Com o DBaaS, as tarefas administrativas e a manutenção são executadas por um provedor de serviços.",
+                    "Banco de dados multimodelo. Bancos de dados multimodelo combinam diferentes tipos de modelos de banco de dados em um back-end único e integrado. Isso significa que eles podem acomodar vários tipos de dados.",
+                    "Banco de dados de documentos/JSON. Projetado para armazenar, recuperar e gerenciar informações orientadas a documentos, os bancos de dados de documentos são uma maneira moderna de armazenar dados no formato JSON, em vez de linhas e colunas.",
+                    "Bancos de dados autônomos. Os bancos de dados independentes mais novos e inovadores (também conhecidos como bancos de dados autônomos) são baseados em nuvem e usam machine learning para automatizar o ajuste de banco de dados, segurança, backups, atualizações e outras tarefas de gerenciamento de rotina tradicionalmente executadas por administradores de banco de dados."
+                ]
+            },
+            {
+                subtitle: `O que é um software de banco de dados?`,
+                text: `O software de banco de dados é usado para criar, editar e manter arquivos e registros de banco de dados, facilitando a criação de arquivos e registros, entrada de dados, edição, atualização e relatórios de dados. O software também processa armazenamento de dados, backup e relatórios, controle multiacesso e segurança. A segurança forte do banco de dados é especialmente importante hoje, porque o roubo de dados se torna mais frequente. O software de banco de dados às vezes também é conhecido como "sistema de gerenciamento de banco de dados" (DBMS).
+                O software de banco de dados simplifica o gerenciamento de dados, permitindo que os usuários armazenem dados em um formulário estruturado e depois os acessem. Ele normalmente tem uma interface gráfica para ajudar a criar e gerenciar os dados e, em alguns casos, os usuários podem construir os próprios bancos de dados usando o software do banco de dados.`
+            },
+            {
+                subtitle: "O que é um sistema de gerenciamento de banco de dados (DBMS)?",
+                text: `Um banco de dados normalmente requer um programa abrangente de banco de dados, conhecido como sistema de gerenciamento de banco de dados (DBMS). Um DBMS serve como uma interface entre o banco de dados e seus usuários finais ou programas, permitindo que os usuários recuperem, atualizem e gerenciem como as informações são organizadas e otimizadas. Um DBMS também facilita a supervisão e o controle de bancos de dados, permitindo uma variedade de operações administrativas, como monitoramento de desempenho, ajuste e backup e recuperação.
+                Alguns exemplos de softwares de bancos de dados populares ou DBMSs incluem MySQL, Microsoft Access, Microsoft SQL Server, FileMaker Pro, Oracle Database e dBASE.`
+            },
+            {
+                subtitle: "O que é um MySQL Database?",
+                text: `MySQL é um sistema de gerenciamento de banco de dados relacional de código aberto baseado em SQL. Ele foi projetado e otimizado para aplicativos da web e pode ser executado em qualquer plataforma. Como surgiram requisitos novos e diferentes com a internet, o MySQL tornou-se a plataforma preferida para desenvolvedores da web e aplicativos baseados na web. Por ter sido projetado para processar milhões de consultas e milhares de transações, o MySQL é uma escolha popular para empresas de comércio eletrônico que precisam gerenciar várias transferências de dinheiro. A flexibilidade sob demanda é o principal recurso do MySQL.
+                O MySQL é o DBMS por trás de alguns dos principais sites e aplicativos baseados na web do mundo, incluindo Airbnb, Uber, LinkedIn, Facebook, Twitter e YouTube.`
+            },
+            {
+                subtitle: "Uso de bancos de dados para aprimorar o desempenho e a tomada de decisões nos negócios",
+                text: `Com a coleta maciça de dados da Internet das Coisas, transformando a vida e o setor em todo o mundo, as empresas hoje têm acesso a mais dados do que nunca. Organizações inovadoras agora podem usar bancos de dados que vão além do armazenamento de dados e de transações básicas para analisar grandes quantidades de dados de vários sistemas. Ao usar bancos de dados e outras ferramentas de business intelligence e computação, as organizações aproveitam dados que coletam para executar funções com mais eficiência, possibilitar melhor tomada de decisões e serem mais rápidas e escalonáveis.
+                O banco de dados autônomo está pronto para fornecer um impulso significativo a esses recursos. Como os bancos de dados autônomos automatizam processos manuais caros e demorados, eles liberam utilizadores de negócios para se tornarem mais proativos com seus dados. Por ter controle direto sobre a capacidade de criar e usar bancos de dados, os usuários ganham controle e autonomia enquanto mantêm importantes padrões de segurança.`
+            },
+            {
+                subtitle: `Desafios do banco de dados`,
+                text: `Hoje, os grandes bancos de dados corporativos geralmente suportam consultas muito complexas e devem fornecer respostas quase instantâneas a essas consultas. Como resultado, os administradores de bancos de dados são constantemente chamados para empregar uma ampla variedade de métodos que ajudam a melhorar o desempenho. Alguns desafios comuns que eles enfrentam incluem:`,
+                ul: [
+                    `Absorção de aumentos significativos no volume de dados. A explosão de dados provenientes de sensores, máquinas conectadas e dezenas de outras fontes mantém os administradores de bancos de dados lutando para gerenciar e organizar os dados de suas empresas com eficiência.`,
+                    `Garantia da segurança de dados. Violações de dados estão acontecendo em todos os lugares nos dias de hoje, e os hackers estão ficando mais inventivos. É mais importante do que nunca garantir que os dados estejam seguros, mas também acessíveis aos usuários.`,
+                    `Acompanhando a demanda. No atual ambiente de negócios de rápido movimento, as empresas precisam de acesso em tempo real aos seus dados para apoiar a tomada de decisões em tempo hábil e aproveitar novas oportunidades.`,
+                    `Gerenciamento e manutenção do banco de dados e da infraestrutura. Os administradores de banco de dados devem observar continuamente o banco de dados em busca de problemas e executar a manutenção preventiva, bem como aplicar atualizações e correções de software. À medida que os bancos de dados se tornam mais complexos e o volume de dados aumenta, as empresas enfrentam a despesa de contratar mais talentos para monitorar e ajustar seus bancos de dados.`,
+                    `Remoção de limites na escalabilidade. Uma empresa precisa crescer se quiser sobreviver, e seu gerenciamento de dados deve crescer junto com ela. Mas é muito difícil para os administradores de banco de dados prever a capacidade que a empresa precisará, principalmente com bancos de dados on-premises.`
+                ]
+            },
+            {
+                text: `Resolver todos esses desafios pode consumir muito tempo e impedir que os administradores de banco de dados executem mais funções estratégicas.`
+            },
+            {
+                subtitle: "Como a tecnologia autônoma está aprimorando o gerenciamento de banco de dados",
+                text: `Os bancos de dados autônomos são a onda do futuro - e oferecem uma possibilidade intrigante para as organizações que desejam usar a melhor tecnologia de banco de dados disponível sem as dores de cabeça da execução e da operação dessa tecnologia.
+                Os bancos de dados autônomos usam tecnologia baseada em nuvem e machine learning para automatizar muitas das tarefas de rotina necessárias para gerenciar bancos de dados, como ajuste, segurança, backups, atualizações e outras tarefas de gerenciamento de rotina. Com essas tarefas tediosas automatizadas, os administradores de banco de dados ficam livres para fazer um trabalho mais estratégico. Os recursos autônomos de autocondução, autoproteção e autorreparo dos bancos de dados independentes estão prestes a revolucionar a forma como as empresas gerenciam e protegem seus dados, possibilitando vantagens de desempenho, custos mais baixos e segurança aprimorada.`
+            },
+            {
+                subtitle: "Futuro dos bancos de dados e bancos de dados autônomos",
+                text: `O primeiro banco de dados autônomo foi anunciado no final de 2017, e vários analistas independentes do setor rapidamente reconheceram a tecnologia e seu impacto potencial na computação.
+                O IDC Perspective de Fevereiro de 2018 valorizou a tecnologia de banco de dados autônomo para fazer “software corporativo mais fácil de implementar, usar e administrar, usando inteligência artificial e machine learning para fornecer recursos que exigem pouca ou nenhuma intervenção humana para gerenciar softwares.”
+                O Relatório de KuppingerCole de Janeiro de 2018 (PDF) disse que “essa abordagem tem imensos benefícios, não apenas reduz mão de obra e custos para os clientes, mas também melhora drasticamente a resiliência dos bancos de dados em relação a erros humanos e atividades maliciosas, internas ou externas. Cada banco de dados também é projetado para ter recursos de segurança habilitados por padrão e parâmetros relevantes configurados automaticamente de acordo com as práticas recomendadas de segurança atuais.”`
             }
         ]
     }

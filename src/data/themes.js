@@ -20,7 +20,7 @@ const themes = [
         themeColorShadow: "#476048",
         themeColorBlur: "#00eaff",
         underlineColor: "#b2ebf2",
-        scrollColor: "#0097a7",
+        scrollColor: "#b2ebf2",
         textExampleColor: "#00838f"
     },
     {
@@ -56,6 +56,14 @@ const themes = [
         textExampleColor: "#de9dce"
     },
     {
+        themeColor: "#da8c75",
+        themeColorShadow: "#f3935f",
+        themeColorBlur: "#fae653",
+        underlineColor: "#fae653",
+        scrollColor: "#fae653",
+        textExampleColor: "#eea659"
+    },
+    {
         themeColor: "#4e342e",
         themeColorShadow: "#221614",
         themeColorBlur: "#ff8100",
@@ -68,7 +76,7 @@ const themes = [
         themeColorShadow: "#141414",
         themeColorBlur: "rgb(6 6 6)",
         underlineColor: "rgb(181 181 181)",
-        scrollColor: "rgb(84 84 84)",
+        scrollColor: "rgb(197 197 197)",
         textExampleColor: "rgb(112 112 112)"
     },
     {
@@ -76,7 +84,7 @@ const themes = [
         themeColorShadow: "#181818",
         themeColorBlur: "rgb(4 0 255)",
         underlineColor: "rgb(4 0 255)",
-        scrollColor: "rgb(3 0 157)",
+        scrollColor: "rgb(145 143 255)",
         textExampleColor: "rgb(0 0 0)"
     }
 ];
