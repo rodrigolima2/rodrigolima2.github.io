@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 
-*{
+* {
   box-sizing: border-box;
 
   font-family: "Roboto";
@@ -9,7 +9,7 @@
   margin: 0;
 }
 
-body{
+body {
   overflow-x: hidden;
 }
 
@@ -27,7 +27,7 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #fff;
 }
 
-.App{
+.App {
   display: flex;
   flex-direction: column;
 
@@ -36,22 +36,22 @@ body::-webkit-scrollbar-thumb {
   padding: 78px 140px 78px 100px;
 }
 
-.App.initial{
+.App.initial {
   align-items: center;
   justify-content: center;
 
   padding: 0;
 }
 
-.App.menu--opened{
+.App.menu--opened {
   margin-left: 20%;
 }
 
-.App.menu--closed{
+.App.menu--closed {
   margin-left: 66px;
 }
 
-.App__title{
+.App__title {
   font-style: normal;
   font-weight: 900;
   font-size: 48px;
@@ -62,7 +62,7 @@ body::-webkit-scrollbar-thumb {
   border-bottom: 3px solid var(--underline-color);
 }
 
-.App__img{
+.App__img {
   width: 100px;
   height: 100px;
 
@@ -72,26 +72,26 @@ body::-webkit-scrollbar-thumb {
   opacity: 0.5;
 }
 
-.App__img.change-theme{
+.App__img.change-theme {
   top: 10%;
   right: 7%;
 }
 
-.App__img.contact{
+.App__img.contact {
   bottom: 15%;
   right: 5%;
 }
 
-.App__main{
+.App__main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  
+
   width: 100%;
 }
 
-.main__title{
+.main__title {
   align-self: center;
 
   font-style: normal;
@@ -106,7 +106,7 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 50px;
 }
 
-.main__subtitle{
+.main__subtitle {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -116,7 +116,7 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 10px;
 }
 
-.main__subtitle2{
+.main__subtitle2 {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -130,7 +130,7 @@ body::-webkit-scrollbar-thumb {
   margin-top: 10px;
 }
 
-.main__text{
+.main__text {
   font-style: normal;
   font-weight: normal;
   letter-spacing: 1px;
@@ -142,7 +142,7 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 30px;
 }
 
-.main__example{
+.main__example {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -152,20 +152,20 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 30px;
 }
 
-.main__img{
+.main__img {
   cursor: pointer;
-  
+
   max-width: 100%;
 
   margin: 40px 0;
 }
 
-.main__ul{
+.main__ul {
   margin-inline-start: 20px;
   margin-bottom: 30px;
 }
 
-.main__li{
+.main__li {
   font-style: normal;
   font-weight: normal;
   letter-spacing: 1px;
@@ -173,178 +173,218 @@ body::-webkit-scrollbar-thumb {
   font-size: 15px;
   line-height: 28px;
   color: #000000;
-  
+
   margin-bottom: 5px;
 }
 
+.main__code-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  width: 100%;
+
+  background-color: var(--background-color);
+
+  padding: 20px 15px;
+}
+
+.code-container__content {
+  display: flex;
+  gap: 20px;
+}
+
+.main__code,
+.main__code-number {
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  font-size: 15px;
+  color: var(--theme-color);
+}
+
+.main__code {
+  width: 100%;
+}
+
+.main__code-number {
+  width: 25px;
+  font-size: 11px;
+  text-align: end;
+  color: var(--scroll-color);
+}
+
 @media only screen and (max-width: 1000px) {
-  .App__img.change-theme{
+  .App__img.change-theme {
     top: 10%;
     right: 10%;
   }
-  
-  .App__img.contact{
+
+  .App__img.contact {
     bottom: 15%;
     right: 7%;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  .App{
+  .App {
     padding: 78px 100px 78px 30px;
   }
 
-  .App.menu--opened{
+  .App.menu--opened {
     min-height: calc(100vh - 350px) !important;
 
     margin-top: 250px;
     margin-left: 0;
   }
-  
-  .App.menu--closed{
+
+  .App.menu--closed {
     min-height: calc(100vh - 66px) !important;
 
     margin-top: 66px;
     margin-left: 0;
   }
 
-  .App__img{
+  .App__img {
     width: 80px;
     height: 80px;
   }
 
-  .App__img.change-theme{
+  .App__img.change-theme {
     top: 42%;
     right: 12%;
   }
 
-  .App__img.change-theme.closed{
+  .App__img.change-theme.closed {
     top: 18%;
   }
-  
-  .App__img.contact{
+
+  .App__img.contact {
     bottom: 15%;
     right: 7%;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .App__img.change-theme{
+  .App__img.change-theme {
     top: 42%;
     right: 17%;
   }
-  
-  .App__img.contact{
+
+  .App__img.contact {
     bottom: 15%;
     right: 13%;
   }
 }
 
 @media only screen and (max-width: 400px) {
-  .App{
+  .App {
     padding: 78px 50px 78px 20px;
   }
 
-  .App__img.change-theme{
+  .App__img.change-theme {
     top: 42%;
     right: 22%;
   }
-  
-  .App__img.contact{
+
+  .App__img.contact {
     bottom: 15%;
     right: 17%;
   }
 }
 
 @media only screen and (max-width: 300px) {
-  .App{
+  .App {
     padding: 78px 10px;
   }
 }
 
 @media only screen and (max-width: 250px) {
-  .App{
+  .App {
     padding: 78px 3px;
   }
 
-  .App__img{
+  .App__img {
     width: 65px;
     height: 65px;
   }
 
-  .App__img.change-theme{
+  .App__img.change-theme {
     top: 42%;
     right: 27%;
   }
-  
-  .App__img.contact{
+
+  .App__img.contact {
     bottom: 15%;
     right: 20%;
   }
 }
 
-@media only screen and (max-width: 200px){
-  .App__img.change-theme{
+@media only screen and (max-width: 200px) {
+  .App__img.change-theme {
     top: 44%;
     right: 30%;
   }
-  
-  .App__img.contact{
+
+  .App__img.contact {
     bottom: 15%;
     right: 20%;
   }
 }
 
-@media only screen and (max-height: 550px){
-  .App__img.change-theme{
+@media only screen and (max-height: 550px) {
+  .App__img.change-theme {
     top: 15%;
     right: 10%;
   }
-  
-  .App__img.contact{
+
+  .App__img.contact {
     bottom: 20%;
     right: 7%;
   }
 
-  @media only screen and (max-width: 700px){
-    .App__img.change-theme{
+  @media only screen and (max-width: 700px) {
+    .App__img.change-theme {
       top: 45%;
       right: 10%;
     }
   }
 }
 
-@media only screen and (max-height: 450px){
-  .App__img{
+@media only screen and (max-height: 450px) {
+  .App__img {
     width: 70px;
     height: 70px;
   }
 
-  .App__img.change-theme{
+  .App__img.change-theme {
     top: 20%;
     right: 10%;
   }
-  
-  .App__img.contact{
+
+  .App__img.contact {
     bottom: 25%;
     right: 7%;
   }
 
-  @media only screen and (max-width: 700px){
-    .App__img{
+  @media only screen and (max-width: 700px) {
+    .App__img {
       width: 55px;
       height: 55px;
     }
-    
-    .App__img.change-theme{
+
+    .App__img.change-theme {
       top: 48%;
       right: 13%;
     }
   }
 }
 
-@media only screen and (max-height: 220px){
-  .App__img{
+@media only screen and (max-height: 220px) {
+  .App__img {
     display: none;
   }
 }

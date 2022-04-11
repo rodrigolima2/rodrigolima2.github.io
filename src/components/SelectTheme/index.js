@@ -37,6 +37,7 @@ function SelectTheme() {
             root.style.setProperty("--underline-color", themes[activeTheme].underlineColor);
             root.style.setProperty("--scroll-color", themes[activeTheme].scrollColor);
             root.style.setProperty("--text-example-color", themes[activeTheme].textExampleColor);
+            root.style.setProperty("--background-color", themes[activeTheme].backgroundColor);
         }
 
         setTheme();

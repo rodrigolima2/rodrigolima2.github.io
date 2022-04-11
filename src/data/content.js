@@ -1632,6 +1632,118 @@ const content = [
                 O Relatório de KuppingerCole de Janeiro de 2018 (PDF) disse que “essa abordagem tem imensos benefícios, não apenas reduz mão de obra e custos para os clientes, mas também melhora drasticamente a resiliência dos bancos de dados em relação a erros humanos e atividades maliciosas, internas ou externas. Cada banco de dados também é projetado para ter recursos de segurança habilitados por padrão e parâmetros relevantes configurados automaticamente de acordo com as práticas recomendadas de segurança atuais.”`
             }
         ]
+    },
+    {
+        title: "Consultas SQL",
+        content: [
+            {
+                subtitle: "SQL - Structured Query Language",
+                ul: [
+                    "Criado nos anos 70 pela IBM.",
+                    "Padronizado pela ANSI e ISO.",
+                    "Consolidou-se como linguagem padrão para Banco de dados."
+                ]
+            },
+            {
+                subtitle: "Conhecendo o SELECT",
+                ul: [
+                    "Select - É uma palavra reservada SQL utilizada para construir queries de consultas no banco de dados.",
+                    "Query - São trechos de códigos SQL que representa uma instrução a ser executada em um banco de dados.",
+                ]
+            },
+            {
+                subtitle2: "Exemplos com SELECT",
+                ul: [
+                    "SELECT * FROM musicas - Seleciona todas as colunas.",
+                    "SELECT id, composicao FROM musicas - Seleciona uma ou mais colunas."
+                ]
+            },
+            {
+                subtitle: "Filtro de Registros com WHERE",
+                ul: [
+                    "É usada para filtrar registros.",
+                    "Filtra registros que atendem a uma ou várias condições.",
+                    "As condições validam expressões lógicas."
+                ]
+            },
+            {
+                subtitle2: "Exemplos com SELECT WHERE",
+                code: [
+                    "SELECT *",
+                    "FROM musicas",
+                    "WHERE tempo < 100",
+                    "-- Filtra todas as músicas onde a coluna tempo seja menor que 100.",
+                    "",
+                    "SELECT *",
+                    "FROM musicas",
+                    "WHERE compositor IS NULL",
+                    "-- Filtra todas as músicas onde a coluna compositor seja nulo."
+                ]
+            },
+            {
+                subtitle2: "Praticando filtro de registro com WHERE",
+                code: [
+                    "SELECT * FROM musicas WHERE compositor = 'Schubert' AND tempo < 500;",
+                    "SELECT * FROM musicas WHERE compositor = 'Schubert' AND tempo <= 500;",
+                    "SELECT * FROM musicas WHERE compositor = 'Schubert' AND tempo > 500 AND tempo < 500;",
+                    "SELECT * FROM musicas WHERE compositor = 'Schubert' AND tempo >= 500;",
+                    "",
+                    "SELECT * FROM musicas WHERE compositor = 'Schubert' AND tempo BETWEEN 368 AND 500;",
+                    "-- BETWEEN usa maior ou igual e menor ou igual.",
+                    "",
+                    "SELECT * FROM musicas WHERE compositor IS NULL;",
+                    "-- Retorna os resultados onde a coluna compositor seja vazia.",
+                    "",
+                    "SELECT * FROM musicas WHERE compositor IS NOT NULL;",
+                    "-- Retorna os resultados onde a coluna compositor não seja vazia.",
+                    "",
+                    "SELECT id, compositor, composicao FROM musicas;"
+                ]
+            },
+            {
+                subtitle: "Operadores mais utilizados",
+                subtitle2: "Sistema lógico com 3 valores: AND, OR e NOT",
+                text: `TRUE, FALSE e NULL
+                    (NULL significa "desconhecido").`
+            },
+            {
+                subtitle2: "Operadores Lógicos",
+                ul: [
+                    "<  - Menor que",
+                    ">  - Maior que",
+                    "<= - Menor ou igual",
+                    ">= - Maior ou igual",
+                    "=  - Igual",
+                    "<> - Diferente",
+                    "!= - Diferente"
+                ],
+                code: [
+                    "BETWEEN a AND b -- pega o intervalo entre o valor a e o valor b.",
+                    "IS NULL -- Verifica se determinado campo está nulo.",
+                    "IS NOT NULL -- Verifica se determinado campo não está nulo."
+                ]
+            },
+            {
+                subtitle: "LIMIT e OFFSET",
+                subtitle2: "LIMIT",
+                text: `Limita a quantidade de resultados, partindo do primeiro, de acordo com a ordenação dos resultados.`,
+                code: [
+                    "SELECT * FROM musicas LIMIT 3",
+                    "-- Exibe os 3 primeiros registros da tabela musicas."
+                ]
+            },
+            {
+                subtitle2: "OFFSET",
+                text: "Ignora a quantidade de registro informado, partindo do primeiro. Geralmente é usado em conjunto com LIMIT.",
+                code: [
+                    "SELECT * FROM musicas OFFSET 2",
+                    "-- Exibe todos os registros da tabela musicas ignorando os 2 primeiros.",
+                    "",
+                    "SELECT * FROM musicas LIMIT 3 OFFSET 5",
+                    "-- Exibe os 3 registros a partir do sexto registro."
+                ]
+            }
+        ]
     }
 ];
 

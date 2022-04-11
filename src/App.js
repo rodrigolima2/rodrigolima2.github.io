@@ -57,6 +57,19 @@ function App() {
                     })}
                   </ul>
                 }
+                {item.code &&
+                  <div className="main__code-container">
+                    {item.code.map((codeItem, codeIndex) => {
+                      return (
+                        <div className="code-container__content">
+                          <span className="main__code-number">{codeIndex + 1}</span>
+                          <span className="main__code" key={codeIndex + 6}>{codeItem}</span>
+                        </div>
+                      );
+                    })
+                    }
+                  </div>
+                }
               </>
             );
           })}
