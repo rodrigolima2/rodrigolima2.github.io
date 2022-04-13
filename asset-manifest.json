@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.64ce7822.css",
-    "main.js": "/static/js/main.3ac4c7fa.js",
+    "main.css": "/static/css/main.86972bf3.css",
+    "main.js": "/static/js/main.0dbf5beb.js",
     "static/media/linkedin-icon.ico": "/static/media/linkedin-icon.44f893b3cc3902f5bf7d.ico",
     "static/media/react-router-dom-img1.png": "/static/media/react-router-dom-img1.b301c1a64bcea3588826.png",
     "static/media/react-router-dom-img3.png": "/static/media/react-router-dom-img3.dfcf68aad1e5458f5e8d.png",
@@ -77,11 +77,11 @@
     "static/media/asyncfunction-img12.png": "/static/media/asyncfunction-img12.82f5fdaa684bcf54668a.png",
     "static/media/side-menu-icon.svg": "/static/media/side-menu-icon.35d5b12b948bb0c0b21ca27bec2d1338.svg",
     "index.html": "/index.html",
-    "main.64ce7822.css.map": "/static/css/main.64ce7822.css.map",
-    "main.3ac4c7fa.js.map": "/static/js/main.3ac4c7fa.js.map"
+    "main.86972bf3.css.map": "/static/css/main.86972bf3.css.map",
+    "main.0dbf5beb.js.map": "/static/js/main.0dbf5beb.js.map"
   },
   "entrypoints": [
-    "static/css/main.64ce7822.css",
-    "static/js/main.3ac4c7fa.js"
+    "static/css/main.86972bf3.css",
+    "static/js/main.0dbf5beb.js"
   ]
 }
