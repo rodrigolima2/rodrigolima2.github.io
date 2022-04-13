@@ -1742,6 +1742,94 @@ const content = [
                     "SELECT * FROM musicas LIMIT 3 OFFSET 5",
                     "-- Exibe os 3 registros a partir do sexto registro."
                 ]
+            },
+            {
+                subtitle: "ORDER BY",
+                text: `Ordena um ou mais campos de forma ascendente ou descendente. Por padrão a ordenação é ascendente, ASC = Ascendente (crescente) e DESC = Descendente (decrescente).`,
+                code: [
+                    "SELECT * FROM musicas ORDER BY id DESC;",
+                    "SELECT * FROM musicas ORDER BY id DESC;",
+                    "SELECT * FROM musicas ORDER BY compositor DESC, tempo ASC;"
+                ]
+            },
+            {
+                subtitle: "Exercício Resolvido 1",
+                text: `Faça uma consulta no banco de dado "orquestra" que retorna 10 músicas em que o tempo de execução seja maior que 2 minutos.`,
+                code: [
+                    "SELECT * FROM musicas WHERE tempo > 120 LIMIT 10;",
+                    "-- Outra forma de resolver:",
+                    "SELECT * FROM musicas WHERE tempo / 60 > 2 LIMIT 10;"
+                ]
+            },
+            {
+                subtitle: "Exercício Resolvido 2",
+                text: `Faça uma consulta no banco de dado "orquestra" que retorna os últimos 20 registros de acordo com o identificador.`,
+                code: [
+                    "SELECT * FROM musicas ORDER BY id DESC LIMIT 20;"
+                ]
+            },
+            {
+                subtitle: "Exercício Resolvido 3",
+                text: `Faça uma consulta no banco de dado "orquestra" que retorna todos os registros somente com os campos "compositor", "composicao" e "tempo" onde o tempo seja entre 2 e 5 minutos e o compositor não seja "Mozart".`,
+                code: [
+                    "SELECT compositor, composicao, tempo ",
+                    "FROM musicas",
+                    "WHERE tempo / 60 BETWEEN 2 AND 5 AND compositor <> 'Mozart';"
+                ]
+            },
+            {
+                subtitle: "Ordem de execução das queries",
+                subtitle2: "Ordem Sintaxe",
+                ul: [
+                    "1. SELECT",
+                    "2. FROM",
+                    "3. WHERE",
+                    "4. ORDER BY"
+                ]
+            },
+            {
+                subtitle2: "Ordem Lógica",
+                ul: [
+                    "1. FROM",
+                    "2. WHERE",
+                    "3. SELECT",
+                    "4. ORDER BY"
+                ]
+            },
+            {
+                subtitle2: "DISTINCT",
+                code: [
+                    "SELECT DISTINCT compositor FROM musicas WHERE compositor IS NOT NULL;",
+                    "-- Retorna registros únicos de determinados campos sem repetir onde compositor não seja vazio.",
+                    "",
+                    "SELECT DISTINCT compositor, composicao, tempo FROM musicas WHERE compositor IS NOT NULL;",
+                    "-- Faz uma distinção de campos onde os campos passados nunca se repitam."
+                ]
+            },
+            {
+                subtitle2: "LIKE com porcentagem",
+                code: [
+                    "SELECT * FROM musicas WHERE compositor LIKE 'Schu%';",
+                    "-- Retorna resultados onde o inicio da palavra deve ser igual ao passado e o final podendo conter qualquer conteúdo, o porcentagem indica em qual direção é a busca."
+                ]
+            },
+            {
+                subtitle2: "LIKE com underline",
+                code: [
+                    "SELECT * FROM musicas WHERE compositor LIKE '_o';",
+                    "-- Onde é colocado um underline indica que obrigatóriamente deve existir um caractere.",
+                    "-- Pode ser usado para quando não se sabe a letra."
+                ]
+            },
+            {
+                subtitle2: "ILIKE - Case Insensitive",
+                code: [
+                    "SELECT * FROM musicas WHERE compositor ILIKE '%mo%';",
+                    `-- Busca por um resultado sem destinguir letras maiusculas de minusculas.`,
+                    "",
+                    "SELECT * FROM musicas WHERE composicao NOT ILIKE '%quintet%';",
+                    "-- Retorna tudo que não possuir a palavra quintet em qualquer parte do texto."
+                ]
             }
         ]
     }
