@@ -634,6 +634,95 @@ const content = [
         ]
     },
     {
+        title: "Data em Javascript",
+        content: [
+            {
+                subtitle: "new Date()",
+                text: `É um objeto nativo do JavaScript criado especialmente para armazenar e manipular datas.`
+            },
+            {
+                subtitle2: "Momento vs Data",
+                ul: [
+                    "Um mesmo momento pode ser representado por várias datas",
+                    "No Brasil a data era: 30/06/2002 as 09h22min",
+                    "Em Londres a data era: 30/06/2002 as 12h22min",
+                    "No Japão a data era: 30/06/2002 as 21h22min"
+                ]
+            },
+            {
+                subtitle2: "Como criar datas com o momento atual",
+                code: [
+                    "const agora = new Date();",
+                    "//guarda o momento correto e pode ser exibido em qualquer fuso horario"
+                ]
+            },
+            {
+                subtitle2: "Como criar datas passando numeros para ano, mes, dia, etc",
+                code: [
+                    "const date = new Date(ano, mes, dia, hora, min, seg, miliseg);",
+                    "// sempre recebe números, os dias começam do 1,  os Meses começam do zero.",
+                    "",
+                    "const date = new Date(2020, 0);",
+                    "zero representa janeiro."
+                ]
+            },
+            {
+                subtitle2: "Como criar datas a partir de Timestamps",
+                example: "Timestamp"
+            },
+            {
+                text: "Um número que representa um momento da história. Esse número é a quantidade de milissegundos que passaram desde primeiro de janeiro de 1970, a 00:00:00.000 em Greenwich",
+                code: [
+                    "const finalDaCopa = new Date(2002, 5, 30, 8);",
+                    "const timestamp = finalDaCopa.getTime()",
+                    "// faz a mesma coisa que utilizando o '+' antes da variavel.",
+                    "// console.log(+finalDaCopa) - o '+' transforma o tempo em quantidade de milissegundos que se passaram desde 1970 até o momento da data passada.",
+                    "",
+                    "const timestamp = +finalDaCopa +f 1000*60*60;",
+                    "// soma 1 hora milissegundos * min * hora",
+                    "",
+                    "const maisUmaHoraDate = new Date(timestamp);",
+                    "sempre que é passado apenas 1 argumento é assumido que o valor é um timestamp."
+                ]
+            },
+            {
+                subtitle2: "Como criar datas a partir de textos",
+                code: [
+                    `const ontem = new Date("2020-10-04T19:05:39.522Z");`,
+                    "Não usem pois alguns navegadores não suporta esse tipo de tratamento."
+                ]
+            },
+            {
+                subtitle2: "Comparando Datas",
+                ul: [
+                    `Datas são objetos, portanto são comparados por referência
+                   Ou seja, new Date(0) !== new Date(0)`,
+                    `Ou seja, caso queira comparar se é o mesmo momento, use timestamps;
+                   +(new Date(0)) === +(new Date(0))`,
+                    `Caso queira comparar anterioridade ou posterioridade, use timestamps e os operadores tradicionais >, <, >= e <=.`
+                ]
+            },
+            {
+                subtitle2: "Getters e Setters para datas",
+                code: [
+                    "const hoje = new Date();",
+                    "",
+                    "hoje.getMonth()",
+                    "// retorna o numero do mes",
+                    "",
+                    "hoje.getDay()",
+                    "retorna o numero do dia (dom 0, seg 1, ter 2 ..)",
+                    "",
+                    "hoje.getYear()",
+                    "retorna o ano",
+                    "",
+                    "hoje.setDate(hoje.getDate() - 30)",
+                    "mostra 30 dias anteriores."
+                ]
+            }
+        ]
+    },
+    {
         title: "API REST",
         content: [
             {
