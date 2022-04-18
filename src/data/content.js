@@ -653,7 +653,7 @@ const content = [
                 subtitle2: "Como criar datas com o momento atual",
                 code: [
                     "const agora = new Date();",
-                    "//guarda o momento correto e pode ser exibido em qualquer fuso horario"
+                    "// guarda o momento correto e pode ser exibido em qualquer fuso horario"
                 ]
             },
             {
@@ -718,6 +718,165 @@ const content = [
                     "",
                     "hoje.setDate(hoje.getDate() - 30)",
                     "mostra 30 dias anteriores."
+                ]
+            },
+            {
+                subtitle: "Conhecendo o date-fns",
+                text: `date-fns é uma biblioteca utilizada para facilitar o uso de datas.
+                é como o lodash para datas.`,
+                example: "para instalar:",
+                code: [
+                    "npm init -y",
+                    "npm install date-fns --save",
+                    "or",
+                    "yarn add date-fns",
+                    "Depois utilizar o require ou o import.",
+                    "const datefns = require('date-fns');",
+                    "É recomendavel fazer a deconstrução para pegar apenas as funções necessárias."
+                ]
+            },
+            {
+                subtitle2: "Date-fns - format",
+                text: "Uma das funções mais importantes e mais uteis.",
+                code: [
+                    "const { format } = require('date-fns');",
+                    "",
+                    "const date = new Date(2017, 3, 12);",
+                    `console.log(format(date, "dd/MMM/yyyy"));`,
+                    "// para usar um texto podemos usar aspar simples dentro:",
+                    `console.log(format(date, "dd 'de' MMM 'de' yyyy"));`
+                ]
+            },
+            {
+                subtitle2: "Date-fns - Parse",
+                text: `É o contrário do metodo format.`,
+                code: [
+                    "let result = parse('02/11/2014', 'MM/dd/yyyy', new Date())",
+                    "// retorna=> Tue Feb 11 2014 00:00:00"
+                ]
+            },
+            {
+                subtitle2: "Date-fns - Add",
+                text: "Permite fazer operações aritméticas de tempos, somar, subtrair, etc.",
+                code: [
+                    "const { add } = require('date-fns');",
+                    "",
+                    "const date = new Date(2018, 2, 13, 12);",
+                    "",
+                    "console.log(date);",
+                    "",
+                    "console.log(add(date, {",
+                    "  seconds: 2,",
+                    "  days: 1,",
+                    "  years: 10",
+                    "}));",
+                    "",
+                    "// não modifica o objeto inicial, apenas retorna o resultado."
+                ]
+            },
+            {
+                subtitle2: "Date-fns - addBusinessDays",
+                text: `Adiciona um número especifico de dias uteis para a data dada, ignorando finais de semana.`,
+                code: [
+                    "const result = addBusinessDays(new Date(2014, 0, 1), 10)",
+                    "// adiciona 10 dias uteis para a data"
+                ]
+            },
+            {
+                subtitle2: "Date-fns difference",
+                text: `Não é um metodo só, são vários, porém todos funciona quase da mesma forma.`,
+            },
+            {
+                subtitle2: "differenceInMilliseconds",
+                text: "Obtem o numero de milissegundos entre as datas dadas.",
+                code: [
+                    "differenceInMilliseconds(dateLeft, dateRight);",
+                    "",
+                    "let result = differenceInMilliseconds(",
+                    "new Date(2014, 6, 2, 12, 30, 21, 700),",
+                    "new Date(2014, 6, 2, 12, 30, 20, 600)",
+                    ")"
+                ]
+            },
+            {
+                subtitle2: "diferenceInSeconds",
+                code: [
+                    "let result = differenceInSeconds(",
+                    "  new Date(2014, 6, 2, 12, 30, 20, 0),",
+                    "  new Date(2014, 6, 2, 12, 30, 7, 999)",
+                    ")"
+                ]
+            },
+            {
+                subtitle2: "date-fns set",
+                text: "Seta valores de uma data dada. eta valores de tempo para valores do objeto date. Valores não são setados se ele for undefined ou vazio ou não existir valor dentro dele. Retorna a data modificada.",
+                code: [
+                    "let result = set(new Date(2014, 0, 20), { year: 2015, month: 9, date: 20 })",
+                    "",
+                    "// tem outros metodos mais especificos como o ",
+                    "const result = setMilliseconds(new Date(2014, 0, 1, 11, 30, 40, 500), 300)",
+                ]
+            },
+            {
+                subtitle2: "date-fns isSame",
+                text: "São o mesmo dia, segundo, hora e por ai vai. Returna um boolean dizendo se a data é a mesma ou não.",
+                code: [
+                    "let result = isSameDay(new Date(2014, 8, 4, 6, 0)), new Date(2014, 8, 4, 18, 0)",
+                    "// retorna=> true"
+                ]
+            },
+            {
+                subtitle2: "date fns isAfter isBefore",
+                code: [
+                    "isAfter(date, dateToCompare)",
+                    "",
+                    "let result = isAfter(new Date(1989, 6, 10), new Date(1987, 1, 11))",
+                    "// retorna=> true, verifica se a primeira data é depois da segunda",
+                    "",
+                    "isBefore(date, dateToCompare)",
+                    "",
+                    "let result = isBefore(new Date(1989, 6, 10), new Date(1987, 1, 11))",
+                    "// retorna=> false"
+                ]
+            },
+            {
+                subtitle2: "date-fns startOf e endOf",
+                code: [
+                    "// startOf - apaga todos os dados depois de um startOfAlgumaCoisa",
+                    "const result = startOfHour(new Date(2014, 8, 2, 11, 55))",
+                    "// retorna=> Tue Sep 02 2014 11:00:00",
+                    "",
+                    "// endOf - joga todos os dados para o maximo do valor que puder",
+                    "const result = endOfHour(new Date(2014, 8, 2, 11, 55))",
+                    "// retorna=> Tue Sep 02 2014 11:59:59.999"
+                ]
+            },
+            {
+                subtitle: "Fusos e JS",
+                text: `Fusos são decisões politicas, são decisões de como vamos representar a data em diferentes regiões do mundo.
+                O javascript quando é salvo uma data, salva apenas o timestamp.
+                Para evitar problemas devemos sempre tratar datas em UTC, quando tiver por obrigação data em outro formato devemos tomar cuidado para não errar.`,
+                example: "Atenção ao converter para outras Timezones"
+            },
+            {
+                text: "O javascript não guarda fusos, guarda apenas o timestamp de uma data.",
+                code: [
+                    "const { zonedTimeToUtc, utcToZonedTime, format } = require ('data-fns-tz')",
+                    "",
+                    `// Set the date to "2018-09-01T16:01:36:386Z"`,
+                    "const utcDate = zonedTimeToUtc('2018-09-01 18:01:36.386', 'Europe/Berlin');",
+                    "console.log(utcDate);",
+                    "",
+                    "// Obtain a Date instance that will render the equivalent Berlin time for the UTC date",
+                    `const date = new Date('2018-09-01T16:01:36.386Z');`,
+                    "const timeZone = 'Europe/Berlin';",
+                    "const zonedDate = utcToZonedTime(date, timeZone);",
+                    "// zonedDate could be used to initialize a date picker or display the formated local date/time",
+                    "",
+                    `// Set the output to "1.9.2018 18:01:36.386 GMT+02:00 (CEST)"`,
+                    `const pattern = 'dd/MM/yyyy HH:mm:ss.SSS \\'GMT\\' XXX (z)'`,
+                    "const output = format(zonedDate, patten, { timeZone: 'Europe/Berlin '});",
+                    "console.log(output);"
                 ]
             }
         ]
