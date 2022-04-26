@@ -916,7 +916,7 @@ const content = [
             },
             {
                 subtitle: "API - Instruções sobre como se comunicar com um serviço",
-                text: `Muitos serviços possuem API's:`,
+                example: `Muitos serviços possuem API's:`,
                 ul: [
                     "Youtube possui uma API para listar vídeos, buscar, ver comentários..",
                     "Instagram possui uma API para ver e enviar fotos...",
@@ -927,7 +927,7 @@ const content = [
                 ]
             },
             {
-                text: `Muitos Back-ends são feitos para disponibilizar api's`,
+                example: `Muitos Back-ends são feitos para disponibilizar api's`,
                 ul: [
                     "API REST - Uma forma padronizada de criar API's baseada no HTTP. REST é um conjunto de regras a serem seguidas.",
                 ]
@@ -942,11 +942,221 @@ const content = [
             },
             {
                 subtitle2: "Coleções de Recursos",
-                text: "Por exemplo: Uma API de uma biblioteca",
+                example: "Por exemplo: Uma API de uma biblioteca",
                 ul: [
                     `Na API temos uma coleção de livros. "Livro" é um recurso nessa API.`,
                     "ós também temos uma coleção de autores. Dentro de um autor também temos uma coleção de livros.",
                     "Ex: Livros: Titulo, Editora, Ano de lançamento  Autores: Nome, País natal, Livros"
+                ]
+            },
+            {
+                example: `Recursos possuem identificadores, Também conhecidos como "id"`,
+                ul: [
+                    "Ex: Uma pessoa pode ser identificada pelo seu CPF",
+                    "Ex: Um produto em uma loja é identificado pelo seu código de barras.",
+                    "Ex: Um carro é identificado pela sua placa.",
+                    "Podem ser qualquer coisa, desde que sejam únicos e imutáveis.",
+                    `Na dúvida, um recurso pode ser identificado por um "UUID".`,
+                    "UUID = Identificador único universal em um formato específico.",
+                    "Ex: 2e3990d1-b01f-47bb-bd10-42cc6e0f40f0",
+                    "Ex: 9ef374a1-2be2-4963-aff0-1677854f1f7b"
+                ]
+            },
+            {
+                example: "Recursos representados como JSON",
+                ul: [
+                    "JSON é uma forma de representar dados em trânsito.",
+                    "Suporta números, texto, objetos, listas, true/false e null/",
+                    `Ex: {"cep": "49032490"}`
+                ]
+            },
+            {
+                example: "Em toda coleção nós podemos:",
+                ul: [
+                    `Listar os recursos contidos nesta coleção - GET /livros - onde livros é a pasta`,
+                    "Ver um recurso dentro da coleção - GET /livros/37",
+                    "Adicionar um novo recurso na coleção - POST /livros",
+                    "Sobrescrever ou criar um recurso - PUT /livros/37",
+                    "Editar um recurso dentro da coleção - PATCH /livros/37",
+                    "Excluir um recurso - DELETE /livros/37"
+                ]
+            },
+            {
+                subtitle2: "Exemplo: API REST da biblioteca",
+                example: "-livros",
+                ul: [
+                    "GET /livros - pesquisa ou retorna todos os livros",
+                    "GET /livros/:id - retorna um livro específico",
+                    "POST /livros - adiciona um livro novo",
+                    "PUT /livros/:id - sobrescreve um livro existente ou cria um se não existir",
+                    "PATCH /livros/:id - editar um livro",
+                    "DELETE /livros - deleta um livro"
+                ]
+            },
+            {
+                example: "-autores",
+                ul: [
+                    "GET /autores - pesquisa ou retorna todos os autores",
+                    "GET /autores/:id - retorna um autor específico",
+                    "POST /autores - adiciona um autor novo",
+                    "PUT /autores/:id - sobrescreve um autor existente ou cria um se não existir",
+                    "PATCH /autores/:id - editar um autor",
+                    "DELETE /autores - deleta um autor"
+                ]
+            },
+            {
+                example: "Dentro de autores possui uma coleção de livros",
+                ul: [
+                    "GET /autores/:idautor/livros",
+                    "GET /autores/:idautor/livors/:id",
+                    "POST /autores/:idautor/livros",
+                    "PUT /autores/:idautor/livros/:id",
+                    "PATCH /autores/:idautor/livros:id",
+                    "DELETE /autores/:idautor/livros"
+                ]
+            },
+            {
+                text: "É comum por causa de redundancias omitir alguns usos acima, porque seria melhor adicionar um livro direto na biblioteca do que adicionar em um autor específico."
+            },
+            {
+                subtitle: "Instalando e usando o Insomnia",
+                ul: [
+                    "Pesquisar pelo site oficial",
+                    "clicar em GET STARTED FOR FREE",
+                    "fazer o passo a passo para instalação"
+                ]
+            },
+            {
+                example: "Insomnia é um cliente HTTP.",
+            },
+            {
+                text: "Pelo insomnia pode-se adicionar requisições e editar como seriam as respostas para estas requisições."
+            },
+            {
+                subtitle2: "Prática - GET da coleção",
+                ul: [
+                    "Primeiro criar o projeto com npm init -y",
+                    "Instalar o express com npm i express",
+                    "Instalar o nodemon com npm i nodemon -D",
+                    "criar um arquivo chamado index.js",
+                    "Fazer as configurações iniciais do servidor. (require, app etc)"
+                ]
+            },
+            {
+                example: "Código demonstrando todos os requisitos necessários para uma API REST:",
+                code: [
+                    `const express = require("express");`,
+                    `const app = express();`,
+                    `app.use(express.json())`,
+                    ``,
+                    `const listaDeInstrutores = [`,
+                    `\u00A0\u00A0{`,
+                    `\u00A0\u00A0\u00A0\u00A0id: 1,`,
+                    `\u00A0\u00A0\u00A0\u00A0nome: "Junior",`,
+                    `\u00A0\u00A0\u00A0\u00A0idade: 19,`,
+                    `\u00A0\u00A0\u00A0\u00A0areaDeAtuacao: "Back end"`,
+                    `\u00A0\u00A0},`,
+                    `\u00A0\u00A0{`,
+                    `\u00A0\u00A0\u00A0\u00A0id: 2,`,
+                    `\u00A0\u00A0\u00A0\u00A0nome: "Dina",`,
+                    `\u00A0\u00A0\u00A0\u00A0idade: 19,`,
+                    `\u00A0\u00A0\u00A0\u00A0areaDeAtuacao: "Back end"`,
+                    `\u00A0\u00A0},`,
+                    `]`,
+                    ``,
+                    `let proximoId = 5;`,
+                    ``,
+                    `app.get("/instrutores", (req, res) => {`,
+                    `\u00A0\u00A0res.json(listaDeInstrutores);`,
+                    `});`,
+                    ``,
+                    `app.get("/instrutores/:id", (req, res) => {`,
+                    `\u00A0\u00A0const instrutor = listaDeInstrutores.find(`,
+                    `\u00A0\u00A0\u00A0\u00A0(instrutor) => instrutor.id === Number(req.params.id));`,
+                    `\u00A0\u00A0res.json(instrutor);`,
+                    `});`,
+                    ``,
+                    `app.post("/instrutores", (req, res) => {`,
+                    `\u00A0\u00A0const novoInstrutor = {`,
+                    `\u00A0\u00A0\u00A0\u00A0id: proximoId,`,
+                    `\u00A0\u00A0\u00A0\u00A0nome: req.body.nome,`,
+                    `\u00A0\u00A0\u00A0\u00A0idade: req.body.idade,`,
+                    `\u00A0\u00A0\u00A0\u00A0areaDeAtuacao: req.body.areaDeAtuacao,`,
+                    `\u00A0\u00A0}`,
+                    ``,
+                    `\u00A0\u00A0listaDeInstrutores.push(novoInstrutor);`,
+                    ``,
+                    `\u00A0\u00A0proximoId += 1;`,
+                    ``,
+                    `\u00A0\u00A0res.json(novoInstrutor);`,
+                    `});`,
+                    ``,
+                    `app.patch("/instrutores/:id", (req, res) => {`,
+                    `\u00A0\u00A0const instrutor = listaDeInstrutores.find(`,
+                    `\u00A0\u00A0\u00A0\u00A0(instrutor) => instrutor.id === Number(rq.params.id);`,
+                    `\u00A0\u00A0);`,
+                    ``,
+                    `\u00A0\u00A0if (req.body.nome !== undefined) {`,
+                    `\u00A0\u00A0\u00A0\u00A0instrutor.nome = req.body.nome;`,
+                    `\u00A0\u00A0}`,
+                    `\u00A0\u00A0if (req.body.idade !== undefined) {`,
+                    `\u00A0\u00A0\u00A0\u00A0instrutor.idade = req.body.idade;`,
+                    `\u00A0\u00A0}`,
+                    `\u00A0\u00A0if (req.body.areaDeAtuacao !== undefined) {`,
+                    `\u00A0\u00A0\u00A0\u00A0instrutor.areaDeAtuacao = req.body.areaDeAtuacao;`,
+                    `\u00A0\u00A0}`,
+                    ``,
+                    `\u00A0\u00A0res.json(instrutor);`,
+                    `});`,
+                    ``,
+                    `app.put("/instrutores/:idConsultado", (req, res) => {`,
+                    `\u00A0\u00A0const instrutor = listaDeInstrutores.find(`,
+                    `\u00A0\u00A0\u00A0\u00A0(instrutor) => instrutor.id === Number(req.params.idConsultado)`,
+                    `\u00A0\u00A0);`,
+                    ``,
+                    `\u00A0\u00A0if (instrutor) {`,
+                    `\u00A0\u00A0\u00A0\u00A0instrutor.nome = req.body.nome;`,
+                    `\u00A0\u00A0\u00A0\u00A0instrutor.idade = req.body.idade;`,
+                    `\u00A0\u00A0\u00A0\u00A0instrutor.areaDeAtuacao = req.body.areaDeAtuacao;`,
+                    `\u00A0\u00A0} else {`,
+                    `\u00A0\u00A0\u00A0\u00A0const novoInstrutor = req.body;`,
+                    `\u00A0\u00A0\u00A0\u00A0listaDeInstrutores.push(novoInstrutor);`,
+                    `\u00A0\u00A0\u00A0\u00A0res.json(novoInstrutor);`,
+                    `\u00A0\u00A0}`,
+                    `});`,
+                    ``,
+                    `app.delete("/instrutores/idConsultado", (req, res) => {`,
+                    `\u00A0\u00A0const instrutor = listaDeInstrutores.find(`,
+                    `\u00A0\u00A0\u00A0\u00A0(instrutor) => instrutor.id === Number(req.params.idConsultado)`,
+                    `\u00A0\u00A0);`,
+                    ``,
+                    `\u00A0\u00A0const indice = listaDeInstrutores.indexOf(instrutor);`,
+                    ``,
+                    `\u00A0\u00A0listaDeInstrutores.splice(indice, 1);`,
+                    ``,
+                    `\u00A0\u00A0res.json(instrutor);`,
+                    `});`,
+                    ``,
+                    `app.listen(8000);`
+                ]
+            },
+            {
+                example: "Erro comum - não responder requisições",
+                code: [
+                    `const express = require("express");`,
+                    ``,
+                    `const app = express();`,
+                    ``,
+                    `app.get("/teste", (req, res) => {`,
+                    `\u00A0\u00A0// é necessário sempre enviar uma resposta para a requisição para que o navegador não fique   esperando para sempre, a resposta sempre deverá ser um send OU um json. (não pode ser os dois)`,
+                    `\u00A0\u00A0res.send("ok");`,
+                    `\u00A0\u00A0// OU`,
+                    `\u00A0\u00A0res.json({`,
+                    `\u00A0\u00A0\u00A0\u00A0ok: 200`,
+                    `\u00A0\u00A0});`,
+                    `});`,
+                    ``,
+                    `app.listen(8000);`
                 ]
             }
         ]
